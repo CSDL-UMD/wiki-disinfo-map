@@ -1,7 +1,7 @@
 import './App.css';
 // mui
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { Container, CssBaseline, Grid, Paper } from '@mui/material';
+import { Container, CssBaseline, Grid } from '@mui/material';
 // component imports
 import {
   Filter,
