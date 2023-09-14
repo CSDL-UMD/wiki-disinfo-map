@@ -5,7 +5,7 @@ import { Container, CssBaseline, Grid } from '@mui/material';
 // component imports
 import {
   Filter,
-  FrequencyChart,
+  LineChart,
   Map,
   PieChart,
   ProjectDescription,
@@ -53,7 +53,7 @@ function App() {
             </Grid>
 
             <Grid item xs={3}>
-              <FrequencyChart column="Start Year" />
+              <LineChart column="Start Year" />
             </Grid>
             <Grid item xs={3}>
               <PieChart column="Country" />
