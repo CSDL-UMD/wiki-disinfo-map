@@ -153,7 +153,9 @@ export default class LineChart extends PureComponent {
               width={800}
               height={400}
               data={data}
-              onMouseDown={(e) => this.setState({ refAreaLeft: e.activeLabel })}
+              onMouseDown={(e) =>
+                this.setState({ refAreaLeft: e?.activeLabel || '' })
+              }
               onMouseMove={(e) =>
                 this.state.refAreaLeft &&
                 this.setState({ refAreaRight: e.activeLabel })
