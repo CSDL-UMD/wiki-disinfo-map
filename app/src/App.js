@@ -7,7 +7,7 @@ import {
   Filter,
   FrequencyChart,
   Map,
-  PieChart,
+  PieTable,
   ProjectDescription,
   Table,
 } from './components';
@@ -56,13 +56,13 @@ function App() {
               <FrequencyChart column="Start Year" />
             </Grid>
             <Grid item xs={3}>
-              <PieChart column="Country" />
+              <PieTable column="Country" />
             </Grid>
             <Grid item xs={3}>
-              <PieChart column="Subcontinent" />
+              <PieTable column="Subcontinent" />
             </Grid>
             <Grid item xs={3}>
-              <PieChart column="Project" />
+              <PieTable column="Project" />
             </Grid>
           </Grid>
         </Container>

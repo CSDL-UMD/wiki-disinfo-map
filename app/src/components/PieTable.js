@@ -45,17 +45,20 @@ const renderActiveShape = (props) => {
         outerRadius={outerRadius + 10}
         fill={fill}
       />
-      <path d={`M${sx},${sy}L${mx},${my}L${ex},${ey}`} stroke={fill} fill="none" />
-      <circle cx={ex} cy={ey} r={2} fill={fill} stroke="none" />
-      <text x={ex + (cos >= 0 ? 1 : -1) * 12} y={ey} textAnchor={textAnchor} fill="#333">{`PV ${value}`}</text>
-      <text x={ex + (cos >= 0 ? 1 : -1) * 12} y={ey} dy={18} textAnchor={textAnchor} fill="#999">
-        {`(Rate ${(percent * 100).toFixed(2)}%)`}
-      </text>
     </g>
   );
 };
 
-export default class PieChart extends PureComponent {
+/* overcomplicated demo code
+<path d={`M${sx},${sy}L${mx},${my}L${ex},${ey}`} stroke={fill} fill="none" />
+<circle cx={ex} cy={ey} r={2} fill={fill} stroke="none" />
+<text x={ex + (cos >= 0 ? 1 : -1) * 12} y={ey} textAnchor={textAnchor} fill="#333">{`PV ${value}`}</text>
+<text x={ex + (cos >= 0 ? 1 : -1) * 12} y={ey} dy={18} textAnchor={textAnchor} fill="#999">
+  {`(Rate ${(percent * 100).toFixed(2)}%)`}
+</text>
+*/
+
+export default class PieTable extends PureComponent {
   // static demoUrl = 'https://codesandbox.io/s/pie-chart-with-customized-active-shape-y93si';
 
   state = {
@@ -68,9 +71,13 @@ export default class PieChart extends PureComponent {
     });
   };
 
+  onSectionClick = (_, index) => {
+    // event handling for filtering data here
+  }
+
   render() {
     return (
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer width="100%" height={250}>
         <PieChart width={400} height={400}>
           <Pie
             activeIndex={this.state.activeIndex}
@@ -83,6 +90,7 @@ export default class PieChart extends PureComponent {
             fill="#0ea5e9"
             dataKey="value"
             onMouseEnter={this.onPieEnter}
+            onMouseDown={this.onSectionClick}
           />
         </PieChart>
       </ResponsiveContainer>
