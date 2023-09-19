@@ -35,7 +35,7 @@ const initialData = [
   { name: 20, cost: 7, impression: 100 },
 ];
 
-const getAxisYDomain = (from, to, ref, offset) => {
+const getAxisYDomain = (from, to, ref) => {
   const refData = initialData.slice(from - 1, to);
   let [bottom, top] = [refData[0][ref], refData[0][ref]];
   refData.forEach((d) => {
@@ -43,25 +43,27 @@ const getAxisYDomain = (from, to, ref, offset) => {
     if (d[ref] < bottom) bottom = d[ref];
   });
 
-  return [(bottom | 0) - offset, (top | 0) + offset];
+  return yDomain([bottom, top]);
 };
 
+// Percent of y-range to offset the y domain;
+const yOffset = 0.1;
+const yDomain = ([dataMin, dataMax]) => [
+  Math.round(dataMin - yOffset * (dataMax - dataMin)),
+  Math.round(dataMax + yOffset * (dataMax - dataMin)),
+];
 const initialState = {
   data: initialData,
   left: 'dataMin',
   right: 'dataMax',
   refAreaLeft: '',
   refAreaRight: '',
-  top: 'dataMax+1',
-  bottom: 'dataMin-1',
-  top2: 'dataMax+20',
-  bottom2: 'dataMin-20',
+  // specifies both top and bottom
+  yDomain: yDomain,
   animation: true,
 };
 
 export default class LineChart extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/highlight-zomm-line-chart-v77bt';
-
   constructor(props) {
     super(props);
     this.state = initialState;
@@ -84,13 +86,7 @@ export default class LineChart extends PureComponent {
       [refAreaLeft, refAreaRight] = [refAreaRight, refAreaLeft];
 
     // yAxis domain
-    const [bottom, top] = getAxisYDomain(refAreaLeft, refAreaRight, 'cost', 1);
-    const [bottom2, top2] = getAxisYDomain(
-      refAreaLeft,
-      refAreaRight,
-      'impression',
-      50
-    );
+    const yDomain = getAxisYDomain(refAreaLeft, refAreaRight, 'cost');
 
     this.setState(() => ({
       refAreaLeft: '',
@@ -98,40 +94,27 @@ export default class LineChart extends PureComponent {
       data: data.slice(),
       left: refAreaLeft,
       right: refAreaRight,
-      bottom,
-      top,
-      bottom2,
-      top2,
+      yDomain: yDomain,
     }));
   }
 
   zoomOut() {
-    const { data } = this.state;
-    this.setState(() => ({
-      data: data.slice(),
-      refAreaLeft: '',
-      refAreaRight: '',
-      left: 'dataMin',
-      right: 'dataMax',
-      top: 'dataMax+1',
-      bottom: 'dataMin',
-      top2: 'dataMax+50',
-      bottom2: 'dataMin+50',
-    }));
+    // reset zoom
+    this.setState(() => initialState);
+
+    // TODO: use callback to tell parent of update
+    // xlo, xhi
   }
 
   render() {
     const {
       data,
-      barIndex,
+      // barIndex,
       left,
       right,
       refAreaLeft,
       refAreaRight,
-      top,
-      bottom,
-      top2,
-      bottom2,
+      yDomain,
     } = this.state;
 
     return (
@@ -145,7 +128,7 @@ export default class LineChart extends PureComponent {
             className="btn update"
             onClick={this.zoomOut.bind(this)}
           >
-            Zoom Out
+            Reset Zoom
           </button>
 
           <ResponsiveContainer width="100%" height={400}>
@@ -169,33 +152,32 @@ export default class LineChart extends PureComponent {
                 dataKey="name"
                 domain={[left, right]}
                 type="number"
+                // TODO: replace "year" with key name prop
+                label={{
+                  value: 'year',
+                  // angle: -90,
+                  position: 'bottom',
+                }}
               />
               <YAxis
                 allowDataOverflow
-                domain={[bottom, top]}
+                domain={yDomain}
                 type="number"
                 yAxisId="1"
-              />
-              <YAxis
-                orientation="right"
-                allowDataOverflow
-                domain={[bottom2, top2]}
-                type="number"
-                yAxisId="2"
+                // TODO: replace "cost" with key name prop
+                label={{
+                  value: 'cost',
+                  angle: -90,
+                  // position: 'insideLeft',
+                }}
               />
               <Tooltip />
               <Line
                 yAxisId="1"
                 type="natural"
+                // TODO: replace "cost" with key name prop
                 dataKey="cost"
                 stroke="#8884d8"
-                animationDuration={300}
-              />
-              <Line
-                yAxisId="2"
-                type="natural"
-                dataKey="impression"
-                stroke="#82ca9d"
                 animationDuration={300}
               />
 
