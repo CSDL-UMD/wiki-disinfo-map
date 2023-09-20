@@ -53,16 +53,16 @@ function App() {
               <Table data={data}/>
             </Grid>
 
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={6} lg={3}>
               <FrequencyChart column="Start Year" />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={6} lg={3}>
               <PieChart column="Country" />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={6} lg={3}>
               <PieChart column="Subcontinent" />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={6} lg={3}>
               <PieChart column="Project" />
             </Grid>
           </Grid>
