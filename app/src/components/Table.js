@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { Paper } from '@mui/material';
 import { DataGrid } from '@mui/x-data-grid';
 
@@ -52,7 +52,7 @@ const Table = (props) => {
   useEffect(() => {
     // Update the document title using the browser API
     setCurData(transformData(props.data))
-  }, [curData]);
+  }, [props.data]);
 
   return (
     <Paper>
