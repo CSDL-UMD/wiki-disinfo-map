@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Paper } from '@mui/material';
 import { DataGrid } from '@mui/x-data-grid';
 
-const data = require('../data/data.json');
-
 const Table = (props) => {
   const [curData, setCurData] = useState([]);
   
@@ -23,8 +21,6 @@ const Table = (props) => {
     
     // NOTE: for the purposes of the table component, the rows have to be associated with an ID
     for (let rowNum = 0; rowNum < data.length; rowNum++) {
-      const row = data[rowNum];
-
       const translations = {
         'Project': 'id1',
         'Description': 'id2', 
@@ -65,7 +61,6 @@ const Table = (props) => {
           },
         }}
         pageSizeOptions={[5, 10]}
-        checkboxSelection
       />
       <p>ProjectDescription</p>
     </Paper>
