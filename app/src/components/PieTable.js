@@ -73,6 +73,9 @@ export default class PieTable extends PureComponent {
 
   onSectionClick = (_, index) => {
     // event handling for filtering data here
+    // this.setState({
+      
+    // });
   }
 
   render() {
