@@ -1,4 +1,4 @@
-import React, {PureComponent} from 'react';
+import React, {PureComponent, useEffect} from 'react';
 import { PieChart, Pie, Sector, ResponsiveContainer } from 'recharts';
 
 
@@ -9,9 +9,10 @@ const data = [
   { name: 'Group D', value: 200 },
 ];
 
+
 const renderActiveShape = (props) => {
   const RADIAN = Math.PI / 180;
-  const { cx, cy, midAngle, innerRadius, outerRadius, startAngle, endAngle, fill, payload, percent, value } = props;
+  const { cx, cy, midAngle, innerRadius, outerRadius, startAngle, endAngle, fill, payload} = props;
   const sin = Math.sin(-RADIAN * midAngle);
   const cos = Math.cos(-RADIAN * midAngle);
   const sx = cx + (outerRadius + 10) * cos;
@@ -24,7 +25,7 @@ const renderActiveShape = (props) => {
 
   return (
     <g>
-      <text x={cx} y={cy} dy={8} textAnchor="middle" fill={fill}>
+      <text x={cx} y={cy} dy={8} textAnchor="middle" fill={"#0ea5e9"}>
         {payload.name}
       </text>
       <Sector
@@ -34,7 +35,7 @@ const renderActiveShape = (props) => {
         outerRadius={outerRadius}
         startAngle={startAngle}
         endAngle={endAngle}
-        fill={fill}
+        fill={"#0ea5e9"}
       />
       <Sector
         cx={cx}
@@ -43,7 +44,7 @@ const renderActiveShape = (props) => {
         endAngle={endAngle}
         innerRadius={outerRadius + 6}
         outerRadius={outerRadius + 10}
-        fill={fill}
+        fill={"#0ea5e9"}
       />
     </g>
   );
@@ -61,22 +62,47 @@ const renderActiveShape = (props) => {
 export default class PieTable extends PureComponent {
   // static demoUrl = 'https://codesandbox.io/s/pie-chart-with-customized-active-shape-y93si';
 
-  state = {
-    activeIndex: 0,
-  };
+  constructor(props) {
+    super(props);
+    this.initialState = {
+      activeIndex: 0,
+      clicks: 0
+    }
+
+    this.state = this.initialState
+  }
 
   onPieEnter = (_, index) => {
-    this.setState({
-      activeIndex: index,
-    });
+    // console.log(this.state.clicked)
+    if (this.state.clicks == 0) {
+      this.setState({
+        activeIndex: index,
+      });
+    }
   };
 
-  onSectionClick = (_, index) => {
-    // event handling for filtering data here
-    // this.setState({
-      
-    // });
+  useEffect = ((_, index) => {
+    // make call to App filter function here
+    console.log("hit")
+    // visually highlight the selected section
+    
+  }, []);
+
+  onPieClick = (_, index) => {
+    // useEffect(index)
+    this.state.clicks = this.state.clicks + 1
+    this.setState({
+      activeIndex: index,
+    })
   }
+
+  // onSectionClick = (index) => {
+  //   // event handling for filtering data here
+  //   // this.setState({
+      
+  //   // });
+  //   useEffect(index)
+  //   }
 
   render() {
     return (
@@ -84,19 +110,20 @@ export default class PieTable extends PureComponent {
         <PieChart width={400} height={400}>
           <Pie
             activeIndex={this.state.activeIndex}
+            clicks={this.state.clicks}
             activeShape={renderActiveShape}
             data={data}
             cx="50%"
             cy="50%"
             innerRadius={45}
             outerRadius={80}
-            fill="#0ea5e9"
+            fill="#0c4a6e"
             dataKey="value"
             onMouseEnter={this.onPieEnter}
-            onMouseDown={this.onSectionClick}
+            onMouseDown={this.onPieClick}
           />
         </PieChart>
       </ResponsiveContainer>
     );
-  }
+  };
 }
