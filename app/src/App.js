@@ -50,11 +50,11 @@ function App() {
 
             <Grid item xs={12}>
               {/* Data table */}
-              <Table data={data}/>
+              <Table data={data} />
             </Grid>
 
             <Grid item xs={12} sm={6} lg={3}>
-              <FrequencyChart column="Start Year" />
+              <FrequencyChart column="Year" data={data} />
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>
               <PieChart column="Country" />
