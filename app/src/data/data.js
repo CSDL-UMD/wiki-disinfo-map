@@ -15,28 +15,6 @@ async function retrieve_data() {
                 ltrim: true,
             })
         ).on("data", (row) => {
-            // NOTE: for the purposes of the table component, the rows have to be associated with an ID
-            const translations = {
-              'Project': 'id1',
-              'Description': 'id2', 
-              'Languages': 'id3',
-              'Country': 'id4',
-              'Region': 'id5',
-              'Year': 'id6',
-              'Group': 'id7',
-            }
-
-            for (key in translations) {
-              // get the translations (ex. id6)
-              let id = translations[key];
-
-              // assign the row value for the key that is associated with that ID to a new key
-              row[id] = row[key];
-
-              // delete the duplicate key under the non-ID name
-              delete row[key]
-            }
-
             // pre-process data directly when scanning each row
             delete row['KeyDisinfo'];
             delete row['Country code'];

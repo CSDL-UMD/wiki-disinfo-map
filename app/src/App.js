@@ -11,6 +11,7 @@ import {
   ProjectDescription,
   Table,
 } from './components';
+const data = require('./data/data.json');
 
 const darkTheme = createTheme({
   palette: {
@@ -49,7 +50,7 @@ function App() {
 
             <Grid item xs={12}>
               {/* Data table */}
-              <Table />
+              <Table data={data}/>
             </Grid>
 
             <Grid item xs={12} sm={6} lg={3}>
