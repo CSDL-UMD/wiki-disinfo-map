@@ -1,8 +1,8 @@
 import Filter from './Filter';
-import LineChart from './LineChart';
+import FrequencyChart from './FrequencyChart';
 import Map from './Map';
 import PieChart from './PieChart';
 import ProjectDescription from './ProjectDescription';
 import Table from './Table';
 
-export { Filter, LineChart, Map, PieChart, ProjectDescription, Table };
+export { Filter, FrequencyChart, Map, PieChart, ProjectDescription, Table };
