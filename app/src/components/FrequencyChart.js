@@ -64,9 +64,8 @@ export default class FrequencyChart extends Component {
   constructor(props) {
     super(props);
 
-    this.initialData = getFrequencies(props.data, props.column);
     this.initialState = {
-      data: this.initialData,
+      data: getFrequencies(props.data, props.column),
       left: 'dataMin',
       right: 'dataMax',
       refAreaLeft: '',
@@ -74,19 +73,20 @@ export default class FrequencyChart extends Component {
       // specifies both top and bottom
       yDomain: yDomain,
       animation: true,
+      xKey: props.column,
+      yKey: 'count',
     };
     // initialize state
     this.state = this.initialState;
-    this.state['xKey'] = props.column;
-    this.state['yKey'] = 'count';
   }
 
   getAxisYDomain = (from, to, xRef, ref) => {
     // get from and to indices
-    from = getKVIndex(this.initialData, xRef, from);
-    to = getKVIndex(this.initialData, xRef, to);
+    const { data } = this.state;
+    from = getKVIndex(data, xRef, from);
+    to = getKVIndex(data, xRef, to);
 
-    const refData = this.initialData.slice(from, to + 1);
+    const refData = data.slice(from, to + 1);
     let [bottom, top] = [refData[0][ref], refData[0][ref]];
     refData.forEach((d) => {
       if (d[ref] > top) top = d[ref];
@@ -95,6 +95,23 @@ export default class FrequencyChart extends Component {
 
     return yDomain([bottom, top]);
   };
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.data !== this.props.data) {
+      // component data updated
+      this.setState(() => ({
+        left: 'dataMin',
+        right: 'dataMax',
+        refAreaLeft: '',
+        refAreaRight: '',
+        // specifies both top and bottom
+        yDomain: yDomain,
+      }));
+      this.setState(() => ({
+        data: getFrequencies(this.props.data, this.props.column),
+      }));
+    }
+  }
 
   zoom() {
     let { refAreaLeft, refAreaRight } = this.state;
@@ -115,7 +132,6 @@ export default class FrequencyChart extends Component {
     // yAxis domain
     const yDomain = this.getAxisYDomain(refAreaLeft, refAreaRight, xKey, yKey);
 
-    // TODO:
     this.setState(() => ({
       refAreaLeft: '',
       refAreaRight: '',
@@ -124,14 +140,14 @@ export default class FrequencyChart extends Component {
       right: refAreaRight,
       yDomain: yDomain,
     }));
+
+    // dispatch update
+    this.props.rangeFilterData(xKey, refAreaLeft, refAreaRight);
   }
 
   zoomOut() {
     // reset zoom
-    this.setState(() => this.initialState);
-
-    // TODO: use callback to tell parent of update
-    // xlo, xhi
+    this.props.resetData();
   }
 
   render() {

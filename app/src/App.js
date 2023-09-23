@@ -1,4 +1,5 @@
 import './App.css';
+import { useState } from 'react';
 // mui
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Container, CssBaseline, Grid } from '@mui/material';
@@ -11,7 +12,7 @@ import {
   ProjectDescription,
   Table,
 } from './components';
-const data = require('./data/data.json');
+const initialData = require('./data/data.json');
 
 const darkTheme = createTheme({
   palette: {
@@ -20,6 +21,21 @@ const darkTheme = createTheme({
 });
 
 function App() {
+  const [currData, setCurrData] = useState(initialData.slice());
+
+  const resetData = () => {
+    setCurrData(initialData);
+  };
+
+  const rangeFilterData = (column, lo, hi) => {
+    setCurrData(
+      currData.filter((item) => {
+        const val = Number(item[column]);
+        return lo <= val && val <= hi;
+      })
+    );
+  };
+
   return (
     <div className="App">
       <ThemeProvider theme={darkTheme}>
@@ -50,11 +66,16 @@ function App() {
 
             <Grid item xs={12}>
               {/* Data table */}
-              <Table data={data} />
+              <Table data={currData} />
             </Grid>
 
             <Grid item xs={12} sm={6} lg={3}>
-              <FrequencyChart column="Year" data={data} />
+              <FrequencyChart
+                column="Year"
+                data={currData}
+                rangeFilterData={rangeFilterData}
+                resetData={resetData}
+              />
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>
               <PieChart column="Country" />
