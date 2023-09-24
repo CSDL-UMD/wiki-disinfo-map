@@ -5,6 +5,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Container, CssBaseline, Grid } from '@mui/material';
 // component imports
 import {
+  AppBar,
   Filter,
   FrequencyChart,
   Map,
@@ -40,7 +41,9 @@ function App() {
     <div className="App">
       <ThemeProvider theme={darkTheme}>
         <CssBaseline />
+
         <Container maxWidth={false}>
+          <AppBar resetData={resetData} />
           <Grid container spacing={2}>
             <Grid item xs={12} md={6}>
               {/* MAP */}
@@ -74,7 +77,6 @@ function App() {
                 column="Year"
                 data={currData}
                 rangeFilterData={rangeFilterData}
-                resetData={resetData}
               />
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>

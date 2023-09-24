@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Paper } from '@mui/material';
+import { Paper } from '@mui/material';
 import {
   LineChart,
   Line,
@@ -145,10 +145,10 @@ export default class FrequencyChart extends Component {
     this.props.rangeFilterData(xKey, refAreaLeft, refAreaRight);
   }
 
-  zoomOut() {
-    // reset zoom
-    this.props.resetData();
-  }
+  // zoomOut() {
+  //   // reset zoom
+  //   this.props.resetData();
+  // }
 
   render() {
     const {
@@ -226,21 +226,6 @@ export default class FrequencyChart extends Component {
               ) : null}
             </LineChart>
           </ResponsiveContainer>
-          <div
-            className="button-container"
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-            }}
-          >
-            <Button
-              className="btn update"
-              variant="contained"
-              onClick={this.zoomOut.bind(this)}
-            >
-              Reset Zoom
-            </Button>
-          </div>
         </div>
       </Paper>
     );
