@@ -1,6 +1,6 @@
 import Typography from '@mui/material/Typography';
 
-import { AppBar, Button, Box, Toolbar } from '@mui/material';
+import { AppBar, Button, Toolbar } from '@mui/material';
 
 export default function ButtonAppBar({ resetData }) {
   return (
