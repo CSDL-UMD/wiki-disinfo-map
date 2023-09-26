@@ -1,16 +1,19 @@
 import './App.css';
+import { useState } from 'react';
 // mui
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Container, CssBaseline, Grid } from '@mui/material';
 // component imports
 import {
+  AppBar,
   Filter,
   FrequencyChart,
   Map,
-  PieTable,
+  PieChart,
   ProjectDescription,
   Table,
 } from './components';
+const initialData = require('./data/data.json');
 
 const darkTheme = createTheme({
   palette: {
@@ -19,11 +22,28 @@ const darkTheme = createTheme({
 });
 
 function App() {
+  const [currData, setCurrData] = useState(initialData.slice());
+
+  const resetData = () => {
+    setCurrData(initialData);
+  };
+
+  const rangeFilterData = (column, lo, hi) => {
+    setCurrData(
+      currData.filter((item) => {
+        const val = Number(item[column]);
+        return lo <= val && val <= hi;
+      })
+    );
+  };
+
   return (
     <div className="App">
       <ThemeProvider theme={darkTheme}>
         <CssBaseline />
+
         <Container maxWidth={false}>
+          <AppBar resetData={resetData} />
           <Grid container spacing={2}>
             <Grid item xs={12} md={6}>
               {/* MAP */}
@@ -49,20 +69,24 @@ function App() {
 
             <Grid item xs={12}>
               {/* Data table */}
-              <Table />
+              <Table data={currData} />
             </Grid>
 
-            <Grid item xs={3}>
-              <FrequencyChart column="Start Year" />
+            <Grid item xs={12} sm={6} lg={3}>
+              <FrequencyChart
+                column="Year"
+                data={currData}
+                rangeFilterData={rangeFilterData}
+              />
             </Grid>
-            <Grid item xs={3}>
-              <PieTable column="Country" />
+            <Grid item xs={12} sm={6} lg={3}>
+              <PieChart column="Country" />
             </Grid>
-            <Grid item xs={3}>
-              <PieTable column="Subcontinent" />
+            <Grid item xs={12} sm={6} lg={3}>
+              <PieChart column="Subcontinent" />
             </Grid>
-            <Grid item xs={3}>
-              <PieTable column="Project" />
+            <Grid item xs={12} sm={6} lg={3}>
+              <PieChart column="Project" />
             </Grid>
           </Grid>
         </Container>
