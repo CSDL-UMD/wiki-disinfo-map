@@ -81,18 +81,30 @@ export default class PieTable extends PureComponent {
     }
   };
 
-  useEffect = ((_, index) => {
-    // make call to App filter function here
-    console.log("hit")
-    // visually highlight the selected section
+  // useEffect = ((_, index) => {
+  //   // make call to App filter function here
+  //   console.log("hit")
+  //   // visually highlight the selected section
     
-  }, []);
+  // }, []);
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.data !== this.props.data) {
+      // component data updated
+      this.setState(() => ({
+        data: this.props.data,
+        activeIndex: 0,
+        clicks: 0
+      }));
+    }
+  }
 
   onPieClick = (_, index) => {
     // useEffect(index)
-    this.state.clicks = this.state.clicks + 1
     this.setState({
       activeIndex: index,
+      clicks: this.clicks + 1
+      // TODO: call filter function here
     })
   }
 
