@@ -1,4 +1,5 @@
 import React, { PureComponent, useEffect } from 'react';
+import './PieChart.css';
 import {
   PieChart as RechartsPieChart,
   Pie,
@@ -130,6 +131,7 @@ export default class PieChart extends PureComponent {
   //   }
 
   render() {
+    const pieStyle = { outline: 'none' };
     return (
       <ResponsiveContainer width="100%" height={250}>
         <RechartsPieChart width={400} height={400}>
@@ -144,8 +146,10 @@ export default class PieChart extends PureComponent {
             outerRadius={80}
             fill="#0c4a6e"
             dataKey="value"
-            onMouseEnter={this.onPieEnter}
+            // TODO: Remove later. This changes active pie slice on hover
+            // onMouseEnter={this.onPieEnter}
             onMouseDown={this.onPieClick}
+            className="pie-chart"
           />
         </RechartsPieChart>
       </ResponsiveContainer>
