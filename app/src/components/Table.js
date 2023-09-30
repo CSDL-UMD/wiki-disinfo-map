@@ -61,6 +61,7 @@ const Table = (props) => {
           },
         }}
         pageSizeOptions={[5, 10]}
+        disableColumnFilter
       />
     </Paper>
   );
