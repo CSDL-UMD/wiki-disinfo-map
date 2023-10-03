@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Paper } from '@mui/material';
+import { Paper, Typography } from '@mui/material';
 import {
   LineChart,
   Line,
@@ -145,11 +145,6 @@ export default class FrequencyChart extends Component {
     this.props.rangeFilterData(xKey, refAreaLeft, refAreaRight);
   }
 
-  // zoomOut() {
-  //   // reset zoom
-  //   this.props.resetData();
-  // }
-
   render() {
     const {
       data,
@@ -169,10 +164,13 @@ export default class FrequencyChart extends Component {
           className="highlight-bar-charts"
           style={{ userSelect: 'none', width: '100%' }}
         >
+          <Typography variant="h6" gutterBottom align="center">
+            Frequency of {xKey}
+          </Typography>
           <ResponsiveContainer width="100%" height={300}>
             <LineChart
               width={800}
-              height={400}
+              height="100%"
               data={data}
               onMouseDown={(e) =>
                 this.setState({ refAreaLeft: e?.activeLabel || '' })
@@ -190,11 +188,6 @@ export default class FrequencyChart extends Component {
                 dataKey={xKey}
                 domain={[left, right]}
                 type="number"
-                label={{
-                  value: xKey,
-                  position: 'insideBottom',
-                  offset: '-10',
-                }}
               />
               <YAxis
                 allowDataOverflow
