@@ -80,13 +80,19 @@ function App() {
               />
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>
-              <PieChart column="Country" />
+              <PieChart 
+                column="Country"
+                data={currData} />
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>
-              <PieChart column="Subcontinent" />
+              <PieChart
+                column="Region"
+                data={currData}/>
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>
-              <PieChart column="Project" />
+              <PieChart
+                column="Group"
+                data={currData} />
             </Grid>
           </Grid>
         </Container>
