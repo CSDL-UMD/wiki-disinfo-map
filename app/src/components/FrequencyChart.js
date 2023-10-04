@@ -22,14 +22,7 @@ const yDomain = ([dataMin, dataMax]) => [
 
 // transform csv data to get frequencies of
 const getFrequencies = (data, column) => {
-  // const values = data.map((x) => Number(x[column]));
-  // TODO: fix data to only be numbers
-  const values = [];
-  for (const el of data) {
-    if (!isNaN(Number(el[column]))) {
-      values.push(Number(el[column]));
-    }
-  }
+  const values = data.map((x) => Number(x[column])).filter((x) => !isNaN(x));
 
   // get counts
   const counts = {};
