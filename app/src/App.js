@@ -34,10 +34,10 @@ function App() {
   // Add a filter to the data and returns the id of the filter
   // A filter must be a function which takes only a single parameter (data) and
   // returns any subset of the data
-  const addFilter = (f) => {
+  const addFilter = (filterFun) => {
     // create filter id
     const id = filterIdCounter;
-    setFilters([...filters, { filter: f, id }]);
+    setFilters((prevFilters) => [...prevFilters, { filterFun, id }]);
 
     // increment counter
     setFilterIdCounter(id + 1);
@@ -45,16 +45,23 @@ function App() {
   };
 
   // remove a filter with the given filter id
+  // for convenience, filter id's will never be negative, so a negative filter id can be used as a default value.
   const removeFilter = (fId) => {
-    setFilters(filters.filter(({ filter: fun, id }) => id !== fId));
+    if (fId >= 0) {
+      setFilters((prevFilters) =>
+        prevFilters.filter(({ filterFun, id }) => {
+          return id !== fId;
+        })
+      );
+    }
   };
 
   // When filters added or removed, rerun all filters on initialData
   useEffect(() => {
     // apply each filter to initialData
     let data = initialData;
-    for (const { filter } of filters) {
-      data = filter(data);
+    for (const { filterFun } of filters) {
+      data = filterFun(data);
     }
 
     // set currData
@@ -70,7 +77,7 @@ function App() {
           <AppBar resetData={resetData} />
           <Grid container spacing={2}>
             <Grid item xs={12} md={6}>
-              {/* MAP */}
+              {/* Map */}
               <Map />
             </Grid>
 
@@ -100,7 +107,8 @@ function App() {
               <FrequencyChart
                 column="Year"
                 data={currData}
-                rangeFilterData={rangeFilterData}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
               />
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>
