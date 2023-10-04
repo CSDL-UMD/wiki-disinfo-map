@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Typography } from '@mui/material';
 import './PieChart.css';
 import {
   PieChart as RechartsPieChart,
@@ -57,9 +58,6 @@ const renderActiveShape = (props) => {
       <text x={cx} y={cy+100} dy={8} textAnchor="middle" fill={'#0ea5e9'}>
         {payload.name}
       </text>
-      <text x={cx} y={cy} dy={8} textAnchor="middle" fill={'#0369a1'}>
-        {props.columnName}
-      </text>
       <Sector
         cx={cx}
         cy={cy}
@@ -97,7 +95,7 @@ export default class PieChart extends Component {
   constructor(props) {
     super(props);
     this.initialState = {
-      activeIndex: 0,
+      activeIndex: -1,
       clicks: 0,
     };
 
@@ -120,12 +118,13 @@ export default class PieChart extends Component {
 
   // }, []);
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps, prevState) { 
+    // will be a problem in filter combination, should not be based on data being different
     if (prevProps.data !== this.props.data) {
       // component data updated
       this.setState(() => ({
         data: this.props.data, // COME HERE FOR FILTERING
-        activeIndex: 0,
+        activeIndex: -1,
         clicks: 0,
       }));
     }
@@ -154,6 +153,10 @@ export default class PieChart extends Component {
     // const pieStyle = { outline: 'none' };
     // columnName={column};
     return (
+      <>
+        <Typography variant="h6" gutterBottom align="center">
+          {this.props.column}
+      </Typography>
       <ResponsiveContainer width="100%" height={250}>
         <RechartsPieChart width={400} height={400}>
           <Pie
@@ -171,9 +174,10 @@ export default class PieChart extends Component {
             // onMouseEnter={this.onPieEnter}
             onMouseDown={this.onPieClick}
             className="pie-chart"
-          />
+            />
         </RechartsPieChart>
       </ResponsiveContainer>
+            </>
     );
   }
 }
