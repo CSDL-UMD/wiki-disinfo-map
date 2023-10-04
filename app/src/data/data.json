@@ -4,9 +4,12 @@
       "Description": "Disinformation on Wikimedia projects often appears in areas in which there are content voids. For this reason, working on filling knowledge gaps is one way Wikimedia can work to increase trustworthy information on the projects. The Wikimedia Foundation has launched the Open the Knowledge Journalism Awards, which recognizes the essential role journalists play in creating well-researched articles that volunteer editors can use as source materials to develop content on Wikipedia and other Wikimedia projects. The award is focused on articles by African journalists increasing knowledge about the African continent.[10]",
       "Region": "Middle East & North Africa / Sub-Saharan Africa",
       "Group": "Wikimedia Foundation",
-      "Year": "2023",
-      "Country": "NA",
-      "Languages": "English",
+      "Year": 2023,
+      "Year (Original)": "2023",
+      "Country": [],
+      "Languages": [
+         "English"
+      ],
       "id": "id1"
    },
    {
@@ -14,9 +17,60 @@
       "Description": "Twice per year, #1Lib1Ref—an abbreviation for “one librarian, one reference”—calls on librarians around the world, and anyone who has a passion for free knowledge, to add missing references to articles on Wikipedia. By increasing the use of reliable sources, the project improves the accuracy of the information.[1]",
       "Region": "Global",
       "Group": "Wikimedia Foundation",
-      "Year": "2016 (according to Talk page)",
-      "Country": "Multiple",
-      "Languages": "Indonesian, Malay, Bikol, German, English, Esperanto, Dutch, Sundanese, Vietnamese, Turkish, Catalan, Danish, Spanish, Basque, French, Galician, Italian, Latvian, Hungarian, Norwegian, Polish, Portuguese, Brazilian Portuguese, Romanian, Slovenian, Suomi, Swedish, Czech, Greek, Belarusian, Macedonian, Russian, Serbian, Ukrainian, Hebrew, Urdu, Arabic, Sindhi, Farsi, Hindi, Bangla, Tamil, Malayalam, Thai, Burmese, Chinese, and Japanese",
+      "Year": 2016,
+      "Year (Original)": "2016 (according to Talk page)",
+      "Country": [
+         "Multiple"
+      ],
+      "Languages": [
+         "Indonesian",
+         " Malay",
+         " Bikol",
+         " German",
+         " English",
+         " Esperanto",
+         " Dutch",
+         " Sundanese",
+         " Vietnamese",
+         " Turkish",
+         " Catalan",
+         " Danish",
+         " Spanish",
+         " Basque",
+         " French",
+         " Galician",
+         " Italian",
+         " Latvian",
+         " Hungarian",
+         " Norwegian",
+         " Polish",
+         " Portuguese",
+         " Brazilian Portuguese",
+         " Romanian",
+         " Slovenian",
+         " Suomi",
+         " Swedish",
+         " Czech",
+         " Greek",
+         " Belarusian",
+         " Macedonian",
+         " Russian",
+         " Serbian",
+         " Ukrainian",
+         " Hebrew",
+         " Urdu",
+         " Arabic",
+         " Sindhi",
+         " Farsi",
+         " Hindi",
+         " Bangla",
+         " Tamil",
+         " Malayalam",
+         " Thai",
+         " Burmese",
+         " Chinese",
+         " and Japanese"
+      ],
       "id": "id2"
    },
    {
@@ -24,9 +78,12 @@
       "Description": "The Wikimedia Foundation’s Research team published a set of white papers that outline plans and priorities for the next 5 years. These white papers, which were developed collaboratively by all members of the team, reflect our thinking about the kind of research necessary to further the 2030 Wikimedia Strategic Direction of Knowledge Equity and Knowledge as a Service.[6]",
       "Region": "Global",
       "Group": "Wikimedia Foundation",
-      "Year": "2019-",
-      "Country": "NA",
-      "Languages": "English",
+      "Year": 2019,
+      "Year (Original)": "2019-",
+      "Country": [],
+      "Languages": [
+         "English"
+      ],
       "id": "id3"
    },
    {
@@ -34,9 +91,10 @@
       "Description": "Models to detect revisions that might be reverted, independently if they were made in good faith or with the intention of creating damage, to help patrollers quickly identify potential problems, prioritize the work, and revert damaging edits when needed.",
       "Region": "Global",
       "Group": "Wikimedia Foundation",
-      "Year": "2022",
-      "Country": "NA",
-      "Languages": "NA",
+      "Year": 2022,
+      "Year (Original)": "2022",
+      "Country": [],
+      "Languages": [],
       "id": "id4"
    },
    {
@@ -44,9 +102,12 @@
       "Description": "ORES is a web service and API that provides machine learning as a service for Wikimedia projects maintained by the Machine Learning team. The system is designed to help automate critical wiki-work—for example, vandalism detection and removal.[11]",
       "Region": "Global",
       "Group": "Wikimedia Foundation",
-      "Year": "2016",
-      "Country": "NA",
-      "Languages": "Multiple",
+      "Year": 2016,
+      "Year (Original)": "2016",
+      "Country": [],
+      "Languages": [
+         "Multiple"
+      ],
       "id": "id5"
    },
    {
@@ -54,9 +115,24 @@
       "Description": "Reading Wikipedia in the Classroom is Wikimedia Foundation’s teacher training program. By leveraging Wikipedia as a pedagogical tool, it helps educators and students develop vital media and information literacy skills for the 21st century.[13]",
       "Region": "Global",
       "Group": "Wikimedia Foundation",
-      "Year": "2021",
-      "Country": "NA",
-      "Languages": "English, Arabic, French, Spanish, Tagalog, Adapted English (Nigeria), Yoruba, Indonesian, Aymara, Guaranì, Quechua, Catalan, Dagbani",
+      "Year": 2021,
+      "Year (Original)": "2021",
+      "Country": [],
+      "Languages": [
+         "English",
+         " Arabic",
+         " French",
+         " Spanish",
+         " Tagalog",
+         " Adapted English (Nigeria)",
+         " Yoruba",
+         " Indonesian",
+         " Aymara",
+         " Guaranì",
+         " Quechua",
+         " Catalan",
+         " Dagbani"
+      ],
       "id": "id6"
    },
    {
@@ -64,9 +140,12 @@
       "Description": "This is a noticeboard in which the community can discuss reliable sources. Guidelines for the use of reliable sources on En.WP can be found at Wikipedia:Reliable sources and Wikipedia:Reliable sources/Perennial sources.",
       "Region": "Global",
       "Group": "NA",
-      "Year": "2007",
-      "Country": "NA",
-      "Languages": "English",
+      "Year": 2007,
+      "Year (Original)": "2007",
+      "Country": [],
+      "Languages": [
+         "English"
+      ],
       "id": "id7"
    },
    {
@@ -74,9 +153,19 @@
       "Description": "WikiProject Climate change is a collaborative effort to improve Wikipedia articles related to climate change. The WikiProject covers topics related to the causes of climatic change, the effects of climate change, and how society responds in terms of adaptation, mitigation and social and political change.[22]",
       "Region": "Global",
       "Group": "NA",
-      "Year": "2010",
-      "Country": "NA",
-      "Languages": "English, German, Spanish, French, Polish, Swedish, Vietnamese, Czech",
+      "Year": 2010,
+      "Year (Original)": "2010",
+      "Country": [],
+      "Languages": [
+         "English",
+         " German",
+         " Spanish",
+         " French",
+         " Polish",
+         " Swedish",
+         " Vietnamese",
+         " Czech"
+      ],
       "id": "id8"
    },
    {
@@ -84,9 +173,36 @@
       "Description": "This is the WikiProject related to Wikipedia coverage of COVID-19. It consolidates and coordinates community efforts to create trustworthy information on the pandemic. It was developed in part also through a partnership with WHO.",
       "Region": "Global",
       "Group": "NA",
-      "Year": "2020",
-      "Country": "United States",
-      "Languages": "English, Urdu, Chinese, Korean, Russian, Spanish, Italian, Czech, Arabic, Shindi, Greek, Malay, Croatian, Dutch, Slovak, Finnish, Turkish, Marathi, Bangla, Punjabi, Telugu, Malayalam, Thai",
+      "Year": 2020,
+      "Year (Original)": "2020",
+      "Country": [
+         "United States"
+      ],
+      "Languages": [
+         "English",
+         " Urdu",
+         " Chinese",
+         " Korean",
+         " Russian",
+         " Spanish",
+         " Italian",
+         " Czech",
+         " Arabic",
+         " Shindi",
+         " Greek",
+         " Malay",
+         " Croatian",
+         " Dutch",
+         " Slovak",
+         " Finnish",
+         " Turkish",
+         " Marathi",
+         " Bangla",
+         " Punjabi",
+         " Telugu",
+         " Malayalam",
+         " Thai"
+      ],
       "id": "id9"
    },
    {
@@ -94,9 +210,14 @@
       "Description": "This WikiCred project trains media professionals how to use Wikipedia, Wikidata, and WikiCommons.[18]",
       "Region": "Sub-Saharan Africa",
       "Group": "WikiCred, Code for Africa",
-      "Year": "2023",
-      "Country": "Nigeria",
-      "Languages": "English",
+      "Year": 2023,
+      "Year (Original)": "2023",
+      "Country": [
+         "Nigeria"
+      ],
+      "Languages": [
+         "English"
+      ],
       "id": "id10"
    },
    {
@@ -104,9 +225,14 @@
       "Description": "This video was created as part of a campaign to empower the senior population to avoid disinformation when using the internet. Participants were volunteer attendees of the workshop \"Senior people and digital environments: tools for integration\", organized by Wikimedia Chile, Google Chile, and the Quilicura municipality in Santiago, who shared their own experiences on how they use online information.",
       "Region": "Latin America & Caribbean",
       "Group": "Wikimedia Chile",
-      "Year": "2022",
-      "Country": "Chile",
-      "Languages": "Spanish",
+      "Year": 2022,
+      "Year (Original)": "2022",
+      "Country": [
+         "Chile"
+      ],
+      "Languages": [
+         "Spanish"
+      ],
       "id": "id11"
    },
    {
@@ -114,9 +240,14 @@
       "Description": "This project is a research focused on improving content on those who were killed or disappeared during the military dictatorship in Brazil (1964-1985). In the context in which the federal government was shutting down websites with official content on human rights violations during the military regime in Brazil, Wiki Movimento Brasil and partners focused on bringing all this information into Wikidata and Wikipedia.",
       "Region": "Latin America & Caribbean",
       "Group": "Wiki Movimento Brasil",
-      "Year": "2021",
-      "Country": "Brazil",
-      "Languages": "Brazilian Portuguese",
+      "Year": 2021,
+      "Year (Original)": "2021",
+      "Country": [
+         "Brazil"
+      ],
+      "Languages": [
+         "Brazilian Portuguese"
+      ],
       "id": "id12"
    },
    {
@@ -124,9 +255,14 @@
       "Description": "This project relied on a partnership with a research lab, NeuroMat, and is a resource for young professionals to specialize in science journalism. Modules 3 and 6 are focused on how misinformation is spread in Brazil.",
       "Region": "Latin America & Caribbean",
       "Group": "Wiki Movimento Brasil",
-      "Year": "2017",
-      "Country": "Brazil",
-      "Languages": "Brazilian Portuguese",
+      "Year": 2017,
+      "Year (Original)": "2017",
+      "Country": [
+         "Brazil"
+      ],
+      "Languages": [
+         "Brazilian Portuguese"
+      ],
       "id": "id13"
    },
    {
@@ -134,9 +270,14 @@
       "Description": "The theme of the 2022 WikiCon Brazil was disinformation. This theme was developed through trainings, events, and presentations.",
       "Region": "Latin America & Caribbean",
       "Group": "Wiki Movimento Brasil",
-      "Year": "2022",
-      "Country": "Brazil",
-      "Languages": "Brazilian Portuguese",
+      "Year": 2022,
+      "Year (Original)": "2022",
+      "Country": [
+         "Brazil"
+      ],
+      "Languages": [
+         "Brazilian Portuguese"
+      ],
       "id": "id14"
    },
    {
@@ -144,9 +285,14 @@
       "Description": "This was a training on how to share resources and capabilities for the integration of Wikidata with other Wikimedia projects, especially Wikipedia.[17]",
       "Region": "Latin America & Caribbean",
       "Group": "Wiki Movimento Brasil",
-      "Year": "2019",
-      "Country": "Brazil",
-      "Languages": "Brazilian Portuguese",
+      "Year": 2019,
+      "Year (Original)": "2019",
+      "Country": [
+         "Brazil"
+      ],
+      "Languages": [
+         "Brazilian Portuguese"
+      ],
       "id": "id15"
    },
    {
@@ -154,9 +300,14 @@
       "Description": "This is a research paper on Wikipedia against \"rational ignorance\". João Alexandre Peschanski led this project as an educator before becoming Executive Director of Wiki Movement Brazil User Group (Grupo de Usuários Wiki Movimento Brasil), and it is framed around a specific behavioral dimension of misinformation in electoral politics. A summary is available on this Wikimedia blog post (with a link to a more substantial research paper), and it has evolved as a Wikidata-integrated system for improving content on elections in Brazil.",
       "Region": "Latin America & Caribbean",
       "Group": "Wiki Movimento Brasil",
-      "Year": "2016",
-      "Country": "Brazil",
-      "Languages": "Brazilian Portuguese",
+      "Year": 2016,
+      "Year (Original)": "2016",
+      "Country": [
+         "Brazil"
+      ],
+      "Languages": [
+         "Brazilian Portuguese"
+      ],
       "id": "id16"
    },
    {
@@ -164,9 +315,14 @@
       "Description": "This is a page created to centralize discussions related to the sources used in articles which lists sources editors should avoid using in the project, many of which have been associated with disinformation campaigns. It is similar to lists of unreliable sources that exist for other language Wikipedias.[20]",
       "Region": "Latin America & Caribbean",
       "Group": "Wiki Movimento Brasil",
-      "Year": "2022",
-      "Country": "Brazil",
-      "Languages": "Brazilian Portuguese",
+      "Year": 2022,
+      "Year (Original)": "2022",
+      "Country": [
+         "Brazil"
+      ],
+      "Languages": [
+         "Brazilian Portuguese"
+      ],
       "id": "id17"
    },
    {
@@ -174,9 +330,14 @@
       "Description": "Wikimedia Chile, Together with CIVIX, CIPER Chile Journalistic Research Center, and Fast Check organizes the CTRL-F program. A training program for students to teach them verification and media literacy techniques.",
       "Region": "Latin America & Caribbean",
       "Group": "Wikimedia Chile",
-      "Year": "2023",
-      "Country": "Chile",
-      "Languages": "Spanish",
+      "Year": 2023,
+      "Year (Original)": "2023",
+      "Country": [
+         "Chile"
+      ],
+      "Languages": [
+         "Spanish"
+      ],
       "id": "id18"
    },
    {
@@ -184,9 +345,16 @@
       "Description": "This is a report of the research project Reading Together: Reliability and Multilingual Global Communities on reliable sources and marginalized communities on Wikipedia.",
       "Region": "North America / Latin America & Caribbean",
       "Group": "Art+Feminism, WikiCred",
-      "Year": "2021",
-      "Country": "Canada, Peru, United States",
-      "Languages": "English",
+      "Year": 2021,
+      "Year (Original)": "2021",
+      "Country": [
+         "Canada",
+         " Peru",
+         " United States"
+      ],
+      "Languages": [
+         "English"
+      ],
       "id": "id19"
    },
    {
@@ -194,9 +362,12 @@
       "Description": "The Unreliable/Predatory Source Detector (UPSD), is a user script that identifies various unreliable and potentially unreliable sources.[15]",
       "Region": "North America",
       "Group": "NA",
-      "Year": "2020",
-      "Country": "NA",
-      "Languages": "English",
+      "Year": 2020,
+      "Year (Original)": "2020",
+      "Country": [],
+      "Languages": [
+         "English"
+      ],
       "id": "id20"
    },
    {
@@ -204,9 +375,14 @@
       "Description": "This page centralizes information about reliable sources for new page reviewers to use when they review new articles. It is intended as a supplement to the reliable sources noticeboard and List of Perennial Sources, to help page reviewers unfamiliar with a given subject assess notability and neutrality of an article.[9]",
       "Region": "North America",
       "Group": "National Science Foundation’s Convergence Accelerator, Hacks/Hackers, and the Paul G. Allen School of Computer Science & Engineering, University of Washington.For more information, please read footnote [1].",
-      "Year": "2021",
-      "Country": "United States",
-      "Languages": "English",
+      "Year": 2021,
+      "Year (Original)": "2021",
+      "Country": [
+         "United States"
+      ],
+      "Languages": [
+         "English"
+      ],
       "id": "id21"
    },
    {
@@ -214,9 +390,14 @@
       "Description": "Cite Unseen is a user script that adds categorical icons to Wikipedia citations, such as whether the citation counts as news, opinion, blog, state-run media, a published book, among others. These categorical icons provide readers and editors with a quick initial evaluation of citations at a glance. This helps guide users on the nature and reliability of sources, and to help identify sources that may potentially be problematic or should be used with caution.[3]",
       "Region": "North America",
       "Group": "NA",
-      "Year": "2019",
-      "Country": "United States",
-      "Languages": "English",
+      "Year": 2019,
+      "Year (Original)": "2019",
+      "Country": [
+         "United States"
+      ],
+      "Languages": [
+         "English"
+      ],
       "id": "id22"
    },
    {
@@ -224,9 +405,14 @@
       "Description": "This is a filter that detects predatory publishers and flags them for editors.",
       "Region": "North America",
       "Group": "NA",
-      "Year": "2017",
-      "Country": "United States",
-      "Languages": "English",
+      "Year": 2017,
+      "Year (Original)": "2017",
+      "Country": [
+         "United States"
+      ],
+      "Languages": [
+         "English"
+      ],
       "id": "id23"
    },
    {
@@ -234,9 +420,14 @@
       "Description": "DOIs are unique identifiers for academic articles. This bot checks those DOIs that are issued by Crossref and can show who is the person associated with the DOI.",
       "Region": "North America",
       "Group": "NA",
-      "Year": "2007",
-      "Country": "United States",
-      "Languages": "English",
+      "Year": 2007,
+      "Year (Original)": "2007",
+      "Country": [
+         "United States"
+      ],
+      "Languages": [
+         "English"
+      ],
       "id": "id24"
    },
    {
@@ -244,9 +435,36 @@
       "Description": "This task force project focuses on Wikipedia editing and writing to share simple, factual information on the coronavirus pandemic in New York City with the goal of explaining the seriousness of the pandemic.[23]",
       "Region": "North America",
       "Group": "Sure We Can",
-      "Year": "2021",
-      "Country": "United States",
-      "Languages": "English, Spanish, Chinese, Russian, Italian, Haitian Creole, Korean, French, Tagalog, Polish, Yiddish, Japanese, Hindi, Hebrew, Swahili, Malagasy, Yoruba, German, Portuguese, Arabic, Hungarian, Bengali, Greek",
+      "Year": 2021,
+      "Year (Original)": "2021",
+      "Country": [
+         "United States"
+      ],
+      "Languages": [
+         "English",
+         " Spanish",
+         " Chinese",
+         " Russian",
+         " Italian",
+         " Haitian Creole",
+         " Korean",
+         " French",
+         " Tagalog",
+         " Polish",
+         " Yiddish",
+         " Japanese",
+         " Hindi",
+         " Hebrew",
+         " Swahili",
+         " Malagasy",
+         " Yoruba",
+         " German",
+         " Portuguese",
+         " Arabic",
+         " Hungarian",
+         " Bengali",
+         " Greek"
+      ],
       "id": "id25"
    },
    {
@@ -254,9 +472,26 @@
       "Description": "Wikipedia SWASTHA is an innovative, collaborative platform uniting multilingual editors from various Wikipedia communities to exchange best practices and jointly edit healthcare pages. Collaborating with diverse government agencies, the United Nations, and the World Health Organization, SWASTHA focuses on enhancing healthcare awareness in local communities by providing accessible, multilingual health information on Wikipedia. Recognized by prominent media outlets for its impactful work, SWASTHA highlights the ethical dissemination of medical information in local languages to empower individuals with limited access to healthcare resources. We invite organizations to join our mission and harness the power of Wikipedia to create a lasting, positive change in global healthcare.",
       "Region": "East, Southeast Asia, & Pacific",
       "Group": "NA",
-      "Year": "2020",
-      "Country": "NA",
-      "Languages": "English, Urdu, Hindi, Bengali, Marathi, Telugu, Tamil, Gujarati, Kannada, Oddia, Malayalam, Punjabi, Bhojpuri, Maithili, and Nepali.",
+      "Year": 2020,
+      "Year (Original)": "2020",
+      "Country": [],
+      "Languages": [
+         "English",
+         " Urdu",
+         " Hindi",
+         " Bengali",
+         " Marathi",
+         " Telugu",
+         " Tamil",
+         " Gujarati",
+         " Kannada",
+         " Oddia",
+         " Malayalam",
+         " Punjabi",
+         " Bhojpuri",
+         " Maithili",
+         " and Nepali."
+      ],
       "id": "id26"
    },
    {
@@ -264,9 +499,14 @@
       "Description": "The Human Rights Violations Victims’ Memorial Commission (HRVVMC), is a government agency tasked with documenting the human rights violations that occurred during the dictator’s regime and to establish a museum and a roll of victims. WikiSocPH worked with HRVVMC to help design training modules to train volunteers on how to edit Wikipedia articles related to the Marcos family and their regime. The Commission has conducted Wikipedia edit-a-thons to commemorate the initial declaration of martial law in 1972 and the Revolution in 1986 that ended the dictatorship.",
       "Region": "East, Southeast Asia, & Pacific",
       "Group": "WikiSocPH",
-      "Year": "2020-2022",
-      "Country": "Philippines",
-      "Languages": "English",
+      "Year": 2020,
+      "Year (Original)": "2020-2022",
+      "Country": [
+         "Philippines"
+      ],
+      "Languages": [
+         "English"
+      ],
       "id": "id27"
    },
    {
@@ -274,9 +514,14 @@
       "Description": "The Bantayog ng mga Bayani is a foundation that maintains a memorial, museum, and library dedicated to remembering and honoring the heroes, martyrs, and victims of the Ferdinand Marcos dictatorship. WikiSocPH partnered with the Bantayog who hired a Wikimedian in Residence (WiR), to help digitize the Bantayog’s library, to improve Wikipedia’s coverage of articles related to the Ferdinand Marcos regime, and to organize Wikimedia events and workshops to the Bantayog’s visitors, researchers, and supporters.",
       "Region": "East, Southeast Asia, & Pacific",
       "Group": "WikiSocPH",
-      "Year": "2018",
-      "Country": "Philippines",
-      "Languages": "English",
+      "Year": 2018,
+      "Year (Original)": "2018",
+      "Country": [
+         "Philippines"
+      ],
+      "Languages": [
+         "English"
+      ],
       "id": "id28"
    },
    {
@@ -284,9 +529,14 @@
       "Description": "PSS 9 is an intelligent software agent-administrator (a bot with administrative rights) on the Bulgarian Wikipedia, which employs artificial intelligence to identify and actively counter vandalism, including the spread of mis- and disinformation.[12]",
       "Region": "Central & Eastern Europe / Central Asia",
       "Group": "NA",
-      "Year": "2017",
-      "Country": "Bulgaria",
-      "Languages": "Bulgarian",
+      "Year": 2017,
+      "Year (Original)": "2017",
+      "Country": [
+         "Bulgaria"
+      ],
+      "Languages": [
+         "Bulgarian"
+      ],
       "id": "id29"
    },
    {
@@ -294,9 +544,14 @@
       "Description": "This is a filter maintained by the community of editors preventing the use of unreliable sources in the main space, and also in the incubator, by users who are not members of the \"autopatrolled\" group. When such a user tries to enter a link to a source in the list, the link is detected by the abuse filter that pulls data from the list and the edit is rejected.",
       "Region": "Central & Eastern Europe / Central Asia",
       "Group": "NA",
-      "Year": "2016 (for the abuse filter); 2019 (adopted and enforced as a policy)",
-      "Country": "Bulgaria",
-      "Languages": "Bulgarian",
+      "Year": 2016,
+      "Year (Original)": "2016 (for the abuse filter); 2019 (adopted and enforced as a policy)",
+      "Country": [
+         "Bulgaria"
+      ],
+      "Languages": [
+         "Bulgarian"
+      ],
       "id": "id30"
    },
    {
@@ -304,9 +559,12 @@
       "Description": "This report evaluates a case of long-term systemic disinformation and project capture on the Croatian-language Wikipedia. The report was produced by an external expert, who conducted a thorough analysis of the content and community dynamics on the Croatian language Wikipedia. It revealed a widespread pattern of manipulative behavior and abuse of power by an ideologically aligned group of admins and volunteer editors. The views and opinions expressed in this report are those of the author and do not necessarily reflect the official policy or position of the Wikimedia Foundation.",
       "Region": "Central & Eastern Europe / Central Asia",
       "Group": "Wikimedia Foundation",
-      "Year": "2021",
-      "Country": "NA",
-      "Languages": "English",
+      "Year": 2021,
+      "Year (Original)": "2021",
+      "Country": [],
+      "Languages": [
+         "English"
+      ],
       "id": "id31"
    },
    {
@@ -314,9 +572,14 @@
       "Description": "This is an editorial recommendation including a list of unreliable sources that should not be used by Polish Wikipedia editors, with an explanation of how these are selected and why.",
       "Region": "Central & Eastern Europe / Central Asia",
       "Group": "NA",
-      "Year": "2022",
-      "Country": "Poland",
-      "Languages": "Polish",
+      "Year": 2022,
+      "Year (Original)": "2022",
+      "Country": [
+         "Poland"
+      ],
+      "Languages": [
+         "Polish"
+      ],
       "id": "id32"
    },
    {
@@ -324,9 +587,14 @@
       "Description": "This project is no longer active. It was a WikiProject to check all edits that were made by anonymous users. It helped prevent vandalism from remaining in articles for a long time. The project kept a patrol log of anonymous edits according to this filter. The project was supported by Wikimedia Ukraine, but not maintained by Wikimedia Ukraine. It was maintained by individual dedicated editors.",
       "Region": "Central & Eastern Europe / Central Asia",
       "Group": "Wikimedia Ukraine",
-      "Year": "2020 (archived)",
-      "Country": "Ukraine",
-      "Languages": "Ukrainian",
+      "Year": 2020,
+      "Year (Original)": "2020 (archived)",
+      "Country": [
+         "Ukraine"
+      ],
+      "Languages": [
+         "Ukrainian"
+      ],
       "id": "id33"
    },
    {
@@ -334,9 +602,14 @@
       "Description": "This is a master class on \"How to enter journalism into Wikipedia\" that was held in Kyiv in 2019, and organized by Wikimedia Ukraine together with the Institute for the Development of the Regional Press. The event was part of the Investigative Journalism Month held on Ukrainian Wikipedia in June-July.",
       "Region": "Central & Eastern Europe / Central Asia",
       "Group": "Wikimedia Ukraine",
-      "Year": "2019",
-      "Country": "Ukraine",
-      "Languages": "Ukrainian",
+      "Year": 2019,
+      "Year (Original)": "2019",
+      "Country": [
+         "Ukraine"
+      ],
+      "Languages": [
+         "Ukrainian"
+      ],
       "id": "id34"
    },
    {
@@ -344,9 +617,14 @@
       "Description": "This is a blog post explaining filter/list of untrustworthy sources that would flag them as untrustworthy for editors to use.",
       "Region": "Central & Eastern Europe / Central Asia",
       "Group": "Wikimedia Ukraine",
-      "Year": "2020",
-      "Country": "Ukraine",
-      "Languages": "Ukrainian",
+      "Year": 2020,
+      "Year (Original)": "2020",
+      "Country": [
+         "Ukraine"
+      ],
+      "Languages": [
+         "Ukrainian"
+      ],
       "id": "id35"
    },
    {
@@ -354,9 +632,14 @@
       "Description": "This is a blog post explaining how Wikipedia works and warning users against fraud and paid editing.",
       "Region": "Central & Eastern Europe / Central Asia",
       "Group": "Wikimedia Ukraine",
-      "Year": "2020",
-      "Country": "Ukraine",
-      "Languages": "Ukrainian",
+      "Year": 2020,
+      "Year (Original)": "2020",
+      "Country": [
+         "Ukraine"
+      ],
+      "Languages": [
+         "Ukrainian"
+      ],
       "id": "id36"
    },
    {
@@ -364,9 +647,14 @@
       "Description": "This is the abstract of a training on disinformation held by Wikimedia Ukraine in collaboration with Vox Check in 2021.",
       "Region": "Central & Eastern Europe / Central Asia",
       "Group": "Wikimedia Ukraine",
-      "Year": "2021",
-      "Country": "Ukraine",
-      "Languages": "Ukrainian",
+      "Year": 2021,
+      "Year (Original)": "2021",
+      "Country": [
+         "Ukraine"
+      ],
+      "Languages": [
+         "Ukrainian"
+      ],
       "id": "id37"
    },
    {
@@ -374,9 +662,14 @@
       "Description": "This is the abstract of two training on disinformation and media literacy which were held by Wikimedia Ukraine in collaboration with Media Detector in 2020.",
       "Region": "Central & Eastern Europe / Central Asia",
       "Group": "Wikimedia Ukraine",
-      "Year": "2020",
-      "Country": "Ukraine",
-      "Languages": "Ukrainian",
+      "Year": 2020,
+      "Year (Original)": "2020",
+      "Country": [
+         "Ukraine"
+      ],
+      "Languages": [
+         "Ukrainian"
+      ],
       "id": "id38"
    },
    {
@@ -384,9 +677,14 @@
       "Description": "This is a training on misinformation and access to knowledge, in collaboration with Medialab-Prado. The event touched upon knowledge and strategies to fight disinformation on Wikipedia. It was directed to journalists, people who are dedicated to scientific research, activists, and Wikimedians.",
       "Region": "Northern & Western Europe",
       "Group": "Wikimedia España",
-      "Year": "2020",
-      "Country": "Spain",
-      "Languages": "Spanish",
+      "Year": 2020,
+      "Year (Original)": "2020",
+      "Country": [
+         "Spain"
+      ],
+      "Languages": [
+         "Spanish"
+      ],
       "id": "id39"
    },
    {
@@ -394,9 +692,14 @@
       "Description": "This is a roundtable discussion with experts on the topic of disinformation on Wikipedia, organized by Wikimedia España in 2020.",
       "Region": "Northern & Western Europe",
       "Group": "Wikimedia España",
-      "Year": "2020",
-      "Country": "Spain",
-      "Languages": "Spanish",
+      "Year": 2020,
+      "Year (Original)": "2020",
+      "Country": [
+         "Spain"
+      ],
+      "Languages": [
+         "Spanish"
+      ],
       "id": "id40"
    },
    {
@@ -404,9 +707,14 @@
       "Description": "This is a training called Wikimedia fact-checking lab: learning and collaboration around Wikimedia projects whose goal is to investigate information and data verification to defend Wikipedia from misinformation.",
       "Region": "Northern & Western Europe",
       "Group": "Wikimedia España",
-      "Year": "2021",
-      "Country": "Spain",
-      "Languages": "Spanish",
+      "Year": 2021,
+      "Year (Original)": "2021",
+      "Country": [
+         "Spain"
+      ],
+      "Languages": [
+         "Spanish"
+      ],
       "id": "id41"
    },
    {
@@ -414,9 +722,14 @@
       "Description": "This is a training event that promotes a fact-checking culture among the Wikipedian community, the I Wikipedia Verific-a-thon. It is a meeting focused on the verification of knowledge related to health issues and, specifically, to the information on COVID-19 found in the free encyclopedia.",
       "Region": "Northern & Western Europe",
       "Group": "Wikimedia España",
-      "Year": "2021",
-      "Country": "Spain",
-      "Languages": "Spanish",
+      "Year": 2021,
+      "Year (Original)": "2021",
+      "Country": [
+         "Spain"
+      ],
+      "Languages": [
+         "Spanish"
+      ],
       "id": "id42"
    },
    {
@@ -424,9 +737,14 @@
       "Description": "This is a research project on COVID-19 disinformation on Wikipedia.",
       "Region": "Northern & Western Europe",
       "Group": "Wikimedia France",
-      "Year": "2020",
-      "Country": "France",
-      "Languages": "French",
+      "Year": 2020,
+      "Year (Original)": "2020",
+      "Country": [
+         "France"
+      ],
+      "Languages": [
+         "French"
+      ],
       "id": "id43"
    },
    {
@@ -434,9 +752,14 @@
       "Description": "This is a list of reliable and unreliable sources to use on French Wikipedia.",
       "Region": "Northern & Western Europe",
       "Group": "Wikimedia France",
-      "Year": "2020",
-      "Country": "France",
-      "Languages": "French",
+      "Year": 2020,
+      "Year (Original)": "2020",
+      "Country": [
+         "France"
+      ],
+      "Languages": [
+         "French"
+      ],
       "id": "id44"
    },
    {
@@ -444,9 +767,14 @@
       "Description": "This is a WikiProject dedicated to improving the reliability of Wikipedia articles. The volunteers working on this project ensure that articles are supported by reliable sources, answer inquiries on the reliable sources noticeboard, and maintain a list of frequently discussed sources. This project works to achieve the goals of the verifiability and no original research policies. For more information about the reliability of sources at Wikipedia, please visit our FAQ.",
       "Region": "Northern & Western Europe",
       "Group": "Wikimedia France",
-      "Year": "2011",
-      "Country": "France",
-      "Languages": "French",
+      "Year": 2011,
+      "Year (Original)": "2011",
+      "Country": [
+         "France"
+      ],
+      "Languages": [
+         "French"
+      ],
       "id": "id45"
    },
    {
@@ -454,9 +782,14 @@
       "Description": "This is a translation and comment for the French community of a memo released by the Wikimedia Foundation relative to an incident in the Chinese community.",
       "Region": "Northern & Western Europe",
       "Group": "Wikimedia France",
-      "Year": "2020",
-      "Country": "France",
-      "Languages": "French",
+      "Year": 2020,
+      "Year (Original)": "2020",
+      "Country": [
+         "France"
+      ],
+      "Languages": [
+         "French"
+      ],
       "id": "id46"
    },
    {
@@ -464,9 +797,14 @@
       "Description": "The Wikimedia Foundation organized a series of webinars in collaboration with the International Science Council, in order to explain the Wikimedia model and how it contributes to creating trustworthy information. The first webinar, Webinar 1: Managing Knowledge Integrity on Information Platforms was on March 16, 2023 and discussed how Wikipedia is a model to model for safeguard the provenance of scientific information online. Speakers were Diego Sáez Trumper (Wikimedia Foundation), Connie Moon Sheat (Hacks/Hackers), and Amalia Toledo (Wikimedia Foundation). The second webinar, Webinar 2: Building Special Projects on Wikipedia: The Covid Case Study, was on March 30, 2023 and showcased the work of the community, and in particular on the COVID-19 pandemic. The speaker was Netha Hussain, a volunteer who created the WikiProject COVID-19.",
       "Region": "Northern & Western Europe",
       "Group": "Wikimedia Foundation",
-      "Year": "2023",
-      "Country": "United Kingdom",
-      "Languages": "English",
+      "Year": 2023,
+      "Year (Original)": "2023",
+      "Country": [
+         "United Kingdom"
+      ],
+      "Languages": [
+         "English"
+      ],
       "id": "id47"
    },
    {
@@ -474,9 +812,14 @@
       "Description": "This is a comprehensive analysis, by Wikimedia UK, of its programs and their impact. In Particular, they analyze the impact of their information literacy work, and how the Wikimedia movement contributes to creating a healthier information environment and stronger democracy.",
       "Region": "Northern & Western Europe",
       "Group": "Suppose algorithm A has time complexity TA(n) = Θ(n) and algorithm B has time complexity TB(n) = Θ(n 2 ). (a) Which algorithm is generally accepted as “faster” and why?",
-      "Year": "2021",
-      "Country": "United Kingdom",
-      "Languages": "English",
+      "Year": 2021,
+      "Year (Original)": "2021",
+      "Country": [
+         "United Kingdom"
+      ],
+      "Languages": [
+         "English"
+      ],
       "id": "id48"
    },
    {
@@ -484,9 +827,14 @@
       "Description": "This is a booklet created by Wikimedia UK in collaboration with the University of Edinburgh about a series of case studies illustrating how to use Wikipedia as a tool for education and support learners to understand, navigate and critically evaluate information as well as develop an appreciation for the role and importance of open education.",
       "Region": "Northern & Western Europe",
       "Group": "Wikimedia UK",
-      "Year": "2020",
-      "Country": "United Kingdom",
-      "Languages": "English",
+      "Year": 2020,
+      "Year (Original)": "2020",
+      "Country": [
+         "United Kingdom"
+      ],
+      "Languages": [
+         "English"
+      ],
       "id": "id49"
    },
    {
@@ -494,9 +842,12 @@
       "Description": "This is an essay explaining how to find and use credible sources in general and in particular in the Swedish language. Many Swedish-speaking Wikipedians have been involved in creating and maintaining this resource.",
       "Region": "Northern & Western Europe",
       "Group": "NA",
-      "Year": "2008",
-      "Country": "NA",
-      "Languages": "Swedish",
+      "Year": 2008,
+      "Year (Original)": "2008",
+      "Country": [],
+      "Languages": [
+         "Swedish"
+      ],
       "id": "id50"
    },
    {
@@ -504,9 +855,12 @@
       "Description": "Citation Hunt is a tool for browsing snippets of Wikipedia articles that lack citations. It is available in several languages and allows browsing snippets either randomly or by their article's categories in a quick and fun way.[2]",
       "Region": "NA",
       "Group": "NA",
-      "Year": "2017",
-      "Country": "NA",
-      "Languages": "English",
+      "Year": 2017,
+      "Year (Original)": "2017",
+      "Country": [],
+      "Languages": [
+         "English"
+      ],
       "id": "id51"
    },
    {
@@ -514,9 +868,12 @@
       "Description": "This is a bot that compiles lists of unreliable sources which are cited by Wikipedians via a specific citation template, based on several lists of unreliable or questionable publications (such as those compiled by Jeffrey Beall, the University Grants Commission, Quackwatch, or Wikipedia editors.[4]",
       "Region": "NA",
       "Group": "NA",
-      "Year": "2018",
-      "Country": "NA",
-      "Languages": "English",
+      "Year": 2018,
+      "Year (Original)": "2018",
+      "Country": [],
+      "Languages": [
+         "English"
+      ],
       "id": "id52"
    },
    {
@@ -524,9 +881,12 @@
       "Description": "FlaggedRevs (Flagged Revisions) is an extension of MediaWiki software that allows one to flag versions of articles and thus give additional information about quality. This comes with the possibility of changing what an unregistered user sees by default. The technical description can be found at mw:Extension:FlaggedRevs. This makes it easier to increase the article quality and trustworthiness.",
       "Region": "NA",
       "Group": "NA",
-      "Year": "2014/2017 (A 2017 moratorium established that no new Wikis can be added but those that were already active can maintain it)",
-      "Country": "NA",
-      "Languages": "All",
+      "Year": 2014,
+      "Year (Original)": "2014/2017 (A 2017 moratorium established that no new Wikis can be added but those that were already active can maintain it)",
+      "Country": [],
+      "Languages": [
+         "All"
+      ],
       "id": "id53"
    },
    {
@@ -534,9 +894,10 @@
       "Description": "masz (the z is silent) is a tool that helps Checkusers (a small group of WP users who work on spotting fake accounts), see similarity of style and language in talk pages to find users with multiple accounts.[7]",
       "Region": "NA",
       "Group": "Wikimedia Foundation",
-      "Year": "2021",
-      "Country": "NA",
-      "Languages": "NA",
+      "Year": 2021,
+      "Year (Original)": "2021",
+      "Country": [],
+      "Languages": [],
       "id": "id54"
    },
    {
@@ -544,9 +905,12 @@
       "Description": "The Moderator Tools team is a Wikimedia Foundation product team working on content moderation tool needs.",
       "Region": "NA",
       "Group": "Wikimedia Foundation",
-      "Year": "2021-",
-      "Country": "NA",
-      "Languages": "All",
+      "Year": 2021,
+      "Year (Original)": "2021-",
+      "Country": [],
+      "Languages": [
+         "All"
+      ],
       "id": "id55"
    },
    {
@@ -554,9 +918,12 @@
       "Description": "This page centralizes information about reliable sources for new page reviewers to use when they review new articles. It is intended as a supplement to the reliable sources noticeboard and List of Perennial Sources, to help page reviewers unfamiliar with a given subject assess notability and neutrality of an article.[9]",
       "Region": "NA",
       "Group": "NA",
-      "Year": "2019",
-      "Country": "NA",
-      "Languages": "English",
+      "Year": 2019,
+      "Year (Original)": "2019",
+      "Country": [],
+      "Languages": [
+         "English"
+      ],
       "id": "id56"
    },
    {
@@ -564,9 +931,12 @@
       "Description": "This template returns a formatted citation from statements stored on a Wikidata item (referred to by its Q identifier or QID) describing a citable source such as a scholarly article. This project allows easy identification of citations to papers which have been redacted or replaced.[14]",
       "Region": "NA",
       "Group": "NA",
-      "Year": "2017",
-      "Country": "NA",
-      "Languages": "English",
+      "Year": 2017,
+      "Year (Original)": "2017",
+      "Country": [],
+      "Languages": [
+         "English"
+      ],
       "id": "id57"
    },
    {
@@ -574,9 +944,12 @@
       "Description": "This page describes vanity and predatory publishers, with links to lists of both and an explanation of why they might be dangerous for Wikipedia articles. Vanity publishers refer to publishing houses where anyone can pay to have a book published. In contrast, predatory publishers refer to an exploitative academic publishing business model that charges publication fees without checking articles' quality or providing editorial services.[16]",
       "Region": "NA",
       "Group": "NA",
-      "Year": "2017",
-      "Country": "NA",
-      "Languages": "English",
+      "Year": 2017,
+      "Year (Original)": "2017",
+      "Country": [],
+      "Languages": [
+         "English"
+      ],
       "id": "id58"
    },
    {
@@ -584,9 +957,50 @@
       "Description": "Huggle is a browser intended for dealing with vandalism and other unconstructive edits on Wikimedia projects. Huggle can load and review edits made to Wikipedia in real time, it also helps users identify unconstructive edits and allows them to be reverted quickly.",
       "Region": "NA",
       "Group": "NA",
-      "Year": "2008",
-      "Country": "NA",
-      "Languages": "Spanish, French, Portuguese, English, Chinese, Dutch, Bulgarian, Russian, Serbian, Ukrainian, Azerbaijani, Bosnian, Catalan, Danish, German, Estonian, Croatian, Latvian, Norwegian, Polish, Romanian, Serbo-Croatian, Swedish, Turkish, Czech, Georgian, Urdu, Arabic, Persian, Kurdish, Hebrew, Japanese, Korean, Hindi, Bangla, Odia, Khmer, Vietnamese, Indonesian",
+      "Year": 2008,
+      "Year (Original)": "2008",
+      "Country": [],
+      "Languages": [
+         "Spanish",
+         " French",
+         " Portuguese",
+         " English",
+         " Chinese",
+         " Dutch",
+         " Bulgarian",
+         " Russian",
+         " Serbian",
+         " Ukrainian",
+         " Azerbaijani",
+         " Bosnian",
+         " Catalan",
+         " Danish",
+         " German",
+         " Estonian",
+         " Croatian",
+         " Latvian",
+         " Norwegian",
+         " Polish",
+         " Romanian",
+         " Serbo-Croatian",
+         " Swedish",
+         " Turkish",
+         " Czech",
+         " Georgian",
+         " Urdu",
+         " Arabic",
+         " Persian",
+         " Kurdish",
+         " Hebrew",
+         " Japanese",
+         " Korean",
+         " Hindi",
+         " Bangla",
+         " Odia",
+         " Khmer",
+         " Vietnamese",
+         " Indonesian"
+      ],
       "id": "id59"
    },
    {
@@ -594,9 +1008,14 @@
       "Description": "This is a list of sources that are \"deprecated,\" whose use on Wikipedia is discouraged because they \"fail the reliable sources guidelines in nearly all circumstances.\"[19]",
       "Region": "NA",
       "Group": "NA",
-      "Year": "2018",
-      "Country": "NA",
-      "Languages": "English, Russian, Polish",
+      "Year": 2018,
+      "Year (Original)": "2018",
+      "Country": [],
+      "Languages": [
+         "English",
+         " Russian",
+         " Polish"
+      ],
       "id": "id60"
    },
    {
@@ -604,9 +1023,12 @@
       "Description": "This is a non-exhaustive list of sources whose reliability and use on Wikipedia are frequently discussed. This list summarizes prior consensus and consolidates links to the most in-depth and recent discussions from the reliable sources noticeboard and elsewhere on Wikipedia.[21]",
       "Region": "NA",
       "Group": "NA",
-      "Year": "2018",
-      "Country": "NA",
-      "Languages": "English",
+      "Year": 2018,
+      "Year (Original)": "2018",
+      "Country": [],
+      "Languages": [
+         "English"
+      ],
       "id": "id61"
    },
    {
@@ -614,9 +1036,12 @@
       "Description": "Launched in April 2022 as a NewsQ project, Wikipedia “Reliable Sources” seeks to support Wikipedians who write articles on vaccines and want to cite reliable sources of vaccine information. NewsQ is collaborating with experienced Wikipedia editors to gather data on source quality and refine a list of reputable sources of vaccine information throughout 2023. NewsQ is a Hacks/Hackers initiative that has sought to elevate quality journalism when algorithms rank and recommend news online.",
       "Region": "NA",
       "Group": "News Quality Initiative (NewsQ), Hacks/Hackers, and Knowledge Futures Group.For more information, read footnote [2].",
-      "Year": "2022",
-      "Country": "NA",
-      "Languages": "English",
+      "Year": 2022,
+      "Year (Original)": "2022",
+      "Country": [],
+      "Languages": [
+         "English"
+      ],
       "id": "id62"
    },
    {
@@ -624,9 +1049,12 @@
       "Description": "This is a WikiProject dedicated to improving the reliability of Wikipedia articles. This includes curating reliable sources, answer inquiries on the reliable sources noticeboard, and maintain a list of frequently discussed sources.[24]",
       "Region": "NA",
       "Group": "NA",
-      "Year": "2011",
-      "Country": "NA",
-      "Languages": "English",
+      "Year": 2011,
+      "Year (Original)": "2011",
+      "Country": [],
+      "Languages": [
+         "English"
+      ],
       "id": "id63"
    },
    {
@@ -634,9 +1062,12 @@
       "Description": "Monitoring system that allows exploring data and metrics on knowledge integrity risks to compare Wikipedia language editions. Knowledge integrity risks are captured through the volume of high-risk revisions, identified with the language-agnostic revert risk machine learning (ML) model, and their revert ratios over time and across pages.",
       "Region": "Global",
       "Group": "Wikimedia Foundation",
-      "Year": "2021-",
-      "Country": "NA",
-      "Languages": "English",
+      "Year": 2021,
+      "Year (Original)": "2021-",
+      "Country": [],
+      "Languages": [
+         "English"
+      ],
       "id": "id64"
    }
 ]
