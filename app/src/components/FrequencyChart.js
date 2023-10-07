@@ -10,6 +10,7 @@ import {
   ReferenceArea,
   ResponsiveContainer,
 } from 'recharts';
+import { createRangeFilter } from '../utils';
 
 // Percent of y-range to offset the y domain
 const yOffset = 0.1;
@@ -68,6 +69,7 @@ export default class FrequencyChart extends Component {
       animation: true,
       xKey: props.column,
       yKey: 'count',
+      filterId: -1,
     };
     // initialize state
     this.state = this.initialState;
@@ -108,7 +110,7 @@ export default class FrequencyChart extends Component {
 
   zoom() {
     let { refAreaLeft, refAreaRight } = this.state;
-    const { data, xKey, yKey } = this.state;
+    const { data, xKey, yKey, filterId } = this.state;
 
     if (refAreaLeft === refAreaRight || refAreaRight === '') {
       this.setState(() => ({
@@ -134,8 +136,14 @@ export default class FrequencyChart extends Component {
       yDomain: yDomain,
     }));
 
-    // dispatch update
-    this.props.rangeFilterData(xKey, refAreaLeft, refAreaRight);
+    // create new filter
+    const newFilter = createRangeFilter(xKey, refAreaLeft, refAreaRight);
+    // remove old filter
+    this.props.removeFilter(filterId);
+    // add new filter and reset the state
+    this.setState({
+      filterId: this.props.addFilter(newFilter),
+    });
   }
 
   render() {

@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 // mui
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Container, CssBaseline, Grid } from '@mui/material';
@@ -22,44 +22,51 @@ const darkTheme = createTheme({
 });
 
 function App() {
+  const [filterIdCounter, setFilterIdCounter] = useState(0);
   const [currData, setCurrData] = useState(initialData.slice());
+  const [filters, setFilters] = useState([]);
 
+  // reset all filters (which will reset all data)
   const resetData = () => {
-    setCurrData(initialData);
+    setFilters([]);
   };
 
-  const rangeFilterData = (column, lo, hi) => {
-    setCurrData(
-      currData.filter((item) => {
-        const val = Number(item[column]);
-        return lo <= val && val <= hi;
-      })
-    );
+  // Add a filter to the data and returns the id of the filter
+  // A filter must be a function which takes only a single parameter (data) and
+  // returns any subset of the data
+  const addFilter = (filterFun) => {
+    // create filter id
+    const id = filterIdCounter;
+    setFilters((prevFilters) => [...prevFilters, { filterFun, id }]);
+
+    // increment counter
+    setFilterIdCounter((prevId) => prevId + 1);
+    return id;
   };
 
-  const rangeFilterStrings = (column, str) => {
-    resetData();
-    setCurrData(
-      currData.filter((item) => {
-        let arr = item[column]
-
-        // Languages could typically be an array, so we iterate through to find label
-        if (column === "Languages") {
-          for (let i = 0 ; i < arr.length; i++) {
-            if (arr[i] === str['label']) {
-              return true;
-            }
-          }
-
-          return false
-        } else {
-          const val = String(item[column]);   
-          return val == str['label'];
-        }
-      })
-    );
-
+  // remove a filter with the given filter id
+  // for convenience, filter id's will never be negative, so a negative filter id can be used as a default value.
+  const removeFilter = (fId) => {
+    if (fId >= 0) {
+      setFilters((prevFilters) =>
+        prevFilters.filter(({ filterFun, id }) => {
+          return id !== fId;
+        })
+      );
+    }
   };
+
+  // When filters added or removed, rerun all filters on initialData
+  useEffect(() => {
+    // apply each filter to initialData
+    let data = initialData;
+    for (const { filterFun } of filters) {
+      data = filterFun(data);
+    }
+
+    // set currData
+    setCurrData(data);
+  }, [filters]);
 
   return (
     <div className="App">
@@ -70,7 +77,7 @@ function App() {
           <AppBar resetData={resetData} />
           <Grid container spacing={2}>
             <Grid item xs={12} md={6}>
-              {/* MAP */}
+              {/* Map */}
               <Map />
             </Grid>
 
@@ -81,12 +88,13 @@ function App() {
               {/* Search */}
               <Grid container spacing={2}>
                 <Grid item xs={12} md={6}>
-                  {/* Continent Filter */}
+                  {/* Country Filter */}
                   <Filter 
                   resetData={resetData}
                   column="Country" 
                   data={currData}
-                  rangeFilterStrings={rangeFilterStrings}/>
+                  addFilter={addFilter}
+                  removeFilter={removeFilter}/>
                 </Grid>
                 <Grid item xs={12} md={6}>
                   {/* Language Filter */}
@@ -94,7 +102,8 @@ function App() {
                   resetData={resetData}
                   column="Languages" 
                   data={currData}
-                  rangeFilterStrings={rangeFilterStrings} />
+                  addFilter={addFilter}
+                  removeFilter={removeFilter}/>
                 </Grid>
               </Grid>
             </Grid>
@@ -108,7 +117,8 @@ function App() {
               <FrequencyChart
                 column="Year"
                 data={currData}
-                rangeFilterData={rangeFilterData}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
               />
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>

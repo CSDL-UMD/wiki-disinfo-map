@@ -31,7 +31,6 @@ async function retrieve_data() {
       })
       .on('end', () => {
         console.log('parsed csv data:');
-        // console.log(data);
 
         // preprocess row
         for (let i = 0; i < data.length; i++) {
