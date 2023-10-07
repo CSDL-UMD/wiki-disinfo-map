@@ -27,6 +27,9 @@ const getData = (dataRaw, columnName) => {
     data.push({ name: key, value: counts[key]});
   }
 
+  const comparator = (a, b) => b.value - a.value
+  data.sort(comparator)
+
   return data;
 }
 
