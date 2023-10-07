@@ -40,7 +40,7 @@ function App() {
     setFilters((prevFilters) => [...prevFilters, { filterFun, id }]);
 
     // increment counter
-    setFilterIdCounter(id + 1);
+    setFilterIdCounter((prevId) => prevId + 1);
     return id;
   };
 
