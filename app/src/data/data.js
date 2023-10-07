@@ -18,7 +18,7 @@ async function retrieve_data() {
       .on('data', (row) => {
         // pre-process data directly when scanning each row
         delete row['KeyDisinfo'];
-        delete row['Country code'];
+        // delete row['Country code'];
         delete row['Subcontinent/Continent code'];
         delete row['Link'];
         delete row['Type'];
@@ -37,7 +37,7 @@ async function retrieve_data() {
           let row = data[i];
           row['id'] = 'id' + (i + 1);
 
-          row = preprocessRow(row);
+          // row = preprocessRow(row);
         }
 
         // data in this context is rows

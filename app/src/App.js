@@ -88,12 +88,22 @@ function App() {
               {/* Search */}
               <Grid container spacing={2}>
                 <Grid item xs={12} md={6}>
-                  {/* Continent Filter */}
-                  <Filter column="Continent" />
+                  {/* Country Filter */}
+                  <Filter 
+                  resetData={resetData}
+                  column="Country" 
+                  data={currData}
+                  addFilter={addFilter}
+                  removeFilter={removeFilter}/>
                 </Grid>
                 <Grid item xs={12} md={6}>
                   {/* Language Filter */}
-                  <Filter column="Languages" />
+                  <Filter
+                  resetData={resetData}
+                  column="Languages" 
+                  data={currData}
+                  addFilter={addFilter}
+                  removeFilter={removeFilter}/>
                 </Grid>
               </Grid>
             </Grid>
