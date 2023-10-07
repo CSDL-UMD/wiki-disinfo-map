@@ -3,6 +3,8 @@ import { Autocomplete, Paper } from '@mui/material';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
+import { createFilterComponentFilter } from '../utils';
+
 // get all the options of countries in the format of the MUI Autocomplete component
 const get_options_countries = (data) => {
   const options = []
@@ -71,14 +73,31 @@ export default class Filter extends Component {
       selectedOption: null,
       options_countries: get_options_countries(props.data),
       options_languages: get_options_languages(props.data),
-      firstFilterApplied: false
+      firstFilterApplied: false,
+      filterId: -1,
     }
+
+    // this.onChange.bind(this)
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.data !== this.props.data && this.state.firstFilterApplied) {
       // component data updated
       // this.setState(() => { this.props.resetData() })
+    }
+  }
+
+  onChange(event, value) {
+    const { column, filterId } = this.state;
+    this.props.removeFilter(filterId);
+    if (value) {
+      // create new filter
+      const newFilter = createFilterComponentFilter(column, value);
+      
+      // add new filter and reset the state
+      this.setState({
+        filterId: this.props.addFilter(newFilter),
+      });
     }
   }
 
@@ -90,11 +109,7 @@ export default class Filter extends Component {
           id="country-select"
           fullWidth={true}
           options={this.props.column === "Country" ? options_countries : options_languages}
-          onChange={(event, value) => {
-            if (value) {
-              this.props.rangeFilterStrings(column, value);
-            }
-          }}
+          onChange={this.onChange.bind(this)}
           autoHighlight
           getOptionLabel={(option) => option.label}
           renderOption={(props, option) => (
@@ -127,11 +142,7 @@ export default class Filter extends Component {
           id="language-select"
           fullWidth={true}
           options={options_languages}
-          onChange={(event, value) => {
-            if (value) {
-              this.props.rangeFilterStrings(column, value);
-            }
-          }}
+          onChange={this.onChange.bind(this)}
           autoHighlight
           getOptionLabel={(option) => option.label}
           renderInput={(params) => (
