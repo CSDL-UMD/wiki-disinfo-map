@@ -14,6 +14,7 @@ const Table = (props) => {
     { field: 'id5', headerName: 'Region', flex: 0.2 },
     { field: 'id6', headerName: 'Starting Year', flex: 0.2 },
     { field: 'id7', headerName: 'Group', flex: 0.2 },
+    { field: 'id8', headerName: 'Country code', flex: 0.2}
   ];
 
   const transformData = (data) => {
@@ -29,6 +30,7 @@ const Table = (props) => {
         Region: 'id5',
         Year: 'id6',
         Group: 'id7',
+        'Country code': 'id8'
       };
       const newRow = { id: `id${rowNum}` };
       for (const key in translations) {

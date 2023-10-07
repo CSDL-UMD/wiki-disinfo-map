@@ -37,6 +37,30 @@ function App() {
     );
   };
 
+  const rangeFilterStrings = (column, str) => {
+    resetData();
+    setCurrData(
+      currData.filter((item) => {
+        let arr = item[column]
+
+        // Languages could typically be an array, so we iterate through to find label
+        if (column === "Languages") {
+          for (let i = 0 ; i < arr.length; i++) {
+            if (arr[i] === str['label']) {
+              return true;
+            }
+          }
+
+          return false
+        } else {
+          const val = String(item[column]);   
+          return val == str['label'];
+        }
+      })
+    );
+
+  };
+
   return (
     <div className="App">
       <ThemeProvider theme={darkTheme}>
@@ -58,11 +82,19 @@ function App() {
               <Grid container spacing={2}>
                 <Grid item xs={12} md={6}>
                   {/* Continent Filter */}
-                  <Filter column="Continent" />
+                  <Filter 
+                  resetData={resetData}
+                  column="Country" 
+                  data={currData}
+                  rangeFilterStrings={rangeFilterStrings}/>
                 </Grid>
                 <Grid item xs={12} md={6}>
                   {/* Language Filter */}
-                  <Filter column="Languages" />
+                  <Filter
+                  resetData={resetData}
+                  column="Languages" 
+                  data={currData}
+                  rangeFilterStrings={rangeFilterStrings} />
                 </Grid>
               </Grid>
             </Grid>
