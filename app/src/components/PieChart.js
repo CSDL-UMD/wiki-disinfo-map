@@ -33,6 +33,19 @@ const getData = (dataRaw, columnName) => {
   return data;
 }
 
+const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, hoverIndex, nameKey }) => {
+  const RADIAN = Math.PI / 180;
+  const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+  const x = cx + radius * Math.cos(-midAngle * RADIAN);
+  const y = cy + radius * Math.sin(-midAngle * RADIAN);
+
+  return (
+    <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
+      {"hello"}
+    </text>
+  );
+};
+
 const renderActiveShape = (props) => {
   // const RADIAN = Math.PI / 180;
   const {
@@ -50,24 +63,27 @@ const renderActiveShape = (props) => {
       <text x={cx} y={cy+100} dy={8} textAnchor="middle" fill={'#0ea5e9'}>
         {payload.name}
       </text>
-      <Sector
-        cx={cx}
-        cy={cy}
-        innerRadius={innerRadius}
-        outerRadius={outerRadius}
-        startAngle={startAngle}
-        endAngle={endAngle}
-        fill={'#0ea5e9'}
-      />
-      <Sector
-        cx={cx}
-        cy={cy}
-        startAngle={startAngle}
-        endAngle={endAngle}
-        innerRadius={outerRadius + 6}
-        outerRadius={outerRadius + 10}
-        fill={'#0ea5e9'}
-      />
+      <text x={cx} y={cy} dy={6} textAnchor="middle" fill={'#0ea5e9'}>
+        {props.nameKey}
+      </text>
+        <Sector
+          cx={cx}
+          cy={cy}
+          innerRadius={innerRadius}
+          outerRadius={outerRadius}
+          startAngle={startAngle}
+          endAngle={endAngle}
+          fill={'#0ea5e9'}
+        />
+        <Sector
+          cx={cx}
+          cy={cy}
+          startAngle={startAngle}
+          endAngle={endAngle}
+          innerRadius={outerRadius + 6}
+          outerRadius={outerRadius + 10}
+          fill={'#0ea5e9'}
+        />
     </g>
   );
 };
@@ -79,6 +95,7 @@ export default class PieChart extends Component {
     this.initialState = {
       activeIndex: -1,
       clicks: 0,
+      hoverIndex: -1,
     };
 
     this.state = this.initialState;
@@ -86,11 +103,12 @@ export default class PieChart extends Component {
 
   onPieEnter = (_, index) => {
     // console.log(this.state.clicked)
-    if (this.state.clicks === 0) {
-      this.setState({
-        activeIndex: index,
-      });
-    }
+    this.setState(() =>({
+      hoverIndex: index,
+    }));
+    // console.log(this.state.data);
+    // console.log(this.state.data[index].key);
+    // <Tooltip title={this.data[index].key}></Tooltip>
   };
 
   componentDidUpdate(prevProps, prevState) { 
@@ -101,6 +119,7 @@ export default class PieChart extends Component {
         data: this.props.data, // COME HERE FOR FILTERING
         activeIndex: -1,
         clicks: 0,
+        hoverIndex: -1,
       }));
     }
   }
@@ -127,7 +146,9 @@ export default class PieChart extends Component {
           <Pie
             activeIndex={this.state.activeIndex}
             clicks={this.state.clicks}
+            hoverIndex={this.state.hoverIndex}
             activeShape={renderActiveShape}
+            label={renderCustomizedLabel}
             data={getData(this.props.data, this.props.column)}
             cx="50%"
             cy="50%"
@@ -135,8 +156,7 @@ export default class PieChart extends Component {
             outerRadius={80}
             fill="#0c4a6e"
             dataKey="value"
-            // TODO: Remove later. This changes active pie slice on hover
-            // onMouseEnter={this.onPieEnter}
+            onMouseEnter={this.onPieEnter}
             onMouseDown={this.onPieClick}
             className="pie-chart"
             />
