@@ -33,18 +33,18 @@ const getData = (dataRaw, columnName) => {
   return data;
 }
 
-const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, hoverIndex, nameKey }) => {
-  const RADIAN = Math.PI / 180;
-  const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
-  const x = cx + radius * Math.cos(-midAngle * RADIAN);
-  const y = cy + radius * Math.sin(-midAngle * RADIAN);
+// const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, hoverIndex, nameKey }) => {
+//   const RADIAN = Math.PI / 180;
+//   const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+//   const x = cx + radius * Math.cos(-midAngle * RADIAN);
+//   const y = cy + radius * Math.sin(-midAngle * RADIAN);
 
-  return (
-    <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
-      {"hello"}
-    </text>
-  );
-};
+//   return (
+//     //<text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
+//     //  {"hello"}
+//     //</text>
+//   );
+// };
 
 const renderActiveShape = (props) => {
   // const RADIAN = Math.PI / 180;
@@ -148,7 +148,7 @@ export default class PieChart extends Component {
             clicks={this.state.clicks}
             hoverIndex={this.state.hoverIndex}
             activeShape={renderActiveShape}
-            label={renderCustomizedLabel}
+            // label={renderCustomizedLabel}
             data={getData(this.props.data, this.props.column)}
             cx="50%"
             cy="50%"
