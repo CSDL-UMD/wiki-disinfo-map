@@ -5,8 +5,10 @@
       "Region": "Middle East & North Africa / Sub-Saharan Africa",
       "Group": "Wikimedia Foundation",
       "Year": "2023",
+      "Year (Original)": "2023",
       "Country": "NA",
       "Languages": "English",
+      "Country code": "NA",
       "id": "id1"
    },
    {
@@ -14,9 +16,11 @@
       "Description": "Twice per year, #1Lib1Ref—an abbreviation for “one librarian, one reference”—calls on librarians around the world, and anyone who has a passion for free knowledge, to add missing references to articles on Wikipedia. By increasing the use of reliable sources, the project improves the accuracy of the information.[1]",
       "Region": "Global",
       "Group": "Wikimedia Foundation",
-      "Year": "2016 (according to Talk page)",
+      "Year": "2016",
+      "Year (Original)": "2016 (according to Talk page)",
       "Country": "Multiple",
       "Languages": "Indonesian, Malay, Bikol, German, English, Esperanto, Dutch, Sundanese, Vietnamese, Turkish, Catalan, Danish, Spanish, Basque, French, Galician, Italian, Latvian, Hungarian, Norwegian, Polish, Portuguese, Brazilian Portuguese, Romanian, Slovenian, Suomi, Swedish, Czech, Greek, Belarusian, Macedonian, Russian, Serbian, Ukrainian, Hebrew, Urdu, Arabic, Sindhi, Farsi, Hindi, Bangla, Tamil, Malayalam, Thai, Burmese, Chinese, and Japanese",
+      "Country code": "NA",
       "id": "id2"
    },
    {
@@ -24,9 +28,11 @@
       "Description": "The Wikimedia Foundation’s Research team published a set of white papers that outline plans and priorities for the next 5 years. These white papers, which were developed collaboratively by all members of the team, reflect our thinking about the kind of research necessary to further the 2030 Wikimedia Strategic Direction of Knowledge Equity and Knowledge as a Service.[6]",
       "Region": "Global",
       "Group": "Wikimedia Foundation",
-      "Year": "2019-",
+      "Year": "2019",
+      "Year (Original)": "2019-",
       "Country": "NA",
       "Languages": "English",
+      "Country code": "NA",
       "id": "id3"
    },
    {
@@ -35,8 +41,10 @@
       "Region": "Global",
       "Group": "Wikimedia Foundation",
       "Year": "2022",
+      "Year (Original)": "2022",
       "Country": "NA",
       "Languages": "NA",
+      "Country code": "NA",
       "id": "id4"
    },
    {
@@ -45,8 +53,10 @@
       "Region": "Global",
       "Group": "Wikimedia Foundation",
       "Year": "2016",
+      "Year (Original)": "2016",
       "Country": "NA",
       "Languages": "Multiple",
+      "Country code": "NA",
       "id": "id5"
    },
    {
@@ -55,8 +65,10 @@
       "Region": "Global",
       "Group": "Wikimedia Foundation",
       "Year": "2021",
+      "Year (Original)": "2021",
       "Country": "NA",
       "Languages": "English, Arabic, French, Spanish, Tagalog, Adapted English (Nigeria), Yoruba, Indonesian, Aymara, Guaranì, Quechua, Catalan, Dagbani",
+      "Country code": "NA",
       "id": "id6"
    },
    {
@@ -65,8 +77,10 @@
       "Region": "Global",
       "Group": "NA",
       "Year": "2007",
+      "Year (Original)": "2007",
       "Country": "NA",
       "Languages": "English",
+      "Country code": "NA",
       "id": "id7"
    },
    {
@@ -75,8 +89,10 @@
       "Region": "Global",
       "Group": "NA",
       "Year": "2010",
+      "Year (Original)": "2010",
       "Country": "NA",
       "Languages": "English, German, Spanish, French, Polish, Swedish, Vietnamese, Czech",
+      "Country code": "NA",
       "id": "id8"
    },
    {
@@ -85,8 +101,10 @@
       "Region": "Global",
       "Group": "NA",
       "Year": "2020",
+      "Year (Original)": "2020",
       "Country": "United States",
       "Languages": "English, Urdu, Chinese, Korean, Russian, Spanish, Italian, Czech, Arabic, Shindi, Greek, Malay, Croatian, Dutch, Slovak, Finnish, Turkish, Marathi, Bangla, Punjabi, Telugu, Malayalam, Thai",
+      "Country code": "USA",
       "id": "id9"
    },
    {
@@ -95,8 +113,10 @@
       "Region": "Sub-Saharan Africa",
       "Group": "WikiCred, Code for Africa",
       "Year": "2023",
+      "Year (Original)": "2023",
       "Country": "Nigeria",
       "Languages": "English",
+      "Country code": "NE",
       "id": "id10"
    },
    {
@@ -105,8 +125,10 @@
       "Region": "Latin America & Caribbean",
       "Group": "Wikimedia Chile",
       "Year": "2022",
+      "Year (Original)": "2022",
       "Country": "Chile",
       "Languages": "Spanish",
+      "Country code": "CHL",
       "id": "id11"
    },
    {
@@ -115,8 +137,10 @@
       "Region": "Latin America & Caribbean",
       "Group": "Wiki Movimento Brasil",
       "Year": "2021",
+      "Year (Original)": "2021",
       "Country": "Brazil",
       "Languages": "Brazilian Portuguese",
+      "Country code": "BRA",
       "id": "id12"
    },
    {
@@ -125,8 +149,10 @@
       "Region": "Latin America & Caribbean",
       "Group": "Wiki Movimento Brasil",
       "Year": "2017",
+      "Year (Original)": "2017",
       "Country": "Brazil",
       "Languages": "Brazilian Portuguese",
+      "Country code": "BRA",
       "id": "id13"
    },
    {
@@ -135,8 +161,10 @@
       "Region": "Latin America & Caribbean",
       "Group": "Wiki Movimento Brasil",
       "Year": "2022",
+      "Year (Original)": "2022",
       "Country": "Brazil",
       "Languages": "Brazilian Portuguese",
+      "Country code": "BRA",
       "id": "id14"
    },
    {
@@ -145,8 +173,10 @@
       "Region": "Latin America & Caribbean",
       "Group": "Wiki Movimento Brasil",
       "Year": "2019",
+      "Year (Original)": "2019",
       "Country": "Brazil",
       "Languages": "Brazilian Portuguese",
+      "Country code": "BRA",
       "id": "id15"
    },
    {
@@ -155,8 +185,10 @@
       "Region": "Latin America & Caribbean",
       "Group": "Wiki Movimento Brasil",
       "Year": "2016",
+      "Year (Original)": "2016",
       "Country": "Brazil",
       "Languages": "Brazilian Portuguese",
+      "Country code": "BRA",
       "id": "id16"
    },
    {
@@ -165,8 +197,10 @@
       "Region": "Latin America & Caribbean",
       "Group": "Wiki Movimento Brasil",
       "Year": "2022",
+      "Year (Original)": "2022",
       "Country": "Brazil",
       "Languages": "Brazilian Portuguese",
+      "Country code": "BRA",
       "id": "id17"
    },
    {
@@ -175,8 +209,10 @@
       "Region": "Latin America & Caribbean",
       "Group": "Wikimedia Chile",
       "Year": "2023",
+      "Year (Original)": "2023",
       "Country": "Chile",
       "Languages": "Spanish",
+      "Country code": "CHL",
       "id": "id18"
    },
    {
@@ -185,8 +221,10 @@
       "Region": "North America / Latin America & Caribbean",
       "Group": "Art+Feminism, WikiCred",
       "Year": "2021",
+      "Year (Original)": "2021",
       "Country": "Canada, Peru, United States",
       "Languages": "English",
+      "Country code": "CAN, USA, PER",
       "id": "id19"
    },
    {
@@ -195,8 +233,10 @@
       "Region": "North America",
       "Group": "NA",
       "Year": "2020",
+      "Year (Original)": "2020",
       "Country": "NA",
       "Languages": "English",
+      "Country code": "NA",
       "id": "id20"
    },
    {
@@ -205,8 +245,10 @@
       "Region": "North America",
       "Group": "National Science Foundation’s Convergence Accelerator, Hacks/Hackers, and the Paul G. Allen School of Computer Science & Engineering, University of Washington.For more information, please read footnote [1].",
       "Year": "2021",
+      "Year (Original)": "2021",
       "Country": "United States",
       "Languages": "English",
+      "Country code": "USA",
       "id": "id21"
    },
    {
@@ -215,8 +257,10 @@
       "Region": "North America",
       "Group": "NA",
       "Year": "2019",
+      "Year (Original)": "2019",
       "Country": "United States",
       "Languages": "English",
+      "Country code": "USA",
       "id": "id22"
    },
    {
@@ -225,8 +269,10 @@
       "Region": "North America",
       "Group": "NA",
       "Year": "2017",
+      "Year (Original)": "2017",
       "Country": "United States",
       "Languages": "English",
+      "Country code": "USA",
       "id": "id23"
    },
    {
@@ -235,8 +281,10 @@
       "Region": "North America",
       "Group": "NA",
       "Year": "2007",
+      "Year (Original)": "2007",
       "Country": "United States",
       "Languages": "English",
+      "Country code": "USA",
       "id": "id24"
    },
    {
@@ -245,8 +293,10 @@
       "Region": "North America",
       "Group": "Sure We Can",
       "Year": "2021",
+      "Year (Original)": "2021",
       "Country": "United States",
       "Languages": "English, Spanish, Chinese, Russian, Italian, Haitian Creole, Korean, French, Tagalog, Polish, Yiddish, Japanese, Hindi, Hebrew, Swahili, Malagasy, Yoruba, German, Portuguese, Arabic, Hungarian, Bengali, Greek",
+      "Country code": "USA",
       "id": "id25"
    },
    {
@@ -255,8 +305,10 @@
       "Region": "East, Southeast Asia, & Pacific",
       "Group": "NA",
       "Year": "2020",
+      "Year (Original)": "2020",
       "Country": "NA",
       "Languages": "English, Urdu, Hindi, Bengali, Marathi, Telugu, Tamil, Gujarati, Kannada, Oddia, Malayalam, Punjabi, Bhojpuri, Maithili, and Nepali.",
+      "Country code": "NA",
       "id": "id26"
    },
    {
@@ -264,9 +316,11 @@
       "Description": "The Human Rights Violations Victims’ Memorial Commission (HRVVMC), is a government agency tasked with documenting the human rights violations that occurred during the dictator’s regime and to establish a museum and a roll of victims. WikiSocPH worked with HRVVMC to help design training modules to train volunteers on how to edit Wikipedia articles related to the Marcos family and their regime. The Commission has conducted Wikipedia edit-a-thons to commemorate the initial declaration of martial law in 1972 and the Revolution in 1986 that ended the dictatorship.",
       "Region": "East, Southeast Asia, & Pacific",
       "Group": "WikiSocPH",
-      "Year": "2020-2022",
+      "Year": "2020",
+      "Year (Original)": "2020-2022",
       "Country": "Philippines",
       "Languages": "English",
+      "Country code": "PHL",
       "id": "id27"
    },
    {
@@ -275,8 +329,10 @@
       "Region": "East, Southeast Asia, & Pacific",
       "Group": "WikiSocPH",
       "Year": "2018",
+      "Year (Original)": "2018",
       "Country": "Philippines",
       "Languages": "English",
+      "Country code": "PHL",
       "id": "id28"
    },
    {
@@ -285,8 +341,10 @@
       "Region": "Central & Eastern Europe / Central Asia",
       "Group": "NA",
       "Year": "2017",
+      "Year (Original)": "2017",
       "Country": "Bulgaria",
       "Languages": "Bulgarian",
+      "Country code": "BGR",
       "id": "id29"
    },
    {
@@ -294,9 +352,11 @@
       "Description": "This is a filter maintained by the community of editors preventing the use of unreliable sources in the main space, and also in the incubator, by users who are not members of the \"autopatrolled\" group. When such a user tries to enter a link to a source in the list, the link is detected by the abuse filter that pulls data from the list and the edit is rejected.",
       "Region": "Central & Eastern Europe / Central Asia",
       "Group": "NA",
-      "Year": "2016 (for the abuse filter); 2019 (adopted and enforced as a policy)",
+      "Year": "2016",
+      "Year (Original)": "2016 (for the abuse filter); 2019 (adopted and enforced as a policy)",
       "Country": "Bulgaria",
       "Languages": "Bulgarian",
+      "Country code": "BGR",
       "id": "id30"
    },
    {
@@ -305,8 +365,10 @@
       "Region": "Central & Eastern Europe / Central Asia",
       "Group": "Wikimedia Foundation",
       "Year": "2021",
+      "Year (Original)": "2021",
       "Country": "NA",
       "Languages": "English",
+      "Country code": "NA",
       "id": "id31"
    },
    {
@@ -315,8 +377,10 @@
       "Region": "Central & Eastern Europe / Central Asia",
       "Group": "NA",
       "Year": "2022",
+      "Year (Original)": "2022",
       "Country": "Poland",
       "Languages": "Polish",
+      "Country code": "POL",
       "id": "id32"
    },
    {
@@ -324,9 +388,11 @@
       "Description": "This project is no longer active. It was a WikiProject to check all edits that were made by anonymous users. It helped prevent vandalism from remaining in articles for a long time. The project kept a patrol log of anonymous edits according to this filter. The project was supported by Wikimedia Ukraine, but not maintained by Wikimedia Ukraine. It was maintained by individual dedicated editors.",
       "Region": "Central & Eastern Europe / Central Asia",
       "Group": "Wikimedia Ukraine",
-      "Year": "2020 (archived)",
+      "Year": "2020",
+      "Year (Original)": "2020 (archived)",
       "Country": "Ukraine",
       "Languages": "Ukrainian",
+      "Country code": "UKR",
       "id": "id33"
    },
    {
@@ -335,8 +401,10 @@
       "Region": "Central & Eastern Europe / Central Asia",
       "Group": "Wikimedia Ukraine",
       "Year": "2019",
+      "Year (Original)": "2019",
       "Country": "Ukraine",
       "Languages": "Ukrainian",
+      "Country code": "UKR",
       "id": "id34"
    },
    {
@@ -345,8 +413,10 @@
       "Region": "Central & Eastern Europe / Central Asia",
       "Group": "Wikimedia Ukraine",
       "Year": "2020",
+      "Year (Original)": "2020",
       "Country": "Ukraine",
       "Languages": "Ukrainian",
+      "Country code": "UKR",
       "id": "id35"
    },
    {
@@ -355,8 +425,10 @@
       "Region": "Central & Eastern Europe / Central Asia",
       "Group": "Wikimedia Ukraine",
       "Year": "2020",
+      "Year (Original)": "2020",
       "Country": "Ukraine",
       "Languages": "Ukrainian",
+      "Country code": "UKR",
       "id": "id36"
    },
    {
@@ -365,8 +437,10 @@
       "Region": "Central & Eastern Europe / Central Asia",
       "Group": "Wikimedia Ukraine",
       "Year": "2021",
+      "Year (Original)": "2021",
       "Country": "Ukraine",
       "Languages": "Ukrainian",
+      "Country code": "UKR",
       "id": "id37"
    },
    {
@@ -375,8 +449,10 @@
       "Region": "Central & Eastern Europe / Central Asia",
       "Group": "Wikimedia Ukraine",
       "Year": "2020",
+      "Year (Original)": "2020",
       "Country": "Ukraine",
       "Languages": "Ukrainian",
+      "Country code": "UKR",
       "id": "id38"
    },
    {
@@ -385,8 +461,10 @@
       "Region": "Northern & Western Europe",
       "Group": "Wikimedia España",
       "Year": "2020",
+      "Year (Original)": "2020",
       "Country": "Spain",
       "Languages": "Spanish",
+      "Country code": "ESP",
       "id": "id39"
    },
    {
@@ -395,8 +473,10 @@
       "Region": "Northern & Western Europe",
       "Group": "Wikimedia España",
       "Year": "2020",
+      "Year (Original)": "2020",
       "Country": "Spain",
       "Languages": "Spanish",
+      "Country code": "ESP",
       "id": "id40"
    },
    {
@@ -405,8 +485,10 @@
       "Region": "Northern & Western Europe",
       "Group": "Wikimedia España",
       "Year": "2021",
+      "Year (Original)": "2021",
       "Country": "Spain",
       "Languages": "Spanish",
+      "Country code": "ESP",
       "id": "id41"
    },
    {
@@ -415,8 +497,10 @@
       "Region": "Northern & Western Europe",
       "Group": "Wikimedia España",
       "Year": "2021",
+      "Year (Original)": "2021",
       "Country": "Spain",
       "Languages": "Spanish",
+      "Country code": "ESP",
       "id": "id42"
    },
    {
@@ -425,8 +509,10 @@
       "Region": "Northern & Western Europe",
       "Group": "Wikimedia France",
       "Year": "2020",
+      "Year (Original)": "2020",
       "Country": "France",
       "Languages": "French",
+      "Country code": "FRA",
       "id": "id43"
    },
    {
@@ -435,8 +521,10 @@
       "Region": "Northern & Western Europe",
       "Group": "Wikimedia France",
       "Year": "2020",
+      "Year (Original)": "2020",
       "Country": "France",
       "Languages": "French",
+      "Country code": "FRA",
       "id": "id44"
    },
    {
@@ -445,8 +533,10 @@
       "Region": "Northern & Western Europe",
       "Group": "Wikimedia France",
       "Year": "2011",
+      "Year (Original)": "2011",
       "Country": "France",
       "Languages": "French",
+      "Country code": "FRA",
       "id": "id45"
    },
    {
@@ -455,8 +545,10 @@
       "Region": "Northern & Western Europe",
       "Group": "Wikimedia France",
       "Year": "2020",
+      "Year (Original)": "2020",
       "Country": "France",
       "Languages": "French",
+      "Country code": "FRA",
       "id": "id46"
    },
    {
@@ -465,8 +557,10 @@
       "Region": "Northern & Western Europe",
       "Group": "Wikimedia Foundation",
       "Year": "2023",
+      "Year (Original)": "2023",
       "Country": "United Kingdom",
       "Languages": "English",
+      "Country code": "GBR",
       "id": "id47"
    },
    {
@@ -475,8 +569,10 @@
       "Region": "Northern & Western Europe",
       "Group": "Suppose algorithm A has time complexity TA(n) = Θ(n) and algorithm B has time complexity TB(n) = Θ(n 2 ). (a) Which algorithm is generally accepted as “faster” and why?",
       "Year": "2021",
+      "Year (Original)": "2021",
       "Country": "United Kingdom",
       "Languages": "English",
+      "Country code": "GBR",
       "id": "id48"
    },
    {
@@ -485,8 +581,10 @@
       "Region": "Northern & Western Europe",
       "Group": "Wikimedia UK",
       "Year": "2020",
+      "Year (Original)": "2020",
       "Country": "United Kingdom",
       "Languages": "English",
+      "Country code": "GBR",
       "id": "id49"
    },
    {
@@ -495,8 +593,10 @@
       "Region": "Northern & Western Europe",
       "Group": "NA",
       "Year": "2008",
+      "Year (Original)": "2008",
       "Country": "NA",
       "Languages": "Swedish",
+      "Country code": "NA",
       "id": "id50"
    },
    {
@@ -505,8 +605,10 @@
       "Region": "NA",
       "Group": "NA",
       "Year": "2017",
+      "Year (Original)": "2017",
       "Country": "NA",
       "Languages": "English",
+      "Country code": "NA",
       "id": "id51"
    },
    {
@@ -515,8 +617,10 @@
       "Region": "NA",
       "Group": "NA",
       "Year": "2018",
+      "Year (Original)": "2018",
       "Country": "NA",
       "Languages": "English",
+      "Country code": "NA",
       "id": "id52"
    },
    {
@@ -524,9 +628,11 @@
       "Description": "FlaggedRevs (Flagged Revisions) is an extension of MediaWiki software that allows one to flag versions of articles and thus give additional information about quality. This comes with the possibility of changing what an unregistered user sees by default. The technical description can be found at mw:Extension:FlaggedRevs. This makes it easier to increase the article quality and trustworthiness.",
       "Region": "NA",
       "Group": "NA",
-      "Year": "2014/2017 (A 2017 moratorium established that no new Wikis can be added but those that were already active can maintain it)",
+      "Year": "2014",
+      "Year (Original)": "2014/2017 (A 2017 moratorium established that no new Wikis can be added but those that were already active can maintain it)",
       "Country": "NA",
       "Languages": "All",
+      "Country code": "NA",
       "id": "id53"
    },
    {
@@ -535,8 +641,10 @@
       "Region": "NA",
       "Group": "Wikimedia Foundation",
       "Year": "2021",
+      "Year (Original)": "2021",
       "Country": "NA",
       "Languages": "NA",
+      "Country code": "NA",
       "id": "id54"
    },
    {
@@ -544,9 +652,11 @@
       "Description": "The Moderator Tools team is a Wikimedia Foundation product team working on content moderation tool needs.",
       "Region": "NA",
       "Group": "Wikimedia Foundation",
-      "Year": "2021-",
+      "Year": "2021",
+      "Year (Original)": "2021-",
       "Country": "NA",
       "Languages": "All",
+      "Country code": "NA",
       "id": "id55"
    },
    {
@@ -555,8 +665,10 @@
       "Region": "NA",
       "Group": "NA",
       "Year": "2019",
+      "Year (Original)": "2019",
       "Country": "NA",
       "Languages": "English",
+      "Country code": "NA",
       "id": "id56"
    },
    {
@@ -565,8 +677,10 @@
       "Region": "NA",
       "Group": "NA",
       "Year": "2017",
+      "Year (Original)": "2017",
       "Country": "NA",
       "Languages": "English",
+      "Country code": "NA",
       "id": "id57"
    },
    {
@@ -575,8 +689,10 @@
       "Region": "NA",
       "Group": "NA",
       "Year": "2017",
+      "Year (Original)": "2017",
       "Country": "NA",
       "Languages": "English",
+      "Country code": "NA",
       "id": "id58"
    },
    {
@@ -585,8 +701,10 @@
       "Region": "NA",
       "Group": "NA",
       "Year": "2008",
+      "Year (Original)": "2008",
       "Country": "NA",
       "Languages": "Spanish, French, Portuguese, English, Chinese, Dutch, Bulgarian, Russian, Serbian, Ukrainian, Azerbaijani, Bosnian, Catalan, Danish, German, Estonian, Croatian, Latvian, Norwegian, Polish, Romanian, Serbo-Croatian, Swedish, Turkish, Czech, Georgian, Urdu, Arabic, Persian, Kurdish, Hebrew, Japanese, Korean, Hindi, Bangla, Odia, Khmer, Vietnamese, Indonesian",
+      "Country code": "NA",
       "id": "id59"
    },
    {
@@ -595,8 +713,10 @@
       "Region": "NA",
       "Group": "NA",
       "Year": "2018",
+      "Year (Original)": "2018",
       "Country": "NA",
       "Languages": "English, Russian, Polish",
+      "Country code": "NA",
       "id": "id60"
    },
    {
@@ -605,8 +725,10 @@
       "Region": "NA",
       "Group": "NA",
       "Year": "2018",
+      "Year (Original)": "2018",
       "Country": "NA",
       "Languages": "English",
+      "Country code": "NA",
       "id": "id61"
    },
    {
@@ -615,8 +737,10 @@
       "Region": "NA",
       "Group": "News Quality Initiative (NewsQ), Hacks/Hackers, and Knowledge Futures Group.For more information, read footnote [2].",
       "Year": "2022",
+      "Year (Original)": "2022",
       "Country": "NA",
       "Languages": "English",
+      "Country code": "NA",
       "id": "id62"
    },
    {
@@ -625,8 +749,10 @@
       "Region": "NA",
       "Group": "NA",
       "Year": "2011",
+      "Year (Original)": "2011",
       "Country": "NA",
       "Languages": "English",
+      "Country code": "NA",
       "id": "id63"
    },
    {
@@ -634,9 +760,11 @@
       "Description": "Monitoring system that allows exploring data and metrics on knowledge integrity risks to compare Wikipedia language editions. Knowledge integrity risks are captured through the volume of high-risk revisions, identified with the language-agnostic revert risk machine learning (ML) model, and their revert ratios over time and across pages.",
       "Region": "Global",
       "Group": "Wikimedia Foundation",
-      "Year": "2021-",
+      "Year": "2021",
+      "Year (Original)": "2021-",
       "Country": "NA",
       "Languages": "English",
+      "Country code": "NA",
       "id": "id64"
    }
 ]

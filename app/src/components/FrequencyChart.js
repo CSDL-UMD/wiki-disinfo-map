@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Paper } from '@mui/material';
+import { Paper, Typography } from '@mui/material';
 import {
   LineChart,
   Line,
@@ -10,6 +10,7 @@ import {
   ReferenceArea,
   ResponsiveContainer,
 } from 'recharts';
+import { createRangeFilter } from '../utils';
 
 // Percent of y-range to offset the y domain
 const yOffset = 0.1;
@@ -22,14 +23,7 @@ const yDomain = ([dataMin, dataMax]) => [
 
 // transform csv data to get frequencies of
 const getFrequencies = (data, column) => {
-  // const values = data.map((x) => Number(x[column]));
-  // TODO: fix data to only be numbers
-  const values = [];
-  for (const el of data) {
-    if (!isNaN(Number(el[column]))) {
-      values.push(Number(el[column]));
-    }
-  }
+  const values = data.map((x) => Number(x[column])).filter((x) => !isNaN(x));
 
   // get counts
   const counts = {};
@@ -75,6 +69,7 @@ export default class FrequencyChart extends Component {
       animation: true,
       xKey: props.column,
       yKey: 'count',
+      filterId: -1,
     };
     // initialize state
     this.state = this.initialState;
@@ -115,7 +110,7 @@ export default class FrequencyChart extends Component {
 
   zoom() {
     let { refAreaLeft, refAreaRight } = this.state;
-    const { data, xKey, yKey } = this.state;
+    const { data, xKey, yKey, filterId } = this.state;
 
     if (refAreaLeft === refAreaRight || refAreaRight === '') {
       this.setState(() => ({
@@ -141,14 +136,15 @@ export default class FrequencyChart extends Component {
       yDomain: yDomain,
     }));
 
-    // dispatch update
-    this.props.rangeFilterData(xKey, refAreaLeft, refAreaRight);
+    // create new filter
+    const newFilter = createRangeFilter(xKey, refAreaLeft, refAreaRight);
+    // remove old filter
+    this.props.removeFilter(filterId);
+    // add new filter and reset the state
+    this.setState({
+      filterId: this.props.addFilter(newFilter),
+    });
   }
-
-  // zoomOut() {
-  //   // reset zoom
-  //   this.props.resetData();
-  // }
 
   render() {
     const {
@@ -169,10 +165,13 @@ export default class FrequencyChart extends Component {
           className="highlight-bar-charts"
           style={{ userSelect: 'none', width: '100%' }}
         >
+          <Typography variant="h6" gutterBottom align="center">
+            Frequency of {xKey}
+          </Typography>
           <ResponsiveContainer width="100%" height={300}>
             <LineChart
               width={800}
-              height={400}
+              height="100%"
               data={data}
               onMouseDown={(e) =>
                 this.setState({ refAreaLeft: e?.activeLabel || '' })
@@ -190,11 +189,6 @@ export default class FrequencyChart extends Component {
                 dataKey={xKey}
                 domain={[left, right]}
                 type="number"
-                label={{
-                  value: xKey,
-                  position: 'insideBottom',
-                  offset: '-10',
-                }}
               />
               <YAxis
                 allowDataOverflow
