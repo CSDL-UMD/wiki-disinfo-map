@@ -7,6 +7,7 @@ import {
   Sector,
   ResponsiveContainer,
 } from 'recharts';
+import { createValueFilter } from '../utils';
 
 const getData = (dataRaw, columnName) => {
   // gather all values of the given column
@@ -94,45 +95,44 @@ export default class PieChart extends Component {
     super(props);
     this.initialState = {
       activeIndex: -1,
-      clicks: 0,
       hoverIndex: -1,
+      dataCounts: getData(this.props.data, this.props.column),
+      filterId: -1,
+      originalLength: this.props.data.length
     };
 
     this.state = this.initialState;
   }
 
   onPieEnter = (_, index) => {
-    // console.log(this.state.clicked)
     this.setState(() =>({
       hoverIndex: index,
     }));
-    // console.log(this.state.data);
-    // console.log(this.state.data[index].key);
-    // <Tooltip title={this.data[index].key}></Tooltip>
   };
 
   componentDidUpdate(prevProps, prevState) { 
-    // TODO: will be a problem in filter combination, should not be based on data being different
-    if (prevProps.data !== this.props.data) {
-      // component data updated
+    // only resets the visual of the pie chart if reset button was pressed
+    if (this.state.originalLength === this.props.data.length && prevProps.data !== this.props.data) {
       this.setState(() => ({
-        data: this.props.data, // COME HERE FOR FILTERING
+        dataCounts: getData(this.props.data, this.props.column),
         activeIndex: -1,
-        clicks: 0,
         hoverIndex: -1,
       }));
     }
   }
 
   onPieClick = (_, index) => {
-    // useEffect(index)
+    const {dataCounts, filterId} = this.state;
+
+    // remove old filter
+    this.props.removeFilter(filterId);
+
+    // create & add new filter
+    const newFilter = createValueFilter(this.props.column, dataCounts[index].name);
     this.setState({
       activeIndex: index,
-      clicks: this.clicks + 1,
-      // TODO: call filter function here
+      filterId: this.props.addFilter(newFilter),
     });
-    // console.log(this.activeIndex)
-    // this.props.rangeFilterData(this.props.column, data[this.activeIndex].name, data[this.activeIndex].name)
   };
 
   render() {
@@ -145,11 +145,12 @@ export default class PieChart extends Component {
         <RechartsPieChart width={400} height={400}>
           <Pie
             activeIndex={this.state.activeIndex}
-            clicks={this.state.clicks}
             hoverIndex={this.state.hoverIndex}
+            filterId={this.state.filterId}
+            originalLength={this.state.originalLength}
             activeShape={renderActiveShape}
             // label={renderCustomizedLabel}
-            data={getData(this.props.data, this.props.column)}
+            data={this.state.dataCounts}
             cx="50%"
             cy="50%"
             innerRadius={45}
@@ -157,7 +158,7 @@ export default class PieChart extends Component {
             fill="#0c4a6e"
             dataKey="value"
             onMouseEnter={this.onPieEnter}
-            onMouseDown={this.onPieClick}
+            onMouseDown={this.onPieClick.bind(this)}
             className="pie-chart"
             />
         </RechartsPieChart>

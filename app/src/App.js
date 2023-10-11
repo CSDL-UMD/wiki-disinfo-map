@@ -124,17 +124,23 @@ function App() {
             <Grid item xs={12} sm={6} lg={3}>
               <PieChart 
                 column="Country"
-                data={currData} />
+                data={currData} 
+                addFilter={addFilter}
+                removeFilter={removeFilter}/>
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>
               <PieChart
                 column="Region"
-                data={currData}/>
+                data={currData}
+                addFilter={addFilter}
+                removeFilter={removeFilter}/>
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>
               <PieChart
                 column="Group"
-                data={currData} />
+                data={currData}
+                addFilter={addFilter}
+                removeFilter={removeFilter}/>
             </Grid>
           </Grid>
         </Container>

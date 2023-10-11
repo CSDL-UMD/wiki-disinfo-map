@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Autocomplete, Paper } from '@mui/material';
+import { Autocomplete } from '@mui/material';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
