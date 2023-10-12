@@ -1,4 +1,5 @@
-import React, { PureComponent, useEffect } from 'react';
+import React, { Component } from 'react';
+import { Typography } from '@mui/material';
 import './PieChart.css';
 import {
   PieChart as RechartsPieChart,
@@ -6,153 +7,163 @@ import {
   Sector,
   ResponsiveContainer,
 } from 'recharts';
+import { createValueFilter } from '../utils';
 
-const data = [
-  { name: 'Group A', value: 400 },
-  { name: 'Group B', value: 300 },
-  { name: 'Group C', value: 300 },
-  { name: 'Group D', value: 200 },
-];
+const getData = (dataRaw, columnName) => {
+  // gather all values of the given column
+  const values = [];
+  for (const oneRow of dataRaw) {
+    values.push(oneRow[columnName])
+  }
+
+  // count occurrences in values (stole rishi's code lol)
+  const counts = {};
+  for (const num of values) {
+    counts[num] = counts[num] ? counts[num] + 1 : 1;
+  }
+
+  const data = [];
+  // add data to pie chart data
+  for (const key in counts) {
+    data.push({ name: key, value: counts[key]});
+  }
+
+  const comparator = (a, b) => b.value - a.value
+  data.sort(comparator)
+
+  return data;
+}
+
+// const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, hoverIndex, nameKey }) => {
+//   const RADIAN = Math.PI / 180;
+//   const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+//   const x = cx + radius * Math.cos(-midAngle * RADIAN);
+//   const y = cy + radius * Math.sin(-midAngle * RADIAN);
+
+//   return (
+//     //<text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
+//     //  {"hello"}
+//     //</text>
+//   );
+// };
 
 const renderActiveShape = (props) => {
-  const RADIAN = Math.PI / 180;
+  // const RADIAN = Math.PI / 180;
   const {
     cx,
     cy,
-    midAngle,
     innerRadius,
     outerRadius,
     startAngle,
     endAngle,
-    fill,
     payload,
   } = props;
-  const sin = Math.sin(-RADIAN * midAngle);
-  const cos = Math.cos(-RADIAN * midAngle);
-  const sx = cx + (outerRadius + 10) * cos;
-  const sy = cy + (outerRadius + 10) * sin;
-  const mx = cx + (outerRadius + 30) * cos;
-  const my = cy + (outerRadius + 30) * sin;
-  const ex = mx + (cos >= 0 ? 1 : -1) * 22;
-  const ey = my;
-  const textAnchor = cos >= 0 ? 'start' : 'end';
-
+  
   return (
-    <g>
-      <text x={cx} y={cy} dy={8} textAnchor="middle" fill={'#0ea5e9'}>
+    <g> 
+      <text x={cx} y={cy+100} dy={8} textAnchor="middle" fill={'#0ea5e9'}>
         {payload.name}
       </text>
-      <Sector
-        cx={cx}
-        cy={cy}
-        innerRadius={innerRadius}
-        outerRadius={outerRadius}
-        startAngle={startAngle}
-        endAngle={endAngle}
-        fill={'#0ea5e9'}
-      />
-      <Sector
-        cx={cx}
-        cy={cy}
-        startAngle={startAngle}
-        endAngle={endAngle}
-        innerRadius={outerRadius + 6}
-        outerRadius={outerRadius + 10}
-        fill={'#0ea5e9'}
-      />
+      <text x={cx} y={cy} dy={6} textAnchor="middle" fill={'#0ea5e9'}>
+        {props.nameKey}
+      </text>
+        <Sector
+          cx={cx}
+          cy={cy}
+          innerRadius={innerRadius}
+          outerRadius={outerRadius}
+          startAngle={startAngle}
+          endAngle={endAngle}
+          fill={'#0ea5e9'}
+        />
+        <Sector
+          cx={cx}
+          cy={cy}
+          startAngle={startAngle}
+          endAngle={endAngle}
+          innerRadius={outerRadius + 6}
+          outerRadius={outerRadius + 10}
+          fill={'#0ea5e9'}
+        />
     </g>
   );
 };
 
-/* overcomplicated demo code
-<path d={`M${sx},${sy}L${mx},${my}L${ex},${ey}`} stroke={fill} fill="none" />
-<circle cx={ex} cy={ey} r={2} fill={fill} stroke="none" />
-<text x={ex + (cos >= 0 ? 1 : -1) * 12} y={ey} textAnchor={textAnchor} fill="#333">{`PV ${value}`}</text>
-<text x={ex + (cos >= 0 ? 1 : -1) * 12} y={ey} dy={18} textAnchor={textAnchor} fill="#999">
-  {`(Rate ${(percent * 100).toFixed(2)}%)`}
-</text>
-*/
-
-export default class PieChart extends PureComponent {
-  // static demoUrl = 'https://codesandbox.io/s/pie-chart-with-customized-active-shape-y93si';
+export default class PieChart extends Component {
 
   constructor(props) {
     super(props);
     this.initialState = {
-      activeIndex: 0,
-      clicks: 0,
+      activeIndex: -1,
+      hoverIndex: -1,
+      dataCounts: getData(this.props.data, this.props.column),
+      filterId: -1,
+      originalLength: this.props.data.length
     };
 
     this.state = this.initialState;
   }
 
   onPieEnter = (_, index) => {
-    // console.log(this.state.clicked)
-    if (this.state.clicks == 0) {
-      this.setState({
-        activeIndex: index,
-      });
-    }
+    this.setState(() =>({
+      hoverIndex: index,
+    }));
   };
 
-  // useEffect = ((_, index) => {
-  //   // make call to App filter function here
-  //   console.log("hit")
-  //   // visually highlight the selected section
-
-  // }, []);
-
-  componentDidUpdate(prevProps, prevState) {
-    if (prevProps.data !== this.props.data) {
-      // component data updated
+  componentDidUpdate(prevProps, prevState) { 
+    // only resets the visual of the pie chart if reset button was pressed
+    if (this.state.originalLength === this.props.data.length && prevProps.data !== this.props.data) {
       this.setState(() => ({
-        data: this.props.data,
-        activeIndex: 0,
-        clicks: 0,
+        dataCounts: getData(this.props.data, this.props.column),
+        activeIndex: -1,
+        hoverIndex: -1,
       }));
     }
   }
 
   onPieClick = (_, index) => {
-    // useEffect(index)
+    const {dataCounts, filterId} = this.state;
+
+    // remove old filter
+    this.props.removeFilter(filterId);
+
+    // create & add new filter
+    const newFilter = createValueFilter(this.props.column, dataCounts[index].name);
     this.setState({
       activeIndex: index,
-      clicks: this.clicks + 1,
-      // TODO: call filter function here
+      filterId: this.props.addFilter(newFilter),
     });
   };
 
-  // onSectionClick = (index) => {
-  //   // event handling for filtering data here
-  //   // this.setState({
-
-  //   // });
-  //   useEffect(index)
-  //   }
-
   render() {
-    const pieStyle = { outline: 'none' };
     return (
+      <>
+        <Typography variant="h6" gutterBottom align="center">
+          {this.props.column}
+      </Typography>
       <ResponsiveContainer width="100%" height={250}>
         <RechartsPieChart width={400} height={400}>
           <Pie
             activeIndex={this.state.activeIndex}
-            clicks={this.state.clicks}
+            hoverIndex={this.state.hoverIndex}
+            filterId={this.state.filterId}
+            originalLength={this.state.originalLength}
             activeShape={renderActiveShape}
-            data={data}
+            // label={renderCustomizedLabel}
+            data={this.state.dataCounts}
             cx="50%"
             cy="50%"
             innerRadius={45}
             outerRadius={80}
             fill="#0c4a6e"
             dataKey="value"
-            // TODO: Remove later. This changes active pie slice on hover
-            // onMouseEnter={this.onPieEnter}
-            onMouseDown={this.onPieClick}
+            onMouseEnter={this.onPieEnter}
+            onMouseDown={this.onPieClick.bind(this)}
             className="pie-chart"
-          />
+            />
         </RechartsPieChart>
       </ResponsiveContainer>
+            </>
     );
   }
 }

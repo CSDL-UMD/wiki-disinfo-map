@@ -28,5 +28,11 @@ const createFilterComponentFilter = (column, str) => {
     })
 };
 
+const createValueFilter = (column, value) => {
+  return (data) => data.filter(item => {
+    return item[column] === value;
+  })
+}
 
-export { createRangeFilter, createFilterComponentFilter };
+
+export { createRangeFilter, createFilterComponentFilter, createValueFilter };
