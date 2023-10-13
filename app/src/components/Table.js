@@ -3,7 +3,7 @@ import { Paper } from '@mui/material';
 import { DataGrid } from '@mui/x-data-grid';
 
 const Table = (props) => {
-  const [curData, setCurData] = useState([]);
+  const [currData, setCurrData] = useState([]);
 
   // COLUMNS: Project Name, Description, Languages, Country, Region, Starting Year, Group
   const columns = [
@@ -14,7 +14,7 @@ const Table = (props) => {
     { field: 'id5', headerName: 'Region', flex: 0.2 },
     { field: 'id6', headerName: 'Starting Year', flex: 0.2 },
     { field: 'id7', headerName: 'Group', flex: 0.2 },
-    { field: 'id8', headerName: 'Country code', flex: 0.2}
+    { field: 'id8', headerName: 'Country code', flex: 0.2 },
   ];
 
   const transformData = (data) => {
@@ -30,7 +30,7 @@ const Table = (props) => {
         Region: 'id5',
         Year: 'id6',
         Group: 'id7',
-        'Country code': 'id8'
+        'Country code': 'id8',
       };
       const newRow = { id: `id${rowNum}` };
       for (const key in translations) {
@@ -49,13 +49,13 @@ const Table = (props) => {
   // Similar to componentDidMount and componentDidUpdate:
   useEffect(() => {
     // Update the document title using the browser API
-    setCurData(transformData(props.data));
+    setCurrData(transformData(props.data));
   }, [props.data]);
 
   return (
     <Paper>
       <DataGrid
-        rows={curData}
+        rows={currData}
         columns={columns}
         initialState={{
           pagination: {
