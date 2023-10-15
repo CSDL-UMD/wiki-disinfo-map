@@ -6,6 +6,7 @@ import {
   Pie,
   Sector,
   ResponsiveContainer,
+  Tooltip,
 } from 'recharts';
 import { createValueFilter } from '../utils';
 
@@ -161,6 +162,7 @@ export default class PieChart extends Component {
             onMouseDown={this.onPieClick.bind(this)}
             className="pie-chart"
             />
+            <Tooltip/>
         </RechartsPieChart>
       </ResponsiveContainer>
             </>
