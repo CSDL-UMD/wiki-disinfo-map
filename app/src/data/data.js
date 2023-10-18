@@ -37,7 +37,7 @@ async function retrieve_data() {
           let row = data[i];
           row['id'] = 'id' + (i + 1);
 
-          // row = preprocessRow(row);
+          row = preprocessRow(row);
         }
 
         // data in this context is rows
@@ -69,12 +69,13 @@ const preprocessRow = async (row) => {
   // parse Start Year to number
   row['Year'] = Number(row['Year']);
   // parse country to list of countries
-  row['Country'] = row['Country']
+  row['Country'] = String(row['Country'])
     .split(',')
-    .filter((country) => country !== 'NA');
+    .filter((country) => country !== 'NA' && country !== 'Multiple (NA)' && country !== 'Multiple');
   // parse languages to list of languages
-  row['Languages'] = row['Languages']
-    .split(',')
-    .filter((lang) => lang !== 'NA');
+  row.Languages = String(row.Languages)
+      .split(',')
+      .map(val => val.trim())
+      .filter((lang) => lang !== 'NA' && lang !== 'undefined' && lang !== '' && lang !== "All");
   return row;
 };

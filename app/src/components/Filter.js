@@ -7,8 +7,8 @@ import { createFilterComponentFilter } from '../utils';
 
 // get all the options of countries in the format of the MUI Autocomplete component
 const get_options_countries = (data) => {
-  const options = [];
   const select_options = []; // this will store the options in a format agreeable to the select component
+  const countries = new Set();
 
   if (!data) {
     return [];
@@ -17,30 +17,20 @@ const get_options_countries = (data) => {
   for (let rowNum = 0; rowNum < data.length; rowNum++) {
     const row = data[rowNum];
 
-    if (row['Country'] !== 'NA' && row['Country'] !== 'Multiple (NA)') {
-      // check if the item is already included in options (since some are repeated)
-      let item;
-
-      item = [
-        row['Country code'].substring(0, row['Country code'].length - 1),
-        row['Country'],
-      ];
-      const included = options.some(
-        (option) =>
-          option.length === item.length &&
-          option.every((value, index) => value === item[index])
-      );
-
-      if (!included) {
-        options.push(item);
-      }
+    // check if the item is already included in options (since some are repeated)
+    for (let country of row['Country']) {      
+      if (!countries.has(country.trim())) {
+        countries.add(country);
+      }  
     }
   }
 
-  for (const option of options) {
-    if (!select_options.includes({ code: option[0], label: option[1] }))
-      select_options.push({ code: option[0], label: option[1] });
+  // add to JSON format acceptable by autocomplete component
+  // NOTE: In the future, map country code to code using json file in data folder
+  for (const country of countries) {
+    select_options.push({ /* code: [INSERT MAPPED CODE] */ label: country });
   }
+
   return select_options;
 };
 
@@ -55,9 +45,6 @@ const get_options_languages = (data) => {
   // get unique languages
   for (let rowNum = 0; rowNum < data.length; rowNum++) {
     const row = data[rowNum];
-    row.Languages = String(row.Languages)
-      .split(',')
-      .filter((lang) => lang !== 'NA');
 
     if (row['Languages'] !== 'NA') {
       // check if the item is already included in options (since some are repeated)
@@ -81,8 +68,8 @@ export default class Filter extends Component {
       column: props.column,
       data: props.data,
       originalDataLen: props.data.length,
-      options_countries: get_options_countries(props.data),
-      options_languages: get_options_languages(props.data),
+      // options_countries: get_options_countries(props.data),
+      // options_languages: get_options_languages(props.data),
       selectedOption: null,
       filterId: -1,
     };
@@ -119,7 +106,7 @@ export default class Filter extends Component {
   }
 
   render() {
-    const { options_countries, options_languages, column, selectedOption } =
+    const { column, selectedOption } =
       this.state;
     if (column === 'Country') {
       return (
@@ -128,8 +115,8 @@ export default class Filter extends Component {
           fullWidth={true}
           options={
             this.props.column === 'Country'
-              ? options_countries
-              : options_languages
+              ? get_options_countries(this.props.data)
+              : get_options_languages(this.props.data)
           }
           value={selectedOption}
           onChange={this.onChange.bind(this)}
@@ -141,13 +128,13 @@ export default class Filter extends Component {
               sx={{ '& > img': { mr: 2, flexShrink: 0 } }}
               {...props}
             >
-              <img
+              {/* <img
                 loading="lazy"
                 width="20"
                 srcSet={`https://flagcdn.com/w40/${option.code.toLowerCase()}.png 2x`}
                 src={`https://flagcdn.com/w20/${option.code.toLowerCase()}.png`}
                 alt=""
-              />
+              /> */}
               {option.label}
             </Box>
           )}
@@ -168,7 +155,7 @@ export default class Filter extends Component {
         <Autocomplete
           id="language-select"
           fullWidth={true}
-          options={options_languages}
+          options={get_options_languages(this.props.data)}
           value={selectedOption}
           onChange={this.onChange.bind(this)}
           autoHighlight

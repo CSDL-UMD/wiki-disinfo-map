@@ -13,7 +13,7 @@ const createFilterComponentFilter = (column, str) => {
       let arr = item[column]
 
       // Languages could typically be an array, so we iterate through to find label
-      if (column === "Languages") {
+      // if (column === "Languages") {
         for (let i = 0 ; i < arr.length; i++) {
           if (arr[i] === str['label']) {
             return true;
@@ -21,10 +21,10 @@ const createFilterComponentFilter = (column, str) => {
         }
 
         return false
-      } else {
-        const val = String(item[column]);   
-        return val === str['label'];
-      }
+      // } else {
+      //   const val = String(item[column]);   
+      //   return val === str['label'];
+      // }
     })
 };
 
