@@ -96,7 +96,7 @@ export default class Filter extends Component {
     this.props.removeFilter(filterId);
     if (value) {
       // create new filter
-      const newFilter = createFilterComponentFilter(column, value);
+      const newFilter = createFilterComponentFilter(column, value['label']);
 
       // add new filter and reset the state
       this.setState({

@@ -8,14 +8,23 @@ import {
   ResponsiveContainer,
   Tooltip,
 } from 'recharts';
-import { createValueFilter } from '../utils';
+import { createValueFilter, createContainsFilter } from '../utils';
 
 const getData = (dataRaw, columnName) => {
   // gather all values of the given column
   const values = [];
   for (const oneRow of dataRaw) {
-    values.push(oneRow[columnName])
+    if(oneRow[columnName] instanceof Array) {
+      for (const oneVal of oneRow[columnName]) {
+        values.push(oneVal);
+      }
+    }
+    else {
+      values.push(oneRow[columnName]);
+    }
   }
+
+  console.log(values);
 
   // count occurrences in values (stole rishi's code lol)
   const counts = {};
@@ -35,31 +44,18 @@ const getData = (dataRaw, columnName) => {
   return data;
 }
 
-// const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, hoverIndex, nameKey }) => {
+// const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, name, value, index }) => {
 //   const RADIAN = Math.PI / 180;
 //   const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
 //   const x = cx + radius * Math.cos(-midAngle * RADIAN);
 //   const y = cy + radius * Math.sin(-midAngle * RADIAN);
 
 //   return (
-//     //<text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
-//     //  {"hello"}
-//     //</text>
+//     <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
+//       {name} ({value})
+//     </text>
 //   );
 // };
-
-const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, name, value, index }) => {
-  const RADIAN = Math.PI / 180;
-  const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
-  const x = cx + radius * Math.cos(-midAngle * RADIAN);
-  const y = cy + radius * Math.sin(-midAngle * RADIAN);
-
-  return (
-    <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
-      {name} ({value})
-    </text>
-  );
-};
 
 const renderActiveShape = (props) => {
   // const RADIAN = Math.PI / 180;
@@ -126,7 +122,7 @@ export default class PieChart extends Component {
 
   componentDidUpdate(prevProps, prevState) { 
     // only resets the visual of the pie chart if reset button was pressed
-    if (this.state.originalLength === this.props.data.length && prevProps.data !== this.props.data) {
+    if (prevProps.data !== this.props.data) {
       this.setState(() => ({
         dataCounts: getData(this.props.data, this.props.column),
         activeIndex: -1,
@@ -141,8 +137,15 @@ export default class PieChart extends Component {
     // remove old filter
     this.props.removeFilter(filterId);
 
+    var newFilter;
     // create & add new filter
-    const newFilter = createValueFilter(this.props.column, dataCounts[index].name);
+    if(this.props.data[0][this.props.column] instanceof Array) {
+      newFilter = createContainsFilter(this.props.column, dataCounts[index].name);
+      console.log("hits")
+    }
+    else {
+      newFilter = createValueFilter(this.props.column, dataCounts[index].name);
+    }
     this.setState({
       activeIndex: index,
       filterId: this.props.addFilter(newFilter),

@@ -34,5 +34,11 @@ const createValueFilter = (column, value) => {
   })
 }
 
+const createContainsFilter = (column, str) => {
+  return (data) => data.filter((item) => {
+      let arr = item[column];
+      return arr.includes(str);
+  })
+};
 
-export { createRangeFilter, createFilterComponentFilter, createValueFilter };
+export { createRangeFilter, createFilterComponentFilter, createValueFilter, createContainsFilter };
