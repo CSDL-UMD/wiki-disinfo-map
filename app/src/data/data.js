@@ -72,11 +72,19 @@ const preprocessRow = async (row) => {
   row['Country'] = String(row['Country'])
     .split(',')
     .map((str) => str.trim())
-    .filter((country) => country !== 'NA' && country !== 'Multiple (NA)' && country !== 'Multiple');
+    .filter(
+      (country) =>
+        country !== 'NA' &&
+        country !== 'Multiple (NA)' &&
+        country !== 'Multiple'
+    );
   // parse languages to list of languages
   row.Languages = String(row.Languages)
-      .split(',')
-      .map(val => val.trim())
-      .filter((lang) => lang !== 'NA' && lang !== 'undefined' && lang !== '' && lang !== "All");
+    .split(',')
+    .map((val) => val.trim())
+    .filter(
+      (lang) =>
+        lang !== 'NA' && lang !== 'undefined' && lang !== '' && lang !== 'All'
+    );
   return row;
 };

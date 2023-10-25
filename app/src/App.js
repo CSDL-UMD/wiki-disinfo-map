@@ -78,7 +78,7 @@ function App() {
           <Grid container spacing={2}>
             <Grid item xs={12} md={6}>
               {/* Map */}
-              <Map />
+              <Map data={currData} />
             </Grid>
 
             <Grid item xs={12} md={6}>
@@ -89,21 +89,23 @@ function App() {
               <Grid container spacing={2}>
                 <Grid item xs={12} md={6}>
                   {/* Country Filter */}
-                  <Filter 
-                  resetData={resetData}
-                  column="Country" 
-                  data={currData}
-                  addFilter={addFilter}
-                  removeFilter={removeFilter}/>
+                  <Filter
+                    resetData={resetData}
+                    column="Country"
+                    data={currData}
+                    addFilter={addFilter}
+                    removeFilter={removeFilter}
+                  />
                 </Grid>
                 <Grid item xs={12} md={6}>
                   {/* Language Filter */}
                   <Filter
-                  resetData={resetData}
-                  column="Languages" 
-                  data={currData}
-                  addFilter={addFilter}
-                  removeFilter={removeFilter}/>
+                    resetData={resetData}
+                    column="Languages"
+                    data={currData}
+                    addFilter={addFilter}
+                    removeFilter={removeFilter}
+                  />
                 </Grid>
               </Grid>
             </Grid>
@@ -122,25 +124,28 @@ function App() {
               />
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>
-              <PieChart 
+              <PieChart
                 column="Country"
-                data={currData} 
+                data={currData}
                 addFilter={addFilter}
-                removeFilter={removeFilter}/>
+                removeFilter={removeFilter}
+              />
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>
               <PieChart
                 column="Region"
                 data={currData}
                 addFilter={addFilter}
-                removeFilter={removeFilter}/>
+                removeFilter={removeFilter}
+              />
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>
               <PieChart
                 column="Group"
                 data={currData}
                 addFilter={addFilter}
-                removeFilter={removeFilter}/>
+                removeFilter={removeFilter}
+              />
             </Grid>
           </Grid>
         </Container>
