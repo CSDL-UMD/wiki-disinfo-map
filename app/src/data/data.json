@@ -10,7 +10,7 @@
       "Languages": [
          "English"
       ],
-      "Country code": "NA",
+      "Country code": [],
       "id": "id1"
    },
    {
@@ -70,7 +70,7 @@
          "Chinese",
          "Japanese"
       ],
-      "Country code": "NA",
+      "Country code": [],
       "id": "id2"
    },
    {
@@ -84,7 +84,7 @@
       "Languages": [
          "English"
       ],
-      "Country code": "NA",
+      "Country code": [],
       "id": "id3"
    },
    {
@@ -96,7 +96,7 @@
       "Year (Original)": "2022",
       "Country": [],
       "Languages": [],
-      "Country code": "NA",
+      "Country code": [],
       "id": "id4"
    },
    {
@@ -110,7 +110,7 @@
       "Languages": [
          "Multiple"
       ],
-      "Country code": "NA",
+      "Country code": [],
       "id": "id5"
    },
    {
@@ -136,7 +136,7 @@
          "Catalan",
          "Dagbani"
       ],
-      "Country code": "NA",
+      "Country code": [],
       "id": "id6"
    },
    {
@@ -150,7 +150,7 @@
       "Languages": [
          "English"
       ],
-      "Country code": "NA",
+      "Country code": [],
       "id": "id7"
    },
    {
@@ -171,7 +171,7 @@
          "Vietnamese",
          "Czech"
       ],
-      "Country code": "NA",
+      "Country code": [],
       "id": "id8"
    },
    {
@@ -209,7 +209,9 @@
          "Malayalam",
          "Thai"
       ],
-      "Country code": "USA",
+      "Country code": [
+         "USA"
+      ],
       "id": "id9"
    },
    {
@@ -225,7 +227,9 @@
       "Languages": [
          "English"
       ],
-      "Country code": "NE",
+      "Country code": [
+         "NE"
+      ],
       "id": "id10"
    },
    {
@@ -241,7 +245,9 @@
       "Languages": [
          "Spanish"
       ],
-      "Country code": "CHL",
+      "Country code": [
+         "CHL"
+      ],
       "id": "id11"
    },
    {
@@ -257,7 +263,9 @@
       "Languages": [
          "Brazilian Portuguese"
       ],
-      "Country code": "BRA",
+      "Country code": [
+         "BRA"
+      ],
       "id": "id12"
    },
    {
@@ -273,7 +281,9 @@
       "Languages": [
          "Brazilian Portuguese"
       ],
-      "Country code": "BRA",
+      "Country code": [
+         "BRA"
+      ],
       "id": "id13"
    },
    {
@@ -289,7 +299,9 @@
       "Languages": [
          "Brazilian Portuguese"
       ],
-      "Country code": "BRA",
+      "Country code": [
+         "BRA"
+      ],
       "id": "id14"
    },
    {
@@ -305,7 +317,9 @@
       "Languages": [
          "Brazilian Portuguese"
       ],
-      "Country code": "BRA",
+      "Country code": [
+         "BRA"
+      ],
       "id": "id15"
    },
    {
@@ -321,7 +335,9 @@
       "Languages": [
          "Brazilian Portuguese"
       ],
-      "Country code": "BRA",
+      "Country code": [
+         "BRA"
+      ],
       "id": "id16"
    },
    {
@@ -337,7 +353,9 @@
       "Languages": [
          "Brazilian Portuguese"
       ],
-      "Country code": "BRA",
+      "Country code": [
+         "BRA"
+      ],
       "id": "id17"
    },
    {
@@ -353,7 +371,9 @@
       "Languages": [
          "Spanish"
       ],
-      "Country code": "CHL",
+      "Country code": [
+         "CHL"
+      ],
       "id": "id18"
    },
    {
@@ -371,7 +391,11 @@
       "Languages": [
          "English"
       ],
-      "Country code": "CAN, USA, PER",
+      "Country code": [
+         "CAN",
+         "USA",
+         "PER"
+      ],
       "id": "id19"
    },
    {
@@ -385,7 +409,7 @@
       "Languages": [
          "English"
       ],
-      "Country code": "NA",
+      "Country code": [],
       "id": "id20"
    },
    {
@@ -401,7 +425,9 @@
       "Languages": [
          "English"
       ],
-      "Country code": "USA",
+      "Country code": [
+         "USA"
+      ],
       "id": "id21"
    },
    {
@@ -417,7 +443,9 @@
       "Languages": [
          "English"
       ],
-      "Country code": "USA",
+      "Country code": [
+         "USA"
+      ],
       "id": "id22"
    },
    {
@@ -433,7 +461,9 @@
       "Languages": [
          "English"
       ],
-      "Country code": "USA",
+      "Country code": [
+         "USA"
+      ],
       "id": "id23"
    },
    {
@@ -449,7 +479,9 @@
       "Languages": [
          "English"
       ],
-      "Country code": "USA",
+      "Country code": [
+         "USA"
+      ],
       "id": "id24"
    },
    {
@@ -487,7 +519,9 @@
          "Bengali",
          "Greek"
       ],
-      "Country code": "USA",
+      "Country code": [
+         "USA"
+      ],
       "id": "id25"
    },
    {
@@ -515,7 +549,7 @@
          "Maithili",
          "Nepali"
       ],
-      "Country code": "NA",
+      "Country code": [],
       "id": "id26"
    },
    {
@@ -531,7 +565,9 @@
       "Languages": [
          "English"
       ],
-      "Country code": "PHL",
+      "Country code": [
+         "PHL"
+      ],
       "id": "id27"
    },
    {
@@ -547,7 +583,9 @@
       "Languages": [
          "English"
       ],
-      "Country code": "PHL",
+      "Country code": [
+         "PHL"
+      ],
       "id": "id28"
    },
    {
@@ -563,7 +601,9 @@
       "Languages": [
          "Bulgarian"
       ],
-      "Country code": "BGR",
+      "Country code": [
+         "BGR"
+      ],
       "id": "id29"
    },
    {
@@ -579,7 +619,9 @@
       "Languages": [
          "Bulgarian"
       ],
-      "Country code": "BGR",
+      "Country code": [
+         "BGR"
+      ],
       "id": "id30"
    },
    {
@@ -593,7 +635,7 @@
       "Languages": [
          "English"
       ],
-      "Country code": "NA",
+      "Country code": [],
       "id": "id31"
    },
    {
@@ -609,7 +651,9 @@
       "Languages": [
          "Polish"
       ],
-      "Country code": "POL",
+      "Country code": [
+         "POL"
+      ],
       "id": "id32"
    },
    {
@@ -625,7 +669,9 @@
       "Languages": [
          "Ukrainian"
       ],
-      "Country code": "UKR",
+      "Country code": [
+         "UKR"
+      ],
       "id": "id33"
    },
    {
@@ -641,7 +687,9 @@
       "Languages": [
          "Ukrainian"
       ],
-      "Country code": "UKR",
+      "Country code": [
+         "UKR"
+      ],
       "id": "id34"
    },
    {
@@ -657,7 +705,9 @@
       "Languages": [
          "Ukrainian"
       ],
-      "Country code": "UKR",
+      "Country code": [
+         "UKR"
+      ],
       "id": "id35"
    },
    {
@@ -673,7 +723,9 @@
       "Languages": [
          "Ukrainian"
       ],
-      "Country code": "UKR",
+      "Country code": [
+         "UKR"
+      ],
       "id": "id36"
    },
    {
@@ -689,7 +741,9 @@
       "Languages": [
          "Ukrainian"
       ],
-      "Country code": "UKR",
+      "Country code": [
+         "UKR"
+      ],
       "id": "id37"
    },
    {
@@ -705,7 +759,9 @@
       "Languages": [
          "Ukrainian"
       ],
-      "Country code": "UKR",
+      "Country code": [
+         "UKR"
+      ],
       "id": "id38"
    },
    {
@@ -721,7 +777,9 @@
       "Languages": [
          "Spanish"
       ],
-      "Country code": "ESP",
+      "Country code": [
+         "ESP"
+      ],
       "id": "id39"
    },
    {
@@ -737,7 +795,9 @@
       "Languages": [
          "Spanish"
       ],
-      "Country code": "ESP",
+      "Country code": [
+         "ESP"
+      ],
       "id": "id40"
    },
    {
@@ -753,7 +813,9 @@
       "Languages": [
          "Spanish"
       ],
-      "Country code": "ESP",
+      "Country code": [
+         "ESP"
+      ],
       "id": "id41"
    },
    {
@@ -769,7 +831,9 @@
       "Languages": [
          "Spanish"
       ],
-      "Country code": "ESP",
+      "Country code": [
+         "ESP"
+      ],
       "id": "id42"
    },
    {
@@ -785,7 +849,9 @@
       "Languages": [
          "French"
       ],
-      "Country code": "FRA",
+      "Country code": [
+         "FRA"
+      ],
       "id": "id43"
    },
    {
@@ -801,7 +867,9 @@
       "Languages": [
          "French"
       ],
-      "Country code": "FRA",
+      "Country code": [
+         "FRA"
+      ],
       "id": "id44"
    },
    {
@@ -817,7 +885,9 @@
       "Languages": [
          "French"
       ],
-      "Country code": "FRA",
+      "Country code": [
+         "FRA"
+      ],
       "id": "id45"
    },
    {
@@ -833,7 +903,9 @@
       "Languages": [
          "French"
       ],
-      "Country code": "FRA",
+      "Country code": [
+         "FRA"
+      ],
       "id": "id46"
    },
    {
@@ -849,7 +921,9 @@
       "Languages": [
          "English"
       ],
-      "Country code": "GBR",
+      "Country code": [
+         "GBR"
+      ],
       "id": "id47"
    },
    {
@@ -865,7 +939,9 @@
       "Languages": [
          "English"
       ],
-      "Country code": "GBR",
+      "Country code": [
+         "GBR"
+      ],
       "id": "id48"
    },
    {
@@ -881,7 +957,9 @@
       "Languages": [
          "English"
       ],
-      "Country code": "GBR",
+      "Country code": [
+         "GBR"
+      ],
       "id": "id49"
    },
    {
@@ -895,7 +973,7 @@
       "Languages": [
          "Swedish"
       ],
-      "Country code": "NA",
+      "Country code": [],
       "id": "id50"
    },
    {
@@ -909,7 +987,7 @@
       "Languages": [
          "English"
       ],
-      "Country code": "NA",
+      "Country code": [],
       "id": "id51"
    },
    {
@@ -923,7 +1001,7 @@
       "Languages": [
          "English"
       ],
-      "Country code": "NA",
+      "Country code": [],
       "id": "id52"
    },
    {
@@ -935,7 +1013,7 @@
       "Year (Original)": "2014/2017 (A 2017 moratorium established that no new Wikis can be added but those that were already active can maintain it)",
       "Country": [],
       "Languages": [],
-      "Country code": "NA",
+      "Country code": [],
       "id": "id53"
    },
    {
@@ -947,7 +1025,7 @@
       "Year (Original)": "2021",
       "Country": [],
       "Languages": [],
-      "Country code": "NA",
+      "Country code": [],
       "id": "id54"
    },
    {
@@ -959,7 +1037,7 @@
       "Year (Original)": "2021-",
       "Country": [],
       "Languages": [],
-      "Country code": "NA",
+      "Country code": [],
       "id": "id55"
    },
    {
@@ -973,7 +1051,7 @@
       "Languages": [
          "English"
       ],
-      "Country code": "NA",
+      "Country code": [],
       "id": "id56"
    },
    {
@@ -987,7 +1065,7 @@
       "Languages": [
          "English"
       ],
-      "Country code": "NA",
+      "Country code": [],
       "id": "id57"
    },
    {
@@ -1001,7 +1079,7 @@
       "Languages": [
          "English"
       ],
-      "Country code": "NA",
+      "Country code": [],
       "id": "id58"
    },
    {
@@ -1053,7 +1131,7 @@
          "Vietnamese",
          "Indonesian"
       ],
-      "Country code": "NA",
+      "Country code": [],
       "id": "id59"
    },
    {
@@ -1069,7 +1147,7 @@
          "Russian",
          "Polish"
       ],
-      "Country code": "NA",
+      "Country code": [],
       "id": "id60"
    },
    {
@@ -1083,7 +1161,7 @@
       "Languages": [
          "English"
       ],
-      "Country code": "NA",
+      "Country code": [],
       "id": "id61"
    },
    {
@@ -1097,7 +1175,7 @@
       "Languages": [
          "English"
       ],
-      "Country code": "NA",
+      "Country code": [],
       "id": "id62"
    },
    {
@@ -1111,7 +1189,7 @@
       "Languages": [
          "English"
       ],
-      "Country code": "NA",
+      "Country code": [],
       "id": "id63"
    },
    {
@@ -1125,7 +1203,7 @@
       "Languages": [
          "English"
       ],
-      "Country code": "NA",
+      "Country code": [],
       "id": "id64"
    }
 ]

@@ -86,5 +86,10 @@ const preprocessRow = async (row) => {
       (lang) =>
         lang !== 'NA' && lang !== 'undefined' && lang !== '' && lang !== 'All'
     );
+
+  row['Country code'] = String(row['Country code'])
+    .split(',')
+    .map((val) => val.trim())
+    .filter((country) => country !== 'NA');
   return row;
 };
