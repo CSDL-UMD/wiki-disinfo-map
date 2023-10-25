@@ -18,10 +18,10 @@ const get_options_countries = (data) => {
     const row = data[rowNum];
 
     // check if the item is already included in options (since some are repeated)
-    for (let country of row['Country']) {      
+    for (let country of row['Country']) {
       if (!countries.has(country.trim())) {
         countries.add(country);
-      }  
+      }
     }
   }
 
@@ -96,7 +96,7 @@ export default class Filter extends Component {
     this.props.removeFilter(filterId);
     if (value) {
       // create new filter
-      const newFilter = createFilterComponentFilter(column, value['label']);
+      const newFilter = createFilterComponentFilter(column, value);
 
       // add new filter and reset the state
       this.setState({
@@ -106,8 +106,7 @@ export default class Filter extends Component {
   }
 
   render() {
-    const { column, selectedOption } =
-      this.state;
+    const { column, selectedOption } = this.state;
     if (column === 'Country') {
       return (
         <Autocomplete
