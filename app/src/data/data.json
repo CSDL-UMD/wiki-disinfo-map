@@ -11,6 +11,7 @@
          "English"
       ],
       "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 145",
       "id": "id1"
    },
    {
@@ -71,6 +72,7 @@
          "Japanese"
       ],
       "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id2"
    },
    {
@@ -85,6 +87,7 @@
          "English"
       ],
       "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id3"
    },
    {
@@ -97,6 +100,7 @@
       "Country": [],
       "Languages": [],
       "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id4"
    },
    {
@@ -111,6 +115,7 @@
          "Multiple"
       ],
       "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id5"
    },
    {
@@ -137,6 +142,7 @@
          "Dagbani"
       ],
       "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id6"
    },
    {
@@ -151,6 +157,7 @@
          "English"
       ],
       "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id7"
    },
    {
@@ -172,6 +179,7 @@
          "Czech"
       ],
       "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id8"
    },
    {
@@ -212,6 +220,7 @@
       "Country code": [
          "USA"
       ],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id9"
    },
    {
@@ -230,6 +239,7 @@
       "Country code": [
          "NE"
       ],
+      "Subcontinent/Continent code": "011, 017, 014, 018",
       "id": "id10"
    },
    {
@@ -248,6 +258,7 @@
       "Country code": [
          "CHL"
       ],
+      "Subcontinent/Continent code": "013, 029, 005",
       "id": "id11"
    },
    {
@@ -266,6 +277,7 @@
       "Country code": [
          "BRA"
       ],
+      "Subcontinent/Continent code": "013, 029, 005",
       "id": "id12"
    },
    {
@@ -284,6 +296,7 @@
       "Country code": [
          "BRA"
       ],
+      "Subcontinent/Continent code": "013, 029, 005",
       "id": "id13"
    },
    {
@@ -302,6 +315,7 @@
       "Country code": [
          "BRA"
       ],
+      "Subcontinent/Continent code": "013, 029, 005",
       "id": "id14"
    },
    {
@@ -320,6 +334,7 @@
       "Country code": [
          "BRA"
       ],
+      "Subcontinent/Continent code": "013, 029, 005",
       "id": "id15"
    },
    {
@@ -338,6 +353,7 @@
       "Country code": [
          "BRA"
       ],
+      "Subcontinent/Continent code": "013, 029, 005",
       "id": "id16"
    },
    {
@@ -356,6 +372,7 @@
       "Country code": [
          "BRA"
       ],
+      "Subcontinent/Continent code": "013, 029, 005",
       "id": "id17"
    },
    {
@@ -374,6 +391,7 @@
       "Country code": [
          "CHL"
       ],
+      "Subcontinent/Continent code": "013, 029, 005",
       "id": "id18"
    },
    {
@@ -396,6 +414,7 @@
          "USA",
          "PER"
       ],
+      "Subcontinent/Continent code": "013, 029, 005, 021",
       "id": "id19"
    },
    {
@@ -410,6 +429,7 @@
          "English"
       ],
       "Country code": [],
+      "Subcontinent/Continent code": "021",
       "id": "id20"
    },
    {
@@ -428,6 +448,7 @@
       "Country code": [
          "USA"
       ],
+      "Subcontinent/Continent code": "021",
       "id": "id21"
    },
    {
@@ -446,6 +467,7 @@
       "Country code": [
          "USA"
       ],
+      "Subcontinent/Continent code": "021",
       "id": "id22"
    },
    {
@@ -464,6 +486,7 @@
       "Country code": [
          "USA"
       ],
+      "Subcontinent/Continent code": "021",
       "id": "id23"
    },
    {
@@ -482,6 +505,7 @@
       "Country code": [
          "USA"
       ],
+      "Subcontinent/Continent code": "021",
       "id": "id24"
    },
    {
@@ -522,6 +546,7 @@
       "Country code": [
          "USA"
       ],
+      "Subcontinent/Continent code": "021",
       "id": "id25"
    },
    {
@@ -550,6 +575,7 @@
          "Nepali"
       ],
       "Country code": [],
+      "Subcontinent/Continent code": "030, 053, 035, 054, 057, 061",
       "id": "id26"
    },
    {
@@ -568,6 +594,7 @@
       "Country code": [
          "PHL"
       ],
+      "Subcontinent/Continent code": "030, 053, 035, 054, 057, 061",
       "id": "id27"
    },
    {
@@ -586,6 +613,7 @@
       "Country code": [
          "PHL"
       ],
+      "Subcontinent/Continent code": "030, 053, 035, 054, 057, 061",
       "id": "id28"
    },
    {
@@ -604,6 +632,7 @@
       "Country code": [
          "BGR"
       ],
+      "Subcontinent/Continent code": "143, 151",
       "id": "id29"
    },
    {
@@ -622,6 +651,7 @@
       "Country code": [
          "BGR"
       ],
+      "Subcontinent/Continent code": "143, 151",
       "id": "id30"
    },
    {
@@ -636,6 +666,7 @@
          "English"
       ],
       "Country code": [],
+      "Subcontinent/Continent code": "143, 151",
       "id": "id31"
    },
    {
@@ -654,6 +685,7 @@
       "Country code": [
          "POL"
       ],
+      "Subcontinent/Continent code": "143, 151",
       "id": "id32"
    },
    {
@@ -672,6 +704,7 @@
       "Country code": [
          "UKR"
       ],
+      "Subcontinent/Continent code": "143, 151",
       "id": "id33"
    },
    {
@@ -690,6 +723,7 @@
       "Country code": [
          "UKR"
       ],
+      "Subcontinent/Continent code": "143, 151",
       "id": "id34"
    },
    {
@@ -708,6 +742,7 @@
       "Country code": [
          "UKR"
       ],
+      "Subcontinent/Continent code": "143, 151",
       "id": "id35"
    },
    {
@@ -726,6 +761,7 @@
       "Country code": [
          "UKR"
       ],
+      "Subcontinent/Continent code": "143, 151",
       "id": "id36"
    },
    {
@@ -744,6 +780,7 @@
       "Country code": [
          "UKR"
       ],
+      "Subcontinent/Continent code": "143, 151",
       "id": "id37"
    },
    {
@@ -762,6 +799,7 @@
       "Country code": [
          "UKR"
       ],
+      "Subcontinent/Continent code": "143, 151",
       "id": "id38"
    },
    {
@@ -780,6 +818,7 @@
       "Country code": [
          "ESP"
       ],
+      "Subcontinent/Continent code": "155, 154",
       "id": "id39"
    },
    {
@@ -798,6 +837,7 @@
       "Country code": [
          "ESP"
       ],
+      "Subcontinent/Continent code": "155, 154",
       "id": "id40"
    },
    {
@@ -816,6 +856,7 @@
       "Country code": [
          "ESP"
       ],
+      "Subcontinent/Continent code": "155, 154",
       "id": "id41"
    },
    {
@@ -834,6 +875,7 @@
       "Country code": [
          "ESP"
       ],
+      "Subcontinent/Continent code": "155, 154",
       "id": "id42"
    },
    {
@@ -852,6 +894,7 @@
       "Country code": [
          "FRA"
       ],
+      "Subcontinent/Continent code": "155, 154",
       "id": "id43"
    },
    {
@@ -870,6 +913,7 @@
       "Country code": [
          "FRA"
       ],
+      "Subcontinent/Continent code": "155, 154",
       "id": "id44"
    },
    {
@@ -888,6 +932,7 @@
       "Country code": [
          "FRA"
       ],
+      "Subcontinent/Continent code": "155, 154",
       "id": "id45"
    },
    {
@@ -906,6 +951,7 @@
       "Country code": [
          "FRA"
       ],
+      "Subcontinent/Continent code": "155, 154",
       "id": "id46"
    },
    {
@@ -924,6 +970,7 @@
       "Country code": [
          "GBR"
       ],
+      "Subcontinent/Continent code": "155, 154",
       "id": "id47"
    },
    {
@@ -942,6 +989,7 @@
       "Country code": [
          "GBR"
       ],
+      "Subcontinent/Continent code": "155, 154",
       "id": "id48"
    },
    {
@@ -960,6 +1008,7 @@
       "Country code": [
          "GBR"
       ],
+      "Subcontinent/Continent code": "155, 154",
       "id": "id49"
    },
    {
@@ -974,6 +1023,7 @@
          "Swedish"
       ],
       "Country code": [],
+      "Subcontinent/Continent code": "155, 154",
       "id": "id50"
    },
    {
@@ -988,6 +1038,7 @@
          "English"
       ],
       "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id51"
    },
    {
@@ -1002,6 +1053,7 @@
          "English"
       ],
       "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id52"
    },
    {
@@ -1014,6 +1066,7 @@
       "Country": [],
       "Languages": [],
       "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id53"
    },
    {
@@ -1026,6 +1079,7 @@
       "Country": [],
       "Languages": [],
       "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id54"
    },
    {
@@ -1038,6 +1092,7 @@
       "Country": [],
       "Languages": [],
       "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id55"
    },
    {
@@ -1052,6 +1107,7 @@
          "English"
       ],
       "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id56"
    },
    {
@@ -1066,6 +1122,7 @@
          "English"
       ],
       "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id57"
    },
    {
@@ -1080,6 +1137,7 @@
          "English"
       ],
       "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id58"
    },
    {
@@ -1132,6 +1190,7 @@
          "Indonesian"
       ],
       "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id59"
    },
    {
@@ -1148,6 +1207,7 @@
          "Polish"
       ],
       "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id60"
    },
    {
@@ -1162,6 +1222,7 @@
          "English"
       ],
       "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id61"
    },
    {
@@ -1176,6 +1237,7 @@
          "English"
       ],
       "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id62"
    },
    {
@@ -1190,6 +1252,7 @@
          "English"
       ],
       "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id63"
    },
    {
@@ -1204,6 +1267,7 @@
          "English"
       ],
       "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id64"
    }
 ]

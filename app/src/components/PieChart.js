@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Typography } from '@mui/material';
-import './PieChart.css';
 import {
   PieChart as RechartsPieChart,
   Pie,
@@ -9,6 +8,9 @@ import {
   Tooltip,
 } from 'recharts';
 import { createValueFilter, createContainsFilter } from '../utils';
+
+// css
+import './PieChart.css';
 
 const getData = (dataRaw, columnName) => {
   // gather all values of the given column

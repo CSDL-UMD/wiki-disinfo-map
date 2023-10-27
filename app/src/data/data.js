@@ -18,8 +18,6 @@ async function retrieve_data() {
       .on('data', (row) => {
         // pre-process data directly when scanning each row
         delete row['KeyDisinfo'];
-        // delete row['Country code'];
-        delete row['Subcontinent/Continent code'];
         delete row['Link'];
         delete row['Type'];
         delete row['Wikimedia project'];
@@ -88,6 +86,13 @@ const preprocessRow = async (row) => {
     );
 
   row['Country code'] = String(row['Country code'])
+    .split(',')
+    .map((val) => val.trim())
+    .filter((country) => country !== 'NA');
+
+  row['Subcontinent/Continent code'] = String(
+    row['Subcontinent/Continent code']
+  )
     .split(',')
     .map((val) => val.trim())
     .filter((country) => country !== 'NA');
