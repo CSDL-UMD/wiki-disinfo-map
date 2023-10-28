@@ -27,6 +27,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Parse csv data
+        run: |
+          cd ./src/data/
+          node data.js
+
       - name: Generate
         run: npm run build
 
