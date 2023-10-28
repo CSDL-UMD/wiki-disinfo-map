@@ -18,8 +18,6 @@ async function retrieve_data() {
       .on('data', (row) => {
         // pre-process data directly when scanning each row
         delete row['KeyDisinfo'];
-        // delete row['Country code'];
-        delete row['Subcontinent/Continent code'];
         delete row['Link'];
         delete row['Type'];
         delete row['Wikimedia project'];
@@ -72,11 +70,31 @@ const preprocessRow = async (row) => {
   row['Country'] = String(row['Country'])
     .split(',')
     .map((str) => str.trim())
-    .filter((country) => country !== 'NA' && country !== 'Multiple (NA)' && country !== 'Multiple');
+    .filter(
+      (country) =>
+        country !== 'NA' &&
+        country !== 'Multiple (NA)' &&
+        country !== 'Multiple'
+    );
   // parse languages to list of languages
   row.Languages = String(row.Languages)
-      .split(',')
-      .map(val => val.trim())
-      .filter((lang) => lang !== 'NA' && lang !== 'undefined' && lang !== '' && lang !== "All");
+    .split(',')
+    .map((val) => val.trim())
+    .filter(
+      (lang) =>
+        lang !== 'NA' && lang !== 'undefined' && lang !== '' && lang !== 'All'
+    );
+
+  row['Country code'] = String(row['Country code'])
+    .split(',')
+    .map((val) => val.trim())
+    .filter((country) => country !== 'NA');
+
+  row['Subcontinent/Continent code'] = String(
+    row['Subcontinent/Continent code']
+  )
+    .split(',')
+    .map((val) => val.trim())
+    .filter((country) => country !== 'NA');
   return row;
 };

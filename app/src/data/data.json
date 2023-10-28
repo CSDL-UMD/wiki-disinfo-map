@@ -10,7 +10,8 @@
       "Languages": [
          "English"
       ],
-      "Country code": "NA",
+      "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 145",
       "id": "id1"
    },
    {
@@ -70,7 +71,8 @@
          "Chinese",
          "Japanese"
       ],
-      "Country code": "NA",
+      "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id2"
    },
    {
@@ -84,7 +86,8 @@
       "Languages": [
          "English"
       ],
-      "Country code": "NA",
+      "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id3"
    },
    {
@@ -96,7 +99,8 @@
       "Year (Original)": "2022",
       "Country": [],
       "Languages": [],
-      "Country code": "NA",
+      "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id4"
    },
    {
@@ -110,7 +114,8 @@
       "Languages": [
          "Multiple"
       ],
-      "Country code": "NA",
+      "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id5"
    },
    {
@@ -136,7 +141,8 @@
          "Catalan",
          "Dagbani"
       ],
-      "Country code": "NA",
+      "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id6"
    },
    {
@@ -150,7 +156,8 @@
       "Languages": [
          "English"
       ],
-      "Country code": "NA",
+      "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id7"
    },
    {
@@ -171,7 +178,8 @@
          "Vietnamese",
          "Czech"
       ],
-      "Country code": "NA",
+      "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id8"
    },
    {
@@ -209,7 +217,10 @@
          "Malayalam",
          "Thai"
       ],
-      "Country code": "USA",
+      "Country code": [
+         "USA"
+      ],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id9"
    },
    {
@@ -225,7 +236,10 @@
       "Languages": [
          "English"
       ],
-      "Country code": "NE",
+      "Country code": [
+         "NE"
+      ],
+      "Subcontinent/Continent code": "011, 017, 014, 018",
       "id": "id10"
    },
    {
@@ -241,7 +255,10 @@
       "Languages": [
          "Spanish"
       ],
-      "Country code": "CHL",
+      "Country code": [
+         "CHL"
+      ],
+      "Subcontinent/Continent code": "013, 029, 005",
       "id": "id11"
    },
    {
@@ -257,7 +274,10 @@
       "Languages": [
          "Brazilian Portuguese"
       ],
-      "Country code": "BRA",
+      "Country code": [
+         "BRA"
+      ],
+      "Subcontinent/Continent code": "013, 029, 005",
       "id": "id12"
    },
    {
@@ -273,7 +293,10 @@
       "Languages": [
          "Brazilian Portuguese"
       ],
-      "Country code": "BRA",
+      "Country code": [
+         "BRA"
+      ],
+      "Subcontinent/Continent code": "013, 029, 005",
       "id": "id13"
    },
    {
@@ -289,7 +312,10 @@
       "Languages": [
          "Brazilian Portuguese"
       ],
-      "Country code": "BRA",
+      "Country code": [
+         "BRA"
+      ],
+      "Subcontinent/Continent code": "013, 029, 005",
       "id": "id14"
    },
    {
@@ -305,7 +331,10 @@
       "Languages": [
          "Brazilian Portuguese"
       ],
-      "Country code": "BRA",
+      "Country code": [
+         "BRA"
+      ],
+      "Subcontinent/Continent code": "013, 029, 005",
       "id": "id15"
    },
    {
@@ -321,7 +350,10 @@
       "Languages": [
          "Brazilian Portuguese"
       ],
-      "Country code": "BRA",
+      "Country code": [
+         "BRA"
+      ],
+      "Subcontinent/Continent code": "013, 029, 005",
       "id": "id16"
    },
    {
@@ -337,7 +369,10 @@
       "Languages": [
          "Brazilian Portuguese"
       ],
-      "Country code": "BRA",
+      "Country code": [
+         "BRA"
+      ],
+      "Subcontinent/Continent code": "013, 029, 005",
       "id": "id17"
    },
    {
@@ -353,7 +388,10 @@
       "Languages": [
          "Spanish"
       ],
-      "Country code": "CHL",
+      "Country code": [
+         "CHL"
+      ],
+      "Subcontinent/Continent code": "013, 029, 005",
       "id": "id18"
    },
    {
@@ -371,7 +409,12 @@
       "Languages": [
          "English"
       ],
-      "Country code": "CAN, USA, PER",
+      "Country code": [
+         "CAN",
+         "USA",
+         "PER"
+      ],
+      "Subcontinent/Continent code": "013, 029, 005, 021",
       "id": "id19"
    },
    {
@@ -385,7 +428,8 @@
       "Languages": [
          "English"
       ],
-      "Country code": "NA",
+      "Country code": [],
+      "Subcontinent/Continent code": "021",
       "id": "id20"
    },
    {
@@ -401,7 +445,10 @@
       "Languages": [
          "English"
       ],
-      "Country code": "USA",
+      "Country code": [
+         "USA"
+      ],
+      "Subcontinent/Continent code": "021",
       "id": "id21"
    },
    {
@@ -417,7 +464,10 @@
       "Languages": [
          "English"
       ],
-      "Country code": "USA",
+      "Country code": [
+         "USA"
+      ],
+      "Subcontinent/Continent code": "021",
       "id": "id22"
    },
    {
@@ -433,7 +483,10 @@
       "Languages": [
          "English"
       ],
-      "Country code": "USA",
+      "Country code": [
+         "USA"
+      ],
+      "Subcontinent/Continent code": "021",
       "id": "id23"
    },
    {
@@ -449,7 +502,10 @@
       "Languages": [
          "English"
       ],
-      "Country code": "USA",
+      "Country code": [
+         "USA"
+      ],
+      "Subcontinent/Continent code": "021",
       "id": "id24"
    },
    {
@@ -487,7 +543,10 @@
          "Bengali",
          "Greek"
       ],
-      "Country code": "USA",
+      "Country code": [
+         "USA"
+      ],
+      "Subcontinent/Continent code": "021",
       "id": "id25"
    },
    {
@@ -515,7 +574,8 @@
          "Maithili",
          "Nepali"
       ],
-      "Country code": "NA",
+      "Country code": [],
+      "Subcontinent/Continent code": "030, 053, 035, 054, 057, 061",
       "id": "id26"
    },
    {
@@ -531,7 +591,10 @@
       "Languages": [
          "English"
       ],
-      "Country code": "PHL",
+      "Country code": [
+         "PHL"
+      ],
+      "Subcontinent/Continent code": "030, 053, 035, 054, 057, 061",
       "id": "id27"
    },
    {
@@ -547,7 +610,10 @@
       "Languages": [
          "English"
       ],
-      "Country code": "PHL",
+      "Country code": [
+         "PHL"
+      ],
+      "Subcontinent/Continent code": "030, 053, 035, 054, 057, 061",
       "id": "id28"
    },
    {
@@ -563,7 +629,10 @@
       "Languages": [
          "Bulgarian"
       ],
-      "Country code": "BGR",
+      "Country code": [
+         "BGR"
+      ],
+      "Subcontinent/Continent code": "143, 151",
       "id": "id29"
    },
    {
@@ -579,7 +648,10 @@
       "Languages": [
          "Bulgarian"
       ],
-      "Country code": "BGR",
+      "Country code": [
+         "BGR"
+      ],
+      "Subcontinent/Continent code": "143, 151",
       "id": "id30"
    },
    {
@@ -593,7 +665,8 @@
       "Languages": [
          "English"
       ],
-      "Country code": "NA",
+      "Country code": [],
+      "Subcontinent/Continent code": "143, 151",
       "id": "id31"
    },
    {
@@ -609,7 +682,10 @@
       "Languages": [
          "Polish"
       ],
-      "Country code": "POL",
+      "Country code": [
+         "POL"
+      ],
+      "Subcontinent/Continent code": "143, 151",
       "id": "id32"
    },
    {
@@ -625,7 +701,10 @@
       "Languages": [
          "Ukrainian"
       ],
-      "Country code": "UKR",
+      "Country code": [
+         "UKR"
+      ],
+      "Subcontinent/Continent code": "143, 151",
       "id": "id33"
    },
    {
@@ -641,7 +720,10 @@
       "Languages": [
          "Ukrainian"
       ],
-      "Country code": "UKR",
+      "Country code": [
+         "UKR"
+      ],
+      "Subcontinent/Continent code": "143, 151",
       "id": "id34"
    },
    {
@@ -657,7 +739,10 @@
       "Languages": [
          "Ukrainian"
       ],
-      "Country code": "UKR",
+      "Country code": [
+         "UKR"
+      ],
+      "Subcontinent/Continent code": "143, 151",
       "id": "id35"
    },
    {
@@ -673,7 +758,10 @@
       "Languages": [
          "Ukrainian"
       ],
-      "Country code": "UKR",
+      "Country code": [
+         "UKR"
+      ],
+      "Subcontinent/Continent code": "143, 151",
       "id": "id36"
    },
    {
@@ -689,7 +777,10 @@
       "Languages": [
          "Ukrainian"
       ],
-      "Country code": "UKR",
+      "Country code": [
+         "UKR"
+      ],
+      "Subcontinent/Continent code": "143, 151",
       "id": "id37"
    },
    {
@@ -705,7 +796,10 @@
       "Languages": [
          "Ukrainian"
       ],
-      "Country code": "UKR",
+      "Country code": [
+         "UKR"
+      ],
+      "Subcontinent/Continent code": "143, 151",
       "id": "id38"
    },
    {
@@ -721,7 +815,10 @@
       "Languages": [
          "Spanish"
       ],
-      "Country code": "ESP",
+      "Country code": [
+         "ESP"
+      ],
+      "Subcontinent/Continent code": "155, 154",
       "id": "id39"
    },
    {
@@ -737,7 +834,10 @@
       "Languages": [
          "Spanish"
       ],
-      "Country code": "ESP",
+      "Country code": [
+         "ESP"
+      ],
+      "Subcontinent/Continent code": "155, 154",
       "id": "id40"
    },
    {
@@ -753,7 +853,10 @@
       "Languages": [
          "Spanish"
       ],
-      "Country code": "ESP",
+      "Country code": [
+         "ESP"
+      ],
+      "Subcontinent/Continent code": "155, 154",
       "id": "id41"
    },
    {
@@ -769,7 +872,10 @@
       "Languages": [
          "Spanish"
       ],
-      "Country code": "ESP",
+      "Country code": [
+         "ESP"
+      ],
+      "Subcontinent/Continent code": "155, 154",
       "id": "id42"
    },
    {
@@ -785,7 +891,10 @@
       "Languages": [
          "French"
       ],
-      "Country code": "FRA",
+      "Country code": [
+         "FRA"
+      ],
+      "Subcontinent/Continent code": "155, 154",
       "id": "id43"
    },
    {
@@ -801,7 +910,10 @@
       "Languages": [
          "French"
       ],
-      "Country code": "FRA",
+      "Country code": [
+         "FRA"
+      ],
+      "Subcontinent/Continent code": "155, 154",
       "id": "id44"
    },
    {
@@ -817,7 +929,10 @@
       "Languages": [
          "French"
       ],
-      "Country code": "FRA",
+      "Country code": [
+         "FRA"
+      ],
+      "Subcontinent/Continent code": "155, 154",
       "id": "id45"
    },
    {
@@ -833,7 +948,10 @@
       "Languages": [
          "French"
       ],
-      "Country code": "FRA",
+      "Country code": [
+         "FRA"
+      ],
+      "Subcontinent/Continent code": "155, 154",
       "id": "id46"
    },
    {
@@ -849,7 +967,10 @@
       "Languages": [
          "English"
       ],
-      "Country code": "GBR",
+      "Country code": [
+         "GBR"
+      ],
+      "Subcontinent/Continent code": "155, 154",
       "id": "id47"
    },
    {
@@ -865,7 +986,10 @@
       "Languages": [
          "English"
       ],
-      "Country code": "GBR",
+      "Country code": [
+         "GBR"
+      ],
+      "Subcontinent/Continent code": "155, 154",
       "id": "id48"
    },
    {
@@ -881,7 +1005,10 @@
       "Languages": [
          "English"
       ],
-      "Country code": "GBR",
+      "Country code": [
+         "GBR"
+      ],
+      "Subcontinent/Continent code": "155, 154",
       "id": "id49"
    },
    {
@@ -895,7 +1022,8 @@
       "Languages": [
          "Swedish"
       ],
-      "Country code": "NA",
+      "Country code": [],
+      "Subcontinent/Continent code": "155, 154",
       "id": "id50"
    },
    {
@@ -909,7 +1037,8 @@
       "Languages": [
          "English"
       ],
-      "Country code": "NA",
+      "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id51"
    },
    {
@@ -923,7 +1052,8 @@
       "Languages": [
          "English"
       ],
-      "Country code": "NA",
+      "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id52"
    },
    {
@@ -935,7 +1065,8 @@
       "Year (Original)": "2014/2017 (A 2017 moratorium established that no new Wikis can be added but those that were already active can maintain it)",
       "Country": [],
       "Languages": [],
-      "Country code": "NA",
+      "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id53"
    },
    {
@@ -947,7 +1078,8 @@
       "Year (Original)": "2021",
       "Country": [],
       "Languages": [],
-      "Country code": "NA",
+      "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id54"
    },
    {
@@ -959,7 +1091,8 @@
       "Year (Original)": "2021-",
       "Country": [],
       "Languages": [],
-      "Country code": "NA",
+      "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id55"
    },
    {
@@ -973,7 +1106,8 @@
       "Languages": [
          "English"
       ],
-      "Country code": "NA",
+      "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id56"
    },
    {
@@ -987,7 +1121,8 @@
       "Languages": [
          "English"
       ],
-      "Country code": "NA",
+      "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id57"
    },
    {
@@ -1001,7 +1136,8 @@
       "Languages": [
          "English"
       ],
-      "Country code": "NA",
+      "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id58"
    },
    {
@@ -1053,7 +1189,8 @@
          "Vietnamese",
          "Indonesian"
       ],
-      "Country code": "NA",
+      "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id59"
    },
    {
@@ -1069,7 +1206,8 @@
          "Russian",
          "Polish"
       ],
-      "Country code": "NA",
+      "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id60"
    },
    {
@@ -1083,7 +1221,8 @@
       "Languages": [
          "English"
       ],
-      "Country code": "NA",
+      "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id61"
    },
    {
@@ -1097,7 +1236,8 @@
       "Languages": [
          "English"
       ],
-      "Country code": "NA",
+      "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id62"
    },
    {
@@ -1111,7 +1251,8 @@
       "Languages": [
          "English"
       ],
-      "Country code": "NA",
+      "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id63"
    },
    {
@@ -1125,7 +1266,8 @@
       "Languages": [
          "English"
       ],
-      "Country code": "NA",
+      "Country code": [],
+      "Subcontinent/Continent code": "015, 011, 017, 014, 018, 053, 054, 057, 061, 021, 029, 013, 005, 143, 030, 034, 035, 145, 154, 155, 151, 039",
       "id": "id64"
    }
 ]
