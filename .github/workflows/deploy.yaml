@@ -11,6 +11,10 @@ jobs:
         os: [ubuntu-latest]
         node: [14]
 
+    defaults:
+      run:
+        working-directory: ./app
+
     steps:
       - name: Checkout
         uses: actions/checkout@master
