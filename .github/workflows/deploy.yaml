@@ -23,9 +23,6 @@ jobs:
         uses: actions/setup-node@v2.1.2
         with:
           node-version: ${{ matrix.node }}
-
-      - name: Set working directory app
-        run: cd ./app/
       
       - name: Install dependencies
         run: npm install
