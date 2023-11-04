@@ -10,6 +10,7 @@ import {
 } from 'react-simple-maps';
 import { Paper } from '@mui/material';
 import { Tooltip } from 'react-tooltip';
+import { createContainsFilter } from '../utils';
 // css
 import './Map.css';
 
@@ -38,16 +39,27 @@ const Map = (props) => {
     listValueCounts(props.data, 'Country')
   );
   const [tooltipContent, setTooltipContent] = useState('');
+  const [filterId, setFilterId] = useState(-1);
 
   const maxCount = mapCounts.reduce((a, b) => Math.max(a, b.count), 0);
   const colorScale = scaleLinear()
     .domain([0, maxCount])
     .range(['#ffedea', '#15008c']);
-
+    
   useEffect(() => {
     console.log('props data updated');
     setMapCounts(listValueCounts(props.data, 'Country'));
   }, [props.data]);
+
+  const onCountryClick = (countryName) => {
+    if (!mapCounts.find(((elem) => elem.Country === countryName))) { // checks if country has no projects
+      // do nothing
+    } else {
+      props.removeFilter(filterId)
+      let newFilter = createContainsFilter("Country", countryName)
+      setFilterId(props.addFilter(newFilter))
+    }
+  }
 
   return (
     <Paper>
@@ -81,6 +93,9 @@ const Map = (props) => {
                       }}
                       onMouseLeave={() => {
                         setTooltipContent('');
+                      }}
+                      onClick={() => {
+                        onCountryClick(geo.properties.name);
                       }}
                     />
                   );
