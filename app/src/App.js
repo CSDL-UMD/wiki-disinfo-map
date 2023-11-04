@@ -78,7 +78,11 @@ function App() {
           <Grid container spacing={2}>
             <Grid item xs={12} md={6}>
               {/* Map */}
-              <Map data={currData} />
+              <Map 
+                data={currData}
+                addFilter={addFilter}
+                removeFilter={removeFilter} 
+              />
             </Grid>
 
             <Grid item xs={12} md={6}>
