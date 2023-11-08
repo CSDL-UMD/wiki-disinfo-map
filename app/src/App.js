@@ -75,13 +75,35 @@ function App() {
 
         <Container maxWidth={false}>
           <AppBar resetData={resetData} />
-          <Grid container spacing={2}>
-            <Grid item xs={12} md={6}>
+          <Grid container spacing={2} justify="flex-end" alignItems="center">
+            <Grid item xs={12} md={8} xl={6}>
               {/* Map */}
-              <Map />
+              <Map 
+                data={currData}
+                addFilter={addFilter}
+                removeFilter={removeFilter} 
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} xl={6}>
+              <FrequencyChart
+                column="Year"
+                data={currData}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
+              />
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              md={12}
+              style={{
+                // maxWidth: '1000px',
+                marginLeft: 'auto',
+                marginRight: 'auto',
+              }}
+            >
               {/* Project Description */}
               <ProjectDescription />
 
@@ -89,21 +111,23 @@ function App() {
               <Grid container spacing={2}>
                 <Grid item xs={12} md={6}>
                   {/* Country Filter */}
-                  <Filter 
-                  resetData={resetData}
-                  column="Country" 
-                  data={currData}
-                  addFilter={addFilter}
-                  removeFilter={removeFilter}/>
+                  <Filter
+                    resetData={resetData}
+                    column="Country"
+                    data={currData}
+                    addFilter={addFilter}
+                    removeFilter={removeFilter}
+                  />
                 </Grid>
                 <Grid item xs={12} md={6}>
                   {/* Language Filter */}
                   <Filter
-                  resetData={resetData}
-                  column="Languages" 
-                  data={currData}
-                  addFilter={addFilter}
-                  removeFilter={removeFilter}/>
+                    resetData={resetData}
+                    column="Languages"
+                    data={currData}
+                    addFilter={addFilter}
+                    removeFilter={removeFilter}
+                  />
                 </Grid>
               </Grid>
             </Grid>
@@ -113,34 +137,29 @@ function App() {
               <Table data={currData} />
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={3}>
-              <FrequencyChart
-                column="Year"
+            <Grid item xs={12} sm={6} md={4}>
+              <PieChart
+                column="Country"
                 data={currData}
                 addFilter={addFilter}
                 removeFilter={removeFilter}
               />
             </Grid>
-            <Grid item xs={12} sm={6} lg={3}>
-              <PieChart 
-                column="Country"
-                data={currData} 
-                addFilter={addFilter}
-                removeFilter={removeFilter}/>
-            </Grid>
-            <Grid item xs={12} sm={6} lg={3}>
+            <Grid item xs={12} sm={6} md={4}>
               <PieChart
                 column="Region"
                 data={currData}
                 addFilter={addFilter}
-                removeFilter={removeFilter}/>
+                removeFilter={removeFilter}
+              />
             </Grid>
-            <Grid item xs={12} sm={6} lg={3}>
+            <Grid item xs={12} sm={6} md={4}>
               <PieChart
                 column="Group"
                 data={currData}
                 addFilter={addFilter}
-                removeFilter={removeFilter}/>
+                removeFilter={removeFilter}
+              />
             </Grid>
           </Grid>
         </Container>
