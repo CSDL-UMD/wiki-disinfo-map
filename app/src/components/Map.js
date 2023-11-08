@@ -99,6 +99,14 @@ const Map = (props) => {
                   return (
                     <Geography
                       key={geo.rsmKey}
+                      style={{
+                        hover: { 
+                          // fill: "#04D",
+                          stroke: "#FFD700", // Border color on hover
+                          strokeWidth: 2, // Border width on hover
+                        },
+                        // pressed: { fill: "#02A" }
+                      }}
                       geography={geo}
                       fill={d ? colorScale(d.count) : '#ffffff'}
                       onMouseEnter={() => {
