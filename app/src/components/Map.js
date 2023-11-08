@@ -63,13 +63,13 @@ const Map = (props) => {
   }
 
   function handleZoomIn() {
-    if (position.zoom >= 8) return;
-    setPosition((pos) => ({ ...pos, zoom: pos.zoom * 2 }));
+    if (position.zoom >= 6) return;
+    setPosition((pos) => ({ ...pos, zoom: pos.zoom * 1.5 }));
   }
 
   function handleZoomOut() {
     if (position.zoom <= 1) return;
-    setPosition((pos) => ({ ...pos, zoom: pos.zoom / 2 }));
+    setPosition((pos) => ({ ...pos, zoom: pos.zoom / 1.5 }));
   }
 
   function handleMoveEnd(position) {
