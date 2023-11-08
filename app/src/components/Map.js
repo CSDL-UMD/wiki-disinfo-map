@@ -40,6 +40,7 @@ const Map = (props) => {
   );
   const [tooltipContent, setTooltipContent] = useState('');
   const [filterId, setFilterId] = useState(-1);
+  const [position, setPosition] = useState({ coordinates: [0, 0], zoom: 1 });
 
   const maxCount = mapCounts.reduce((a, b) => Math.max(a, b.count), 0);
   const colorScale = scaleLinear()
@@ -61,6 +62,20 @@ const Map = (props) => {
     }
   }
 
+  function handleZoomIn() {
+    if (position.zoom >= 8) return;
+    setPosition((pos) => ({ ...pos, zoom: pos.zoom * 2 }));
+  }
+
+  function handleZoomOut() {
+    if (position.zoom <= 1) return;
+    setPosition((pos) => ({ ...pos, zoom: pos.zoom / 2 }));
+  }
+
+  function handleMoveEnd(position) {
+    setPosition(position);
+  }
+
   return (
     <Paper>
       <ComposableMap
@@ -71,7 +86,10 @@ const Map = (props) => {
         className="map-chart"
         id="map"
       >
-        <ZoomableGroup center={[0, 0]} zoom={1}>
+        <ZoomableGroup
+          zoom={position.zoom}
+          center={position.coordinates}
+          onMoveEnd={handleMoveEnd}>
           <Sphere stroke="#E4E5E6" strokeWidth={0.5} />
           <Graticule stroke="#E4E5E6" strokeWidth={0.5} />
           {mapCounts.length > 0 && (
@@ -105,6 +123,35 @@ const Map = (props) => {
           )}
         </ZoomableGroup>
       </ComposableMap>
+
+      <div className="controls">
+        <button onClick={handleZoomIn}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth="3"
+          >
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <line x1="5" y1="12" x2="19" y2="12" />
+          </svg>
+        </button>
+        <button onClick={handleZoomOut}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth="3"
+          >
+            <line x1="5" y1="12" x2="19" y2="12" />
+          </svg>
+        </button>
+      </div>
+
       <Tooltip anchorId="map" content={tooltipContent} float />
     </Paper>
   );
