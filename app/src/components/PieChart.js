@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Typography } from '@mui/material';
+import { Paper, Typography } from '@mui/material';
 import {
   PieChart as RechartsPieChart,
   Pie,
@@ -28,7 +28,7 @@ const getData = (dataRaw, columnName) => {
   // count occurrences in values (stole rishi's code lol)
   const counts = {};
   for (const num of values) {
-    if (num !== "NA") {
+    if (num !== 'NA') {
       counts[num] = counts[num] ? counts[num] + 1 : 1;
     }
   }
@@ -148,36 +148,51 @@ export default class PieChart extends Component {
 
   render() {
     return (
-      <>
-        <Typography variant="h6" gutterBottom align="center">
+      <Paper style={{ padding: 20 }}>
+        <Typography variant="h5" gutterBottom align="center">
           {this.props.column}
         </Typography>
         <ResponsiveContainer width="100%" height={250}>
-          <RechartsPieChart width={400} height={400}>
-            <Pie
-              activeIndex={this.state.activeIndex}
-              hoverIndex={this.state.hoverIndex}
-              filterId={this.state.filterId}
-              originalLength={this.state.originalLength}
-              activeShape={renderActiveShape}
-              // label={true}
-              data={this.state.dataCounts}
-              paddingAngle={2.5}
-              cx="50%"
-              cy="50%"
-              innerRadius={45}
-              outerRadius={80}
-              fill="#0c4a6e"
-              nameKey="name"
-              dataKey="value"
-              onMouseEnter={this.onPieEnter}
-              onMouseDown={this.onPieClick.bind(this)}
-              className="pie-chart"
-            />
-            <Tooltip />
-          </RechartsPieChart>
+          {this.state.dataCounts.length <= 0 ? (
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                height: '100%',
+              }}
+            >
+              <Typography variant="h5" gutterBottom>
+                No Data
+              </Typography>
+            </div>
+          ) : (
+            <RechartsPieChart width={400} height={400}>
+              <Pie
+                activeIndex={this.state.activeIndex}
+                hoverIndex={this.state.hoverIndex}
+                filterId={this.state.filterId}
+                originalLength={this.state.originalLength}
+                activeShape={renderActiveShape}
+                // label={true}
+                data={this.state.dataCounts}
+                paddingAngle={2.5}
+                cx="50%"
+                cy="50%"
+                innerRadius={45}
+                outerRadius={80}
+                fill="#0c4a6e"
+                nameKey="name"
+                dataKey="value"
+                onMouseEnter={this.onPieEnter}
+                onMouseDown={this.onPieClick.bind(this)}
+                className="pie-chart"
+              />
+              <Tooltip />
+            </RechartsPieChart>
+          )}
         </ResponsiveContainer>
-      </>
+      </Paper>
     );
   }
 }
