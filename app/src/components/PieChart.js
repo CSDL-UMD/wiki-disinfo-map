@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Typography } from '@mui/material';
+import { Paper, Typography } from '@mui/material';
 import {
   PieChart as RechartsPieChart,
   Pie,
@@ -148,8 +148,8 @@ export default class PieChart extends Component {
 
   render() {
     return (
-      <>
-        <Typography variant="h6" gutterBottom align="center">
+      <Paper style={{ padding: 20 }}>
+        <Typography variant="h5" gutterBottom align="center">
           {this.props.column}
         </Typography>
         <ResponsiveContainer width="100%" height={250}>
@@ -183,7 +183,7 @@ export default class PieChart extends Component {
             </RechartsPieChart>
           )}
         </ResponsiveContainer>
-      </>
+      </Paper>
     );
   }
 }
