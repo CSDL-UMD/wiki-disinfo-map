@@ -89,17 +89,7 @@ function App() {
               />
             </Grid>
 
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              md={12}
-              style={{
-                // maxWidth: '1000px',
-                marginLeft: 'auto',
-                marginRight: 'auto',
-              }}
-            >
+            <Grid item xs={12} sm={6} md={12}>
               {/* Project Description */}
               <ProjectDescription />
 
