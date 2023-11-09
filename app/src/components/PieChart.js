@@ -154,9 +154,18 @@ export default class PieChart extends Component {
         </Typography>
         <ResponsiveContainer width="100%" height={250}>
           {this.state.dataCounts.length <= 0 ? (
-            <Typography variant="h5" gutterBottom align="center">
-              No Data
-            </Typography>
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                height: '100%',
+              }}
+            >
+              <Typography variant="h5" gutterBottom>
+                No Data
+              </Typography>
+            </div>
           ) : (
             <RechartsPieChart width={400} height={400}>
               <Pie
