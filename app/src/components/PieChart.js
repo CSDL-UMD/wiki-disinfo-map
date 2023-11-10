@@ -6,11 +6,14 @@ import {
   Sector,
   ResponsiveContainer,
   Tooltip,
+  Cell,
 } from 'recharts';
 import { createValueFilter, createContainsFilter } from '../utils';
 
 // css
 import './PieChart.css';
+
+const COLORS = ['#bae6fd', '#7dd3fc', '#0ea5e9', '#0ea5e9', '#0284c7', '#0369a1', '#075985', '#0c4a6e', '#082f49'];
 
 const getData = (dataRaw, columnName) => {
   // gather all values of the given column
@@ -43,6 +46,18 @@ const getData = (dataRaw, columnName) => {
   data.sort(comparator);
 
   return data;
+};
+
+const getMaxCounts = (dataC) => {
+  var counts_max = 0;
+
+  for (const c of dataC) {
+    if (c.value > counts_max) {
+      counts_max = c.value;
+    }
+  }
+
+  return counts_max;
 };
 
 // const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, name, value, index }) => {
@@ -100,6 +115,7 @@ export default class PieChart extends Component {
       activeIndex: -1,
       hoverIndex: -1,
       dataCounts: getData(this.props.data, this.props.column),
+      maxCount: getMaxCounts(getData(this.props.data, this.props.column)),
       filterId: -1,
       originalLength: this.props.data.length,
     };
@@ -118,6 +134,7 @@ export default class PieChart extends Component {
     if (prevProps.data !== this.props.data) {
       this.setState(() => ({
         dataCounts: getData(this.props.data, this.props.column),
+        maxCount: getMaxCounts(getData(this.props.data, this.props.column)),
         activeIndex: -1,
         hoverIndex: -1,
       }));
@@ -173,6 +190,7 @@ export default class PieChart extends Component {
                 hoverIndex={this.state.hoverIndex}
                 filterId={this.state.filterId}
                 originalLength={this.state.originalLength}
+                maxCount={this.state.maxCount}
                 activeShape={renderActiveShape}
                 // label={true}
                 data={this.state.dataCounts}
@@ -181,13 +199,17 @@ export default class PieChart extends Component {
                 cy="50%"
                 innerRadius={45}
                 outerRadius={80}
-                fill="#0c4a6e"
+                fill="#ffffff"
                 nameKey="name"
                 dataKey="value"
                 onMouseEnter={this.onPieEnter}
                 onMouseDown={this.onPieClick.bind(this)}
                 className="pie-chart"
-              />
+              >
+                {this.state.dataCounts.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={COLORS[Math.floor((entry.value / (this.state.maxCount + 1)) * COLORS.length)]} />
+            ))}
+              </Pie>
               <Tooltip />
             </RechartsPieChart>
           )}
