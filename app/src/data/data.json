@@ -11,15 +11,8 @@
          "English"
       ],
       "Country code": [],
-      "Subcontinent/Continent code": [
-         "015",
-         "011",
-         "017",
-         "014",
-         "018",
-         "145"
-      ],
-      "id": "id1"
+      "id": "id1",
+      "Continent": []
    },
    {
       "Project": "1 Lib 1 Ref (#1Lib1Ref)",
@@ -79,31 +72,8 @@
          "and Japanese"
       ],
       "Country code": [],
-      "Subcontinent/Continent code": [
-         "015",
-         "011",
-         "017",
-         "014",
-         "018",
-         "053",
-         "054",
-         "057",
-         "061",
-         "021",
-         "029",
-         "013",
-         "005",
-         "143",
-         "030",
-         "034",
-         "035",
-         "145",
-         "154",
-         "155",
-         "151",
-         "039"
-      ],
-      "id": "id2"
+      "id": "id2",
+      "Continent": []
    },
    {
       "Project": "Knowledge integrity, Wikimedia Research",
@@ -117,31 +87,8 @@
          "English"
       ],
       "Country code": [],
-      "Subcontinent/Continent code": [
-         "015",
-         "011",
-         "017",
-         "014",
-         "018",
-         "053",
-         "054",
-         "057",
-         "061",
-         "021",
-         "029",
-         "013",
-         "005",
-         "143",
-         "030",
-         "034",
-         "035",
-         "145",
-         "154",
-         "155",
-         "151",
-         "039"
-      ],
-      "id": "id3"
+      "id": "id3",
+      "Continent": []
    },
    {
       "Project": "Machine Learning based service to predict reverts on Wikipedia, Wikimedia Research",
@@ -153,31 +100,8 @@
       "Country": [],
       "Languages": [],
       "Country code": [],
-      "Subcontinent/Continent code": [
-         "015",
-         "011",
-         "017",
-         "014",
-         "018",
-         "053",
-         "054",
-         "057",
-         "061",
-         "021",
-         "029",
-         "013",
-         "005",
-         "143",
-         "030",
-         "034",
-         "035",
-         "145",
-         "154",
-         "155",
-         "151",
-         "039"
-      ],
-      "id": "id4"
+      "id": "id4",
+      "Continent": []
    },
    {
       "Project": "ORES",
@@ -191,31 +115,8 @@
          "Multiple"
       ],
       "Country code": [],
-      "Subcontinent/Continent code": [
-         "015",
-         "011",
-         "017",
-         "014",
-         "018",
-         "053",
-         "054",
-         "057",
-         "061",
-         "021",
-         "029",
-         "013",
-         "005",
-         "143",
-         "030",
-         "034",
-         "035",
-         "145",
-         "154",
-         "155",
-         "151",
-         "039"
-      ],
-      "id": "id5"
+      "id": "id5",
+      "Continent": []
    },
    {
       "Project": "Reading Wikipedia in the classroom",
@@ -241,31 +142,8 @@
          "Dagbani"
       ],
       "Country code": [],
-      "Subcontinent/Continent code": [
-         "015",
-         "011",
-         "017",
-         "014",
-         "018",
-         "053",
-         "054",
-         "057",
-         "061",
-         "021",
-         "029",
-         "013",
-         "005",
-         "143",
-         "030",
-         "034",
-         "035",
-         "145",
-         "154",
-         "155",
-         "151",
-         "039"
-      ],
-      "id": "id6"
+      "id": "id6",
+      "Continent": []
    },
    {
       "Project": "Reliable sources noticeboard",
@@ -279,31 +157,8 @@
          "English"
       ],
       "Country code": [],
-      "Subcontinent/Continent code": [
-         "015",
-         "011",
-         "017",
-         "014",
-         "018",
-         "053",
-         "054",
-         "057",
-         "061",
-         "021",
-         "029",
-         "013",
-         "005",
-         "143",
-         "030",
-         "034",
-         "035",
-         "145",
-         "154",
-         "155",
-         "151",
-         "039"
-      ],
-      "id": "id7"
+      "id": "id7",
+      "Continent": []
    },
    {
       "Project": "Wikipedia:WikiProject Climate change",
@@ -324,31 +179,8 @@
          "Czech"
       ],
       "Country code": [],
-      "Subcontinent/Continent code": [
-         "015",
-         "011",
-         "017",
-         "014",
-         "018",
-         "053",
-         "054",
-         "057",
-         "061",
-         "021",
-         "029",
-         "013",
-         "005",
-         "143",
-         "030",
-         "034",
-         "035",
-         "145",
-         "154",
-         "155",
-         "151",
-         "039"
-      ],
-      "id": "id8"
+      "id": "id8",
+      "Continent": []
    },
    {
       "Project": "Wikipedia:WikiProject COVID-19",
@@ -388,31 +220,10 @@
       "Country code": [
          "USA"
       ],
-      "Subcontinent/Continent code": [
-         "015",
-         "011",
-         "017",
-         "014",
-         "018",
-         "053",
-         "054",
-         "057",
-         "061",
-         "021",
-         "029",
-         "013",
-         "005",
-         "143",
-         "030",
-         "034",
-         "035",
-         "145",
-         "154",
-         "155",
-         "151",
-         "039"
-      ],
-      "id": "id9"
+      "id": "id9",
+      "Continent": [
+         "North America"
+      ]
    },
    {
       "Project": "WikiFactCheckers training",
@@ -430,13 +241,10 @@
       "Country code": [
          "NE"
       ],
-      "Subcontinent/Continent code": [
-         "011",
-         "017",
-         "014",
-         "018"
-      ],
-      "id": "id10"
+      "id": "id10",
+      "Continent": [
+         "Africa"
+      ]
    },
    {
       "Project": "¡Que no te pille la tecnología! Personas Mayores Informadas / Don't let technology catch you! Senior Citizens Informed",
@@ -454,12 +262,10 @@
       "Country code": [
          "CHL"
       ],
-      "Subcontinent/Continent code": [
-         "013",
-         "029",
-         "005"
-      ],
-      "id": "id11"
+      "id": "id11",
+      "Continent": [
+         "South America"
+      ]
    },
    {
       "Project": "Completude, consistência e correção em bases de dados digitais sobre mortos e desaparecidos políticos na ditadura civil-militar brasileira / Completeness, consistency, and correction in digital databases about victims and political desaparecidos during the Brazilian civic-military dictatorship",
@@ -477,12 +283,10 @@
       "Country code": [
          "BRA"
       ],
-      "Subcontinent/Continent code": [
-         "013",
-         "029",
-         "005"
-      ],
-      "id": "id12"
+      "id": "id12",
+      "Continent": [
+         "South America"
+      ]
    },
    {
       "Project": "Introdução ao Jornalismo Científico / Introduction to Scientific Journalism",
@@ -500,12 +304,10 @@
       "Country code": [
          "BRA"
       ],
-      "Subcontinent/Continent code": [
-         "013",
-         "029",
-         "005"
-      ],
-      "id": "id13"
+      "id": "id13",
+      "Continent": [
+         "South America"
+      ]
    },
    {
       "Project": "WikiCon Brazil",
@@ -523,12 +325,10 @@
       "Country code": [
          "BRA"
       ],
-      "Subcontinent/Continent code": [
-         "013",
-         "029",
-         "005"
-      ],
-      "id": "id14"
+      "id": "id14",
+      "Continent": [
+         "South America"
+      ]
    },
    {
       "Project": "Wikidata Lab XIV, Modelagem com estruturação intencional / Wikidata Lab XIV, Modeling with intentional structuring",
@@ -546,12 +346,10 @@
       "Country code": [
          "BRA"
       ],
-      "Subcontinent/Continent code": [
-         "013",
-         "029",
-         "005"
-      ],
-      "id": "id15"
+      "id": "id15",
+      "Continent": [
+         "South America"
+      ]
    },
    {
       "Project": "Wikipédia contra a ignorância racional / Wikipedia against rational ignorance",
@@ -569,12 +367,10 @@
       "Country code": [
          "BRA"
       ],
-      "Subcontinent/Continent code": [
-         "013",
-         "029",
-         "005"
-      ],
-      "id": "id16"
+      "id": "id16",
+      "Continent": [
+         "South America"
+      ]
    },
    {
       "Project": "Wikipédia:Fontes confiáveis/Central de confiabilidade / Wikipedia:Reliable sources/Trust Center",
@@ -592,12 +388,10 @@
       "Country code": [
          "BRA"
       ],
-      "Subcontinent/Continent code": [
-         "013",
-         "029",
-         "005"
-      ],
-      "id": "id17"
+      "id": "id17",
+      "Continent": [
+         "South America"
+      ]
    },
    {
       "Project": "CTRL-F",
@@ -615,12 +409,10 @@
       "Country code": [
          "CHL"
       ],
-      "Subcontinent/Continent code": [
-         "013",
-         "029",
-         "005"
-      ],
-      "id": "id18"
+      "id": "id18",
+      "Continent": [
+         "South America"
+      ]
    },
    {
       "Project": "Unreliable guidelines - Reliable sources and marginalized communities in French, English, and Spanish Wikipedias",
@@ -642,13 +434,11 @@
          "USA",
          "PER"
       ],
-      "Subcontinent/Continent code": [
-         "013",
-         "029",
-         "005",
-         "021"
-      ],
-      "id": "id19"
+      "id": "id19",
+      "Continent": [
+         "North America",
+         "South America"
+      ]
    },
    {
       "Project": "Unreliable/Predatory Source Detector (UPSD)",
@@ -662,10 +452,8 @@
          "English"
       ],
       "Country code": [],
-      "Subcontinent/Continent code": [
-         "021"
-      ],
-      "id": "id20"
+      "id": "id20",
+      "Continent": []
    },
    {
       "Project": "ARTT (Analysis and Response Toolkit for Trust)",
@@ -683,10 +471,10 @@
       "Country code": [
          "USA"
       ],
-      "Subcontinent/Continent code": [
-         "021"
-      ],
-      "id": "id21"
+      "id": "id21",
+      "Continent": [
+         "North America"
+      ]
    },
    {
       "Project": "Cite Unseen",
@@ -704,10 +492,10 @@
       "Country code": [
          "USA"
       ],
-      "Subcontinent/Continent code": [
-         "021"
-      ],
-      "id": "id22"
+      "id": "id22",
+      "Continent": [
+         "North America"
+      ]
    },
    {
       "Project": "Special:AbuseFilter891",
@@ -725,10 +513,10 @@
       "Country code": [
          "USA"
       ],
-      "Subcontinent/Continent code": [
-         "021"
-      ],
-      "id": "id23"
+      "id": "id23",
+      "Continent": [
+         "North America"
+      ]
    },
    {
       "Project": "User:JL-Bot/DOI",
@@ -746,10 +534,10 @@
       "Country code": [
          "USA"
       ],
-      "Subcontinent/Continent code": [
-         "021"
-      ],
-      "id": "id24"
+      "id": "id24",
+      "Continent": [
+         "North America"
+      ]
    },
    {
       "Project": "Wikipedia:WikiProject COVID-19/SureWeCan COVID19 Task Force",
@@ -789,10 +577,10 @@
       "Country code": [
          "USA"
       ],
-      "Subcontinent/Continent code": [
-         "021"
-      ],
-      "id": "id25"
+      "id": "id25",
+      "Continent": [
+         "North America"
+      ]
    },
    {
       "Project": "Wikipedia SWASTHA",
@@ -820,15 +608,8 @@
          "and Nepali."
       ],
       "Country code": [],
-      "Subcontinent/Continent code": [
-         "030",
-         "053",
-         "035",
-         "054",
-         "057",
-         "061"
-      ],
-      "id": "id26"
+      "id": "id26",
+      "Continent": []
    },
    {
       "Project": "HRVVMC Wikipedia Edit-a-thons",
@@ -846,15 +627,10 @@
       "Country code": [
          "PHL"
       ],
-      "Subcontinent/Continent code": [
-         "030",
-         "053",
-         "035",
-         "054",
-         "057",
-         "061"
-      ],
-      "id": "id27"
+      "id": "id27",
+      "Continent": [
+         "Asia"
+      ]
    },
    {
       "Project": "Wikipedian in Residence at Bantayog ng mga Bayani",
@@ -872,15 +648,10 @@
       "Country code": [
          "PHL"
       ],
-      "Subcontinent/Continent code": [
-         "030",
-         "053",
-         "035",
-         "054",
-         "057",
-         "061"
-      ],
-      "id": "id28"
+      "id": "id28",
+      "Continent": [
+         "Asia"
+      ]
    },
    {
       "Project": "PSS 9",
@@ -898,11 +669,10 @@
       "Country code": [
          "BGR"
       ],
-      "Subcontinent/Continent code": [
-         "143",
-         "151"
-      ],
-      "id": "id29"
+      "id": "id29",
+      "Continent": [
+         "Europe"
+      ]
    },
    {
       "Project": "Уикипедия:Патрульори/СФИН / Wikipedia:Patrollers/SFIN",
@@ -920,11 +690,10 @@
       "Country code": [
          "BGR"
       ],
-      "Subcontinent/Continent code": [
-         "143",
-         "151"
-      ],
-      "id": "id30"
+      "id": "id30",
+      "Continent": [
+         "Europe"
+      ]
    },
    {
       "Project": "Croatian Wikipedia Disinformation Assessment",
@@ -938,11 +707,8 @@
          "English"
       ],
       "Country code": [],
-      "Subcontinent/Continent code": [
-         "143",
-         "151"
-      ],
-      "id": "id31"
+      "id": "id31",
+      "Continent": []
    },
    {
       "Project": "Wikipedia:Nierzetelne źródła / Wikipedia:Not reliable sources",
@@ -960,11 +726,10 @@
       "Country code": [
          "POL"
       ],
-      "Subcontinent/Continent code": [
-         "143",
-         "151"
-      ],
-      "id": "id32"
+      "id": "id32",
+      "Continent": [
+         "Europe"
+      ]
    },
    {
       "Project": "Project: Patrolling/Monitoring vandalism (Wikipedia Ukrainian)",
@@ -982,11 +747,10 @@
       "Country code": [
          "UKR"
       ],
-      "Subcontinent/Continent code": [
-         "143",
-         "151"
-      ],
-      "id": "id33"
+      "id": "id33",
+      "Continent": [
+         "Europe"
+      ]
    },
    {
       "Project": "Віківишколи/Тренінг для журналістів 19 травня 2019 / Wikivishkoli/Training for journalists 19 May 2019",
@@ -1004,11 +768,10 @@
       "Country code": [
          "UKR"
       ],
-      "Subcontinent/Continent code": [
-         "143",
-         "151"
-      ],
-      "id": "id34"
+      "id": "id34",
+      "Continent": [
+         "Europe"
+      ]
    },
    {
       "Project": "Вікіпедія:Авторитетні джерела / Wikipedia: Authoritative sources",
@@ -1026,11 +789,10 @@
       "Country code": [
          "UKR"
       ],
-      "Subcontinent/Continent code": [
-         "143",
-         "151"
-      ],
-      "id": "id35"
+      "id": "id35",
+      "Continent": [
+         "Europe"
+      ]
    },
    {
       "Project": "ГО «Вікімедіа Україна» попереджає: користуючись Вікіпедією, не платіть шахраям! / NGO \"Wikimedia Ukraine\" warns: When using Wikipedia, do not pay fraudsters!",
@@ -1048,11 +810,10 @@
       "Country code": [
          "UKR"
       ],
-      "Subcontinent/Continent code": [
-         "143",
-         "151"
-      ],
-      "id": "id36"
+      "id": "id36",
+      "Continent": [
+         "Europe"
+      ]
    },
    {
       "Project": "Як перевіряти інформацію: поради з фактчекінгу від Vox Check / How to check information: Fact-checking tips from Vox Check",
@@ -1070,11 +831,10 @@
       "Country code": [
          "UKR"
       ],
-      "Subcontinent/Continent code": [
-         "143",
-         "151"
-      ],
-      "id": "id37"
+      "id": "id37",
+      "Continent": [
+         "Europe"
+      ]
    },
    {
       "Project": "Як читати новини критично? and Експерти та експертність у медіа / How to read news critically? and Experts and expertise in the media",
@@ -1092,11 +852,10 @@
       "Country code": [
          "UKR"
       ],
-      "Subcontinent/Continent code": [
-         "143",
-         "151"
-      ],
-      "id": "id38"
+      "id": "id38",
+      "Continent": [
+         "Europe"
+      ]
    },
    {
       "Project": "Decálogos para la lucha contra la desinformación en Wikipedia / Decalogues for the fight against disinformation on Wikipedia",
@@ -1114,11 +873,10 @@
       "Country code": [
          "ESP"
       ],
-      "Subcontinent/Continent code": [
-         "155",
-         "154"
-      ],
-      "id": "id39"
+      "id": "id39",
+      "Continent": [
+         "Europe"
+      ]
    },
    {
       "Project": "I Encuentro sobre lucha contra la desinformación en Wikipedia / 1st Meeting on the struggle against disinformation on Wikipedia",
@@ -1136,11 +894,10 @@
       "Country code": [
          "ESP"
       ],
-      "Subcontinent/Continent code": [
-         "155",
-         "154"
-      ],
-      "id": "id40"
+      "id": "id40",
+      "Continent": [
+         "Europe"
+      ]
    },
    {
       "Project": "Laboratorio Wikimedia de verificación de datos / Wikimedia workshop on data verification",
@@ -1158,11 +915,10 @@
       "Country code": [
          "ESP"
       ],
-      "Subcontinent/Continent code": [
-         "155",
-         "154"
-      ],
-      "id": "id41"
+      "id": "id41",
+      "Continent": [
+         "Europe"
+      ]
    },
    {
       "Project": "Verificaton en Wikipedia / Verific-a-thon on Wikipedia",
@@ -1180,11 +936,10 @@
       "Country code": [
          "ESP"
       ],
-      "Subcontinent/Continent code": [
-         "155",
-         "154"
-      ],
-      "id": "id42"
+      "id": "id42",
+      "Continent": [
+         "Europe"
+      ]
    },
    {
       "Project": "Covid-19 et désinformacion / COVID-19 and disinformation",
@@ -1202,11 +957,10 @@
       "Country code": [
          "FRA"
       ],
-      "Subcontinent/Continent code": [
-         "155",
-         "154"
-      ],
-      "id": "id43"
+      "id": "id43",
+      "Continent": [
+         "Europe"
+      ]
    },
    {
       "Project": "Observatoire de sources / Sources observatory",
@@ -1224,11 +978,10 @@
       "Country code": [
          "FRA"
       ],
-      "Subcontinent/Continent code": [
-         "155",
-         "154"
-      ],
-      "id": "id44"
+      "id": "id44",
+      "Continent": [
+         "Europe"
+      ]
    },
    {
       "Project": "Project:Sources",
@@ -1246,11 +999,10 @@
       "Country code": [
          "FRA"
       ],
-      "Subcontinent/Continent code": [
-         "155",
-         "154"
-      ],
-      "id": "id45"
+      "id": "id45",
+      "Continent": [
+         "Europe"
+      ]
    },
    {
       "Project": "Wikimedia en Chine / Wikimedia in China",
@@ -1268,11 +1020,10 @@
       "Country code": [
          "FRA"
       ],
-      "Subcontinent/Continent code": [
-         "155",
-         "154"
-      ],
-      "id": "id46"
+      "id": "id46",
+      "Continent": [
+         "Europe"
+      ]
    },
    {
       "Project": "International Science Council and Wikimedia Foundation webinar series: Exploring the opportunities and challenges of Wikipedia for science",
@@ -1290,11 +1041,10 @@
       "Country code": [
          "GBR"
       ],
-      "Subcontinent/Continent code": [
-         "155",
-         "154"
-      ],
-      "id": "id47"
+      "id": "id47",
+      "Continent": [
+         "Europe"
+      ]
    },
    {
       "Project": "Wikimedia and Democracy – The impact of Wikimedia UK's information literacy work on citizen engagement",
@@ -1312,11 +1062,10 @@
       "Country code": [
          "GBR"
       ],
-      "Subcontinent/Continent code": [
-         "155",
-         "154"
-      ],
-      "id": "id48"
+      "id": "id48",
+      "Continent": [
+         "Europe"
+      ]
    },
    {
       "Project": "Wikimedia in Education",
@@ -1334,11 +1083,10 @@
       "Country code": [
          "GBR"
       ],
-      "Subcontinent/Continent code": [
-         "155",
-         "154"
-      ],
-      "id": "id49"
+      "id": "id49",
+      "Continent": [
+         "Europe"
+      ]
    },
    {
       "Project": "Wikipedia:Trovärdiga källor / Wikipedia:Credible sources",
@@ -1352,11 +1100,8 @@
          "Swedish"
       ],
       "Country code": [],
-      "Subcontinent/Continent code": [
-         "155",
-         "154"
-      ],
-      "id": "id50"
+      "id": "id50",
+      "Continent": []
    },
    {
       "Project": "Citation Hunt",
@@ -1370,31 +1115,8 @@
          "English"
       ],
       "Country code": [],
-      "Subcontinent/Continent code": [
-         "015",
-         "011",
-         "017",
-         "014",
-         "018",
-         "053",
-         "054",
-         "057",
-         "061",
-         "021",
-         "029",
-         "013",
-         "005",
-         "143",
-         "030",
-         "034",
-         "035",
-         "145",
-         "154",
-         "155",
-         "151",
-         "039"
-      ],
-      "id": "id51"
+      "id": "id51",
+      "Continent": []
    },
    {
       "Project": "CiteWatch",
@@ -1408,31 +1130,8 @@
          "English"
       ],
       "Country code": [],
-      "Subcontinent/Continent code": [
-         "015",
-         "011",
-         "017",
-         "014",
-         "018",
-         "053",
-         "054",
-         "057",
-         "061",
-         "021",
-         "029",
-         "013",
-         "005",
-         "143",
-         "030",
-         "034",
-         "035",
-         "145",
-         "154",
-         "155",
-         "151",
-         "039"
-      ],
-      "id": "id52"
+      "id": "id52",
+      "Continent": []
    },
    {
       "Project": "Flagged_Revisions",
@@ -1444,31 +1143,8 @@
       "Country": [],
       "Languages": [],
       "Country code": [],
-      "Subcontinent/Continent code": [
-         "015",
-         "011",
-         "017",
-         "014",
-         "018",
-         "053",
-         "054",
-         "057",
-         "061",
-         "021",
-         "029",
-         "013",
-         "005",
-         "143",
-         "030",
-         "034",
-         "035",
-         "145",
-         "154",
-         "155",
-         "151",
-         "039"
-      ],
-      "id": "id53"
+      "id": "id53",
+      "Continent": []
    },
    {
       "Project": "masz - Media Wiki",
@@ -1480,31 +1156,8 @@
       "Country": [],
       "Languages": [],
       "Country code": [],
-      "Subcontinent/Continent code": [
-         "015",
-         "011",
-         "017",
-         "014",
-         "018",
-         "053",
-         "054",
-         "057",
-         "061",
-         "021",
-         "029",
-         "013",
-         "005",
-         "143",
-         "030",
-         "034",
-         "035",
-         "145",
-         "154",
-         "155",
-         "151",
-         "039"
-      ],
-      "id": "id54"
+      "id": "id54",
+      "Continent": []
    },
    {
       "Project": "Moderator Tools",
@@ -1516,31 +1169,8 @@
       "Country": [],
       "Languages": [],
       "Country code": [],
-      "Subcontinent/Continent code": [
-         "015",
-         "011",
-         "017",
-         "014",
-         "018",
-         "053",
-         "054",
-         "057",
-         "061",
-         "021",
-         "029",
-         "013",
-         "005",
-         "143",
-         "030",
-         "034",
-         "035",
-         "145",
-         "154",
-         "155",
-         "151",
-         "039"
-      ],
-      "id": "id55"
+      "id": "id55",
+      "Continent": []
    },
    {
       "Project": "New Page Patrol Source Guide",
@@ -1554,31 +1184,8 @@
          "English"
       ],
       "Country code": [],
-      "Subcontinent/Continent code": [
-         "015",
-         "011",
-         "017",
-         "014",
-         "018",
-         "053",
-         "054",
-         "057",
-         "061",
-         "021",
-         "029",
-         "013",
-         "005",
-         "143",
-         "030",
-         "034",
-         "035",
-         "145",
-         "154",
-         "155",
-         "151",
-         "039"
-      ],
-      "id": "id56"
+      "id": "id56",
+      "Continent": []
    },
    {
       "Project": "Template CiteQ",
@@ -1592,31 +1199,8 @@
          "English"
       ],
       "Country code": [],
-      "Subcontinent/Continent code": [
-         "015",
-         "011",
-         "017",
-         "014",
-         "018",
-         "053",
-         "054",
-         "057",
-         "061",
-         "021",
-         "029",
-         "013",
-         "005",
-         "143",
-         "030",
-         "034",
-         "035",
-         "145",
-         "154",
-         "155",
-         "151",
-         "039"
-      ],
-      "id": "id57"
+      "id": "id57",
+      "Continent": []
    },
    {
       "Project": "Vanity and Predatory Publishing",
@@ -1630,31 +1214,8 @@
          "English"
       ],
       "Country code": [],
-      "Subcontinent/Continent code": [
-         "015",
-         "011",
-         "017",
-         "014",
-         "018",
-         "053",
-         "054",
-         "057",
-         "061",
-         "021",
-         "029",
-         "013",
-         "005",
-         "143",
-         "030",
-         "034",
-         "035",
-         "145",
-         "154",
-         "155",
-         "151",
-         "039"
-      ],
-      "id": "id58"
+      "id": "id58",
+      "Continent": []
    },
    {
       "Project": "Wikipedia Huggle",
@@ -1706,31 +1267,8 @@
          "Indonesian"
       ],
       "Country code": [],
-      "Subcontinent/Continent code": [
-         "015",
-         "011",
-         "017",
-         "014",
-         "018",
-         "053",
-         "054",
-         "057",
-         "061",
-         "021",
-         "029",
-         "013",
-         "005",
-         "143",
-         "030",
-         "034",
-         "035",
-         "145",
-         "154",
-         "155",
-         "151",
-         "039"
-      ],
-      "id": "id59"
+      "id": "id59",
+      "Continent": []
    },
    {
       "Project": "Wikipedia:Deprecated sources",
@@ -1746,31 +1284,8 @@
          "Polish"
       ],
       "Country code": [],
-      "Subcontinent/Continent code": [
-         "015",
-         "011",
-         "017",
-         "014",
-         "018",
-         "053",
-         "054",
-         "057",
-         "061",
-         "021",
-         "029",
-         "013",
-         "005",
-         "143",
-         "030",
-         "034",
-         "035",
-         "145",
-         "154",
-         "155",
-         "151",
-         "039"
-      ],
-      "id": "id60"
+      "id": "id60",
+      "Continent": []
    },
    {
       "Project": "Wikipedia:Reliable sources/Perennial sources",
@@ -1784,31 +1299,8 @@
          "English"
       ],
       "Country code": [],
-      "Subcontinent/Continent code": [
-         "015",
-         "011",
-         "017",
-         "014",
-         "018",
-         "053",
-         "054",
-         "057",
-         "061",
-         "021",
-         "029",
-         "013",
-         "005",
-         "143",
-         "030",
-         "034",
-         "035",
-         "145",
-         "154",
-         "155",
-         "151",
-         "039"
-      ],
-      "id": "id61"
+      "id": "id61",
+      "Continent": []
    },
    {
       "Project": "Wikipedia:Vaccine safety/Reliable sources",
@@ -1822,31 +1314,8 @@
          "English"
       ],
       "Country code": [],
-      "Subcontinent/Continent code": [
-         "015",
-         "011",
-         "017",
-         "014",
-         "018",
-         "053",
-         "054",
-         "057",
-         "061",
-         "021",
-         "029",
-         "013",
-         "005",
-         "143",
-         "030",
-         "034",
-         "035",
-         "145",
-         "154",
-         "155",
-         "151",
-         "039"
-      ],
-      "id": "id62"
+      "id": "id62",
+      "Continent": []
    },
    {
       "Project": "Wikipedia:WikiProject_Reliability",
@@ -1860,31 +1329,8 @@
          "English"
       ],
       "Country code": [],
-      "Subcontinent/Continent code": [
-         "015",
-         "011",
-         "017",
-         "014",
-         "018",
-         "053",
-         "054",
-         "057",
-         "061",
-         "021",
-         "029",
-         "013",
-         "005",
-         "143",
-         "030",
-         "034",
-         "035",
-         "145",
-         "154",
-         "155",
-         "151",
-         "039"
-      ],
-      "id": "id63"
+      "id": "id63",
+      "Continent": []
    },
    {
       "Project": "Wikipedia Knowledge Integrity Risk Observatory, Wikimedia Research",
@@ -1898,30 +1344,7 @@
          "English"
       ],
       "Country code": [],
-      "Subcontinent/Continent code": [
-         "015",
-         "011",
-         "017",
-         "014",
-         "018",
-         "053",
-         "054",
-         "057",
-         "061",
-         "021",
-         "029",
-         "013",
-         "005",
-         "143",
-         "030",
-         "034",
-         "035",
-         "145",
-         "154",
-         "155",
-         "151",
-         "039"
-      ],
-      "id": "id64"
+      "id": "id64",
+      "Continent": []
    }
 ]
