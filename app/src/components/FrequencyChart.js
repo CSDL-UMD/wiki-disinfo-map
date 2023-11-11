@@ -204,7 +204,7 @@ export default class FrequencyChart extends Component {
               <Tooltip />
               <Line
                 yAxisId="1"
-                type="natural"
+                type="linear"
                 dataKey={yKey}
                 stroke="#8884d8"
                 animationDuration={300}
