@@ -92,42 +92,46 @@ function App() {
                 removeFilter={removeFilter}
               />
             </Grid>
+            <Grid item xs={12} sm={6} md={4} xl={6}>
+              <FrequencyChart
+                column="Year"
+                data={currData}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
+              />
+            </Grid>
 
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              md={12}
-              style={{
-                // maxWidth: '1000px',
-                marginLeft: 'auto',
-                marginRight: 'auto',
-              }}
-            >
-              {/* Project Description */}
-              <ProjectDescription />
-
-              {/* Search */}
+            <Grid item xs={12} sm={6} md={12}>
               <Grid container spacing={2}>
                 <Grid item xs={12} md={6}>
-                  {/* Country Filter */}
-                  <Filter
-                    resetData={resetData}
-                    column="Country"
-                    data={currData}
-                    addFilter={addFilter}
-                    removeFilter={removeFilter}
-                  />
+                  {/* Project Description */}
+                  <ProjectDescription />
                 </Grid>
+
+                {/* Search */}
                 <Grid item xs={12} md={6}>
-                  {/* Language Filter */}
-                  <Filter
-                    resetData={resetData}
-                    column="Languages"
-                    data={currData}
-                    addFilter={addFilter}
-                    removeFilter={removeFilter}
-                  />
+                  <Grid container spacing={2}>
+                    <Grid item xs={12} md={6}>
+                      {/* Country Filter */}
+                      <Filter
+                        resetData={resetData}
+                        column="Country"
+                        data={currData}
+                        addFilter={addFilter}
+                        removeFilter={removeFilter}
+                      />
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                      {/* Language Filter */}
+                      <Filter
+                        resetData={resetData}
+                        column="Languages"
+                        data={currData}
+                        addFilter={addFilter}
+                        removeFilter={removeFilter}
+                      />
+                    </Grid>
+                  </Grid>
                 </Grid>
               </Grid>
             </Grid>
