@@ -102,7 +102,7 @@ const Map = (props) => {
                       style={{
                         hover: { 
                           // fill: "#04D",
-                          stroke: "#FFD700", // Border color on hover
+                          stroke: "#FFFFFF", // Border color on hover
                           strokeWidth: 2, // Border width on hover
                         },
                         // pressed: { fill: "#02A" }
