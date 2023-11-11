@@ -2,7 +2,7 @@
    {
       "Project": "Open the Knowledge Journalism Award",
       "Description": "Disinformation on Wikimedia projects often appears in areas in which there are content voids. For this reason, working on filling knowledge gaps is one way Wikimedia can work to increase trustworthy information on the projects. The Wikimedia Foundation has launched the Open the Knowledge Journalism Awards, which recognizes the essential role journalists play in creating well-researched articles that volunteer editors can use as source materials to develop content on Wikipedia and other Wikimedia projects. The award is focused on articles by African journalists increasing knowledge about the African continent.[10]",
-      "Region": "Middle East & North Africa / Sub-Saharan Africa",
+      "Region": "Middle East & North Africa, Sub-Saharan Africa",
       "Group": "Wikimedia Foundation",
       "Year": 2023,
       "Year (Original)": "2023",
@@ -69,7 +69,7 @@
          "Thai",
          "Burmese",
          "Chinese",
-         "Japanese"
+         "and Japanese"
       ],
       "Country code": [],
       "id": "id2",
@@ -417,7 +417,7 @@
    {
       "Project": "Unreliable guidelines - Reliable sources and marginalized communities in French, English, and Spanish Wikipedias",
       "Description": "This is a report of the research project Reading Together: Reliability and Multilingual Global Communities on reliable sources and marginalized communities on Wikipedia.",
-      "Region": "North America / Latin America & Caribbean",
+      "Region": "North America, Latin America & Caribbean",
       "Group": "Art+Feminism, WikiCred",
       "Year": 2021,
       "Year (Original)": "2021",
@@ -459,7 +459,7 @@
       "Project": "ARTT (Analysis and Response Toolkit for Trust)",
       "Description": "This page centralizes information about reliable sources for new page reviewers to use when they review new articles. It is intended as a supplement to the reliable sources noticeboard and List of Perennial Sources, to help page reviewers unfamiliar with a given subject assess notability and neutrality of an article.[9]",
       "Region": "North America",
-      "Group": "National Science Foundation’s Convergence Accelerator, Hacks/Hackers, and the Paul G. Allen School of Computer Science & Engineering, University of Washington.For more information, please read footnote [1].",
+      "Group": "National Science Foundation’s Convergence Accelerator, Hacks/Hackers, Paul G. Allen School of Computer Science & Engineering University of Washington",
       "Year": 2021,
       "Year (Original)": "2021",
       "Country": [
@@ -585,7 +585,7 @@
    {
       "Project": "Wikipedia SWASTHA",
       "Description": "Wikipedia SWASTHA is an innovative, collaborative platform uniting multilingual editors from various Wikipedia communities to exchange best practices and jointly edit healthcare pages. Collaborating with diverse government agencies, the United Nations, and the World Health Organization, SWASTHA focuses on enhancing healthcare awareness in local communities by providing accessible, multilingual health information on Wikipedia. Recognized by prominent media outlets for its impactful work, SWASTHA highlights the ethical dissemination of medical information in local languages to empower individuals with limited access to healthcare resources. We invite organizations to join our mission and harness the power of Wikipedia to create a lasting, positive change in global healthcare.",
-      "Region": "East, Southeast Asia, & Pacific",
+      "Region": "East & Southeast Asia & Pacific",
       "Group": "NA",
       "Year": 2020,
       "Year (Original)": "2020",
@@ -605,7 +605,7 @@
          "Punjabi",
          "Bhojpuri",
          "Maithili",
-         "Nepali"
+         "and Nepali."
       ],
       "Country code": [],
       "id": "id26",
@@ -614,7 +614,7 @@
    {
       "Project": "HRVVMC Wikipedia Edit-a-thons",
       "Description": "The Human Rights Violations Victims’ Memorial Commission (HRVVMC), is a government agency tasked with documenting the human rights violations that occurred during the dictator’s regime and to establish a museum and a roll of victims. WikiSocPH worked with HRVVMC to help design training modules to train volunteers on how to edit Wikipedia articles related to the Marcos family and their regime. The Commission has conducted Wikipedia edit-a-thons to commemorate the initial declaration of martial law in 1972 and the Revolution in 1986 that ended the dictatorship.",
-      "Region": "East, Southeast Asia, & Pacific",
+      "Region": "East & Southeast Asia & Pacific",
       "Group": "WikiSocPH",
       "Year": 2020,
       "Year (Original)": "2020-2022",
@@ -635,7 +635,7 @@
    {
       "Project": "Wikipedian in Residence at Bantayog ng mga Bayani",
       "Description": "The Bantayog ng mga Bayani is a foundation that maintains a memorial, museum, and library dedicated to remembering and honoring the heroes, martyrs, and victims of the Ferdinand Marcos dictatorship. WikiSocPH partnered with the Bantayog who hired a Wikimedian in Residence (WiR), to help digitize the Bantayog’s library, to improve Wikipedia’s coverage of articles related to the Ferdinand Marcos regime, and to organize Wikimedia events and workshops to the Bantayog’s visitors, researchers, and supporters.",
-      "Region": "East, Southeast Asia, & Pacific",
+      "Region": "East & Southeast Asia & Pacific",
       "Group": "WikiSocPH",
       "Year": 2018,
       "Year (Original)": "2018",
@@ -656,7 +656,7 @@
    {
       "Project": "PSS 9",
       "Description": "PSS 9 is an intelligent software agent-administrator (a bot with administrative rights) on the Bulgarian Wikipedia, which employs artificial intelligence to identify and actively counter vandalism, including the spread of mis- and disinformation.[12]",
-      "Region": "Central & Eastern Europe / Central Asia",
+      "Region": "Central & Eastern Europe, Central Asia",
       "Group": "NA",
       "Year": 2017,
       "Year (Original)": "2017",
@@ -677,7 +677,7 @@
    {
       "Project": "Уикипедия:Патрульори/СФИН / Wikipedia:Patrollers/SFIN",
       "Description": "This is a filter maintained by the community of editors preventing the use of unreliable sources in the main space, and also in the incubator, by users who are not members of the \"autopatrolled\" group. When such a user tries to enter a link to a source in the list, the link is detected by the abuse filter that pulls data from the list and the edit is rejected.",
-      "Region": "Central & Eastern Europe / Central Asia",
+      "Region": "Central & Eastern Europe, Central Asia",
       "Group": "NA",
       "Year": 2016,
       "Year (Original)": "2016 (for the abuse filter); 2019 (adopted and enforced as a policy)",
@@ -698,7 +698,7 @@
    {
       "Project": "Croatian Wikipedia Disinformation Assessment",
       "Description": "This report evaluates a case of long-term systemic disinformation and project capture on the Croatian-language Wikipedia. The report was produced by an external expert, who conducted a thorough analysis of the content and community dynamics on the Croatian language Wikipedia. It revealed a widespread pattern of manipulative behavior and abuse of power by an ideologically aligned group of admins and volunteer editors. The views and opinions expressed in this report are those of the author and do not necessarily reflect the official policy or position of the Wikimedia Foundation.",
-      "Region": "Central & Eastern Europe / Central Asia",
+      "Region": "Central & Eastern Europe, Central Asia",
       "Group": "Wikimedia Foundation",
       "Year": 2021,
       "Year (Original)": "2021",
@@ -713,7 +713,7 @@
    {
       "Project": "Wikipedia:Nierzetelne źródła / Wikipedia:Not reliable sources",
       "Description": "This is an editorial recommendation including a list of unreliable sources that should not be used by Polish Wikipedia editors, with an explanation of how these are selected and why.",
-      "Region": "Central & Eastern Europe / Central Asia",
+      "Region": "Central & Eastern Europe, Central Asia",
       "Group": "NA",
       "Year": 2022,
       "Year (Original)": "2022",
@@ -734,7 +734,7 @@
    {
       "Project": "Project: Patrolling/Monitoring vandalism (Wikipedia Ukrainian)",
       "Description": "This project is no longer active. It was a WikiProject to check all edits that were made by anonymous users. It helped prevent vandalism from remaining in articles for a long time. The project kept a patrol log of anonymous edits according to this filter. The project was supported by Wikimedia Ukraine, but not maintained by Wikimedia Ukraine. It was maintained by individual dedicated editors.",
-      "Region": "Central & Eastern Europe / Central Asia",
+      "Region": "Central & Eastern Europe, Central Asia",
       "Group": "Wikimedia Ukraine",
       "Year": 2020,
       "Year (Original)": "2020 (archived)",
@@ -755,7 +755,7 @@
    {
       "Project": "Віківишколи/Тренінг для журналістів 19 травня 2019 / Wikivishkoli/Training for journalists 19 May 2019",
       "Description": "This is a master class on \"How to enter journalism into Wikipedia\" that was held in Kyiv in 2019, and organized by Wikimedia Ukraine together with the Institute for the Development of the Regional Press. The event was part of the Investigative Journalism Month held on Ukrainian Wikipedia in June-July.",
-      "Region": "Central & Eastern Europe / Central Asia",
+      "Region": "Central & Eastern Europe, Central Asia",
       "Group": "Wikimedia Ukraine",
       "Year": 2019,
       "Year (Original)": "2019",
@@ -776,7 +776,7 @@
    {
       "Project": "Вікіпедія:Авторитетні джерела / Wikipedia: Authoritative sources",
       "Description": "This is a blog post explaining filter/list of untrustworthy sources that would flag them as untrustworthy for editors to use.",
-      "Region": "Central & Eastern Europe / Central Asia",
+      "Region": "Central & Eastern Europe, Central Asia",
       "Group": "Wikimedia Ukraine",
       "Year": 2020,
       "Year (Original)": "2020",
@@ -797,7 +797,7 @@
    {
       "Project": "ГО «Вікімедіа Україна» попереджає: користуючись Вікіпедією, не платіть шахраям! / NGO \"Wikimedia Ukraine\" warns: When using Wikipedia, do not pay fraudsters!",
       "Description": "This is a blog post explaining how Wikipedia works and warning users against fraud and paid editing.",
-      "Region": "Central & Eastern Europe / Central Asia",
+      "Region": "Central & Eastern Europe, Central Asia",
       "Group": "Wikimedia Ukraine",
       "Year": 2020,
       "Year (Original)": "2020",
@@ -818,7 +818,7 @@
    {
       "Project": "Як перевіряти інформацію: поради з фактчекінгу від Vox Check / How to check information: Fact-checking tips from Vox Check",
       "Description": "This is the abstract of a training on disinformation held by Wikimedia Ukraine in collaboration with Vox Check in 2021.",
-      "Region": "Central & Eastern Europe / Central Asia",
+      "Region": "Central & Eastern Europe, Central Asia",
       "Group": "Wikimedia Ukraine",
       "Year": 2021,
       "Year (Original)": "2021",
@@ -839,7 +839,7 @@
    {
       "Project": "Як читати новини критично? and Експерти та експертність у медіа / How to read news critically? and Experts and expertise in the media",
       "Description": "This is the abstract of two training on disinformation and media literacy which were held by Wikimedia Ukraine in collaboration with Media Detector in 2020.",
-      "Region": "Central & Eastern Europe / Central Asia",
+      "Region": "Central & Eastern Europe, Central Asia",
       "Group": "Wikimedia Ukraine",
       "Year": 2020,
       "Year (Original)": "2020",
@@ -1050,7 +1050,7 @@
       "Project": "Wikimedia and Democracy – The impact of Wikimedia UK's information literacy work on citizen engagement",
       "Description": "This is a comprehensive analysis, by Wikimedia UK, of its programs and their impact. In Particular, they analyze the impact of their information literacy work, and how the Wikimedia movement contributes to creating a healthier information environment and stronger democracy.",
       "Region": "Northern & Western Europe",
-      "Group": "Suppose algorithm A has time complexity TA(n) = Θ(n) and algorithm B has time complexity TB(n) = Θ(n 2 ). (a) Which algorithm is generally accepted as “faster” and why?",
+      "Group": "Wikimedia UK",
       "Year": 2021,
       "Year (Original)": "2021",
       "Country": [
@@ -1306,7 +1306,7 @@
       "Project": "Wikipedia:Vaccine safety/Reliable sources",
       "Description": "Launched in April 2022 as a NewsQ project, Wikipedia “Reliable Sources” seeks to support Wikipedians who write articles on vaccines and want to cite reliable sources of vaccine information. NewsQ is collaborating with experienced Wikipedia editors to gather data on source quality and refine a list of reputable sources of vaccine information throughout 2023. NewsQ is a Hacks/Hackers initiative that has sought to elevate quality journalism when algorithms rank and recommend news online.",
       "Region": "NA",
-      "Group": "News Quality Initiative (NewsQ), Hacks/Hackers, and Knowledge Futures Group.For more information, read footnote [2].",
+      "Group": "News Quality Initiative (NewsQ), Hacks/Hackers, Knowledge Futures Group",
       "Year": 2022,
       "Year (Original)": "2022",
       "Country": [],
