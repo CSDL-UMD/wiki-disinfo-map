@@ -63,7 +63,7 @@ const Map = (props) => {
   }
 
   function handleZoomIn() {
-    if (position.zoom >= 6) return;
+    if (position.zoom >= 3.375) return;
     setPosition((pos) => ({ ...pos, zoom: pos.zoom * 1.5 }));
   }
 
@@ -87,6 +87,9 @@ const Map = (props) => {
         id="map"
       >
         <ZoomableGroup
+          filterZoomEvent={(event) => {
+            return event.type === "wheel" ? false : true;
+          }}
           zoom={position.zoom}
           center={position.coordinates}
           onMoveEnd={handleMoveEnd}>
