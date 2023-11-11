@@ -28,7 +28,9 @@ const getData = (dataRaw, columnName) => {
   // count occurrences in values (stole rishi's code lol)
   const counts = {};
   for (const num of values) {
-    counts[num] = counts[num] ? counts[num] + 1 : 1;
+    if (num !== "NA") {
+      counts[num] = counts[num] ? counts[num] + 1 : 1;
+    }
   }
 
   const data = [];
@@ -160,6 +162,7 @@ export default class PieChart extends Component {
               activeShape={renderActiveShape}
               // label={true}
               data={this.state.dataCounts}
+              paddingAngle={2.5}
               cx="50%"
               cy="50%"
               innerRadius={45}

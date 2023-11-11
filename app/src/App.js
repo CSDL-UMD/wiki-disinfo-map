@@ -78,7 +78,19 @@ function App() {
           <Grid container spacing={2} justify="flex-end" alignItems="center">
             <Grid item xs={12} md={8} xl={6}>
               {/* Map */}
-              <Map data={currData} />
+              <Map 
+                data={currData}
+                addFilter={addFilter}
+                removeFilter={removeFilter} 
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} xl={6}>
+              <FrequencyChart
+                column="Year"
+                data={currData}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
+              />
             </Grid>
             <Grid item xs={12} sm={6} md={4} xl={6}>
               <FrequencyChart
