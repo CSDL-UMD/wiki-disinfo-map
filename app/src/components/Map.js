@@ -122,12 +122,12 @@ const Map = (props) => {
                       key={geo.rsmKey}
                       style={{
                         hover: { 
-                          // fill: "#04D",
-                          stroke: "#FFFFFF", // Border color on hover
-                          strokeWidth: 2, // Border width on hover
+                          fill: "#FFF",
+                          
                         },
-                        // pressed: { fill: "#02A" }
                       }}
+                      // stroke="#FFF"
+                      // strokeWidth={2}
                       geography={geo}
                       fill={d ? colorScale(d.count) : '#ffffff'}
                       onMouseEnter={() => {
@@ -158,7 +158,7 @@ const Map = (props) => {
       </ComposableMap>
 
       <div className="controls">
-        <button onClick={handleZoomIn}>
+        <button id="1" onClick={handleZoomIn}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -171,7 +171,7 @@ const Map = (props) => {
             <line x1="5" y1="12" x2="19" y2="12" />
           </svg>
         </button>
-        <button onClick={handleZoomOut}>
+        <button id="2" onClick={handleZoomOut}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"

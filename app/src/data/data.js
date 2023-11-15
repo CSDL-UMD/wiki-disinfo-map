@@ -100,6 +100,16 @@ const preprocessRow = async (row) => {
     .map((val) => val.trim())
     .filter((country) => country !== 'NA');
 
+  row['Group'] = String(row['Group'])
+    .split(',')
+    .map((val) => val.trim())
+    .filter((country) => country !== 'NA');
+
+  row['Region'] = String(row['Region'])
+    .split(',')
+    .map((val) => val.trim())
+    .filter((country) => country !== 'NA');
+
   row['Continent'] = [];
   for (let i = 0; i < row['Country'].length; i++) {
     const continent = lookup_continent(row['Country'][i])
