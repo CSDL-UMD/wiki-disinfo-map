@@ -166,7 +166,7 @@ export default class FrequencyChart extends Component {
           style={{ userSelect: 'none', width: '100%' }}
         >
           <Typography variant="h6" gutterBottom align="center">
-            Frequency of {xKey}
+            {this.props.title}
           </Typography>
           <ResponsiveContainer width="100%" height={300}>
             <LineChart

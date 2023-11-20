@@ -18,7 +18,7 @@
   margin-left: 2em;
   margin-bottom: 2em;
   width: 2rem;
-  background: #3366ff;
+  background: #9682c0;
   color: #fff;
   border-radius: 100%;
   border: 0;
@@ -32,7 +32,7 @@
   margin-left: -2em;
   margin-bottom: 2em;
   width: 2rem;
-  background: #3366ff;
+  background: #9682c0;
   color: #fff;
   border-radius: 100%;
   border: 0;
@@ -40,5 +40,3 @@
 /* .controls > button:first-child {
   margin-right: 0.25rem;
 } */
-
-

@@ -18,7 +18,6 @@ import './Map.css';
 // const mapFeatures = require('./mapFeatures.json');
 const mapFeatures = require('./continents.json');
 
-
 const listValueCounts = (data, column) => {
   const counts = {};
 
@@ -36,9 +35,11 @@ const listValueCounts = (data, column) => {
 };
 
 const Map = (props) => {
+  const [originalCounts, setOriginalCounts] = useState(
+    listValueCounts(props.data, 'Continent')
+  );
   const [mapCounts, setMapCounts] = useState(
     listValueCounts(props.data, 'Continent')
-    // listValueCounts(props.data, 'Country')
   );
   const [tooltipContent, setTooltipContent] = useState('');
   const [filterId, setFilterId] = useState(-1);
@@ -48,32 +49,22 @@ const Map = (props) => {
   const colorScale = scaleLinear()
     .domain([0, maxCount])
     .range(['#ffedea', '#15008c']);
-    
+
   useEffect(() => {
     setMapCounts(listValueCounts(props.data, 'Continent'));
-    // setMapCounts(listValueCounts(props.data, 'Country'));
   }, [props.data]);
 
-  // const onCountryClick = (countryName) => {
-  //   if (!mapCounts.find(((elem) => elem.Country === countryName))) { // checks if country has no projects
-  //     // do nothing
-  //   } else {
-  //     props.removeFilter(filterId)
-  //     let newFilter = createContainsFilter("Country", countryName)
-  //     setFilterId(props.addFilter(newFilter))
-  //   }
-  // }
+  const onMapRegionClick = (columnName, regionName) => {
+    props.removeFilter(filterId);
 
-  const onContinentClick = (continentName) => {
-    console.log(continentName);
-    if (!mapCounts.find(((elem) => elem.Continent === continentName))) { // checks if country has no projects
+    if (!originalCounts.find((elem) => elem[columnName] === regionName)) {
+      // checks if region has no projects
       // do nothing
     } else {
-      props.removeFilter(filterId)
-      let newFilter = createContainsFilter("Continent", continentName)
-      setFilterId(props.addFilter(newFilter))
+      let newFilter = createContainsFilter(columnName, regionName);
+      setFilterId(props.addFilter(newFilter));
     }
-  }
+  };
 
   function handleZoomIn() {
     if (position.zoom >= 3.375) return;
@@ -101,11 +92,12 @@ const Map = (props) => {
       >
         <ZoomableGroup
           filterZoomEvent={(event) => {
-            return event.type === "wheel" ? false : true;
+            return event.type === 'wheel' ? false : true;
           }}
           zoom={position.zoom}
           center={position.coordinates}
-          onMoveEnd={handleMoveEnd}>
+          onMoveEnd={handleMoveEnd}
+        >
           <Sphere stroke="#E4E5E6" strokeWidth={0.5} />
           <Graticule stroke="#E4E5E6" strokeWidth={0.5} />
           {mapCounts.length > 0 && (
@@ -113,7 +105,6 @@ const Map = (props) => {
               {({ geographies }) =>
                 geographies.map((geo) => {
                   const d = mapCounts.find(
-                    // (s) => s.Country === geo.properties.name
                     (s) => s.Continent === geo.properties.continent
                   );
 
@@ -121,32 +112,22 @@ const Map = (props) => {
                     <Geography
                       key={geo.rsmKey}
                       style={{
-                        hover: { 
-                          fill: "#FFF",
-                          
+                        hover: {
+                          fill: '#FFF',
                         },
                       }}
-                      // stroke="#FFF"
-                      // strokeWidth={2}
                       geography={geo}
-                      fill={d ? colorScale(d.count) : '#ffffff'}
+                      fill={d ? colorScale(d.count) : '#525151'}
                       onMouseEnter={() => {
-                        console.log(d);
                         setTooltipContent(
                           `${geo.properties.continent}: ${d ? d.count : 0}`
-                          //`${geo.properties.Country}: ${d ? d.count : 0}`
                         );
                       }}
                       onMouseLeave={() => {
                         setTooltipContent('');
                       }}
-                      // onClick={() => {
-                      //   // onCountryClick(geo.properties.name);
-                      //   onCountryClick(geo.properties.Country);
-                      // }}
                       onClick={() => {
-                        // onCountryClick(geo.properties.name);
-                        onContinentClick(geo.properties.continent);
+                        onMapRegionClick('Continent', geo.properties.continent);
                       }}
                     />
                   );

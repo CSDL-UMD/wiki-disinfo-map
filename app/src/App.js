@@ -87,6 +87,7 @@ function App() {
             <Grid item xs={12} sm={6} md={4} xl={6}>
               <FrequencyChart
                 column="Year"
+                title="Frequency of Start Year"
                 data={currData}
                 addFilter={addFilter}
                 removeFilter={removeFilter}
