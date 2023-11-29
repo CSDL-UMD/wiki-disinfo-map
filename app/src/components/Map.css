@@ -1,3 +1,42 @@
 .map-chart *:focus {
   outline: none;
 }
+
+/*
+.controls {
+  display: flex;
+  margin: 1.25rem 0;
+  text-align: center;
+  justify-content: center;
+} */
+
+.controls > button {
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  height: 2rem;
+  margin-left: 2em;
+  margin-bottom: 2em;
+  width: 2rem;
+  background: #9682c0;
+  color: #fff;
+  border-radius: 100%;
+  border: 0;
+}
+
+.controls > button#2 {
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  height: 2rem;
+  margin-left: -2em;
+  margin-bottom: 2em;
+  width: 2rem;
+  background: #9682c0;
+  color: #fff;
+  border-radius: 100%;
+  border: 0;
+}
+/* .controls > button:first-child {
+  margin-right: 0.25rem;
+} */

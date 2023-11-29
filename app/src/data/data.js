@@ -1,5 +1,6 @@
 const fs = require('fs');
 const { parse } = require('csv-parse');
+const country_continent = require('./country-continent.json');
 
 // @returns rows, columns
 async function retrieve_data() {
@@ -21,6 +22,7 @@ async function retrieve_data() {
         delete row['Link'];
         delete row['Type'];
         delete row['Wikimedia project'];
+        delete row["Subcontinent/Continent code"];
 
         data.push(row);
       })
@@ -63,6 +65,14 @@ main().catch((error) => {
   console.error('An error occurred:', error);
 });
 
+const lookup_continent = (country) => {
+  for (let i = 0; i < country_continent.length; i++) {
+    if (country_continent[i].country === country) {
+      return country_continent[i].continent;
+    }
+  }
+}
+
 const preprocessRow = async (row) => {
   // parse Start Year to number
   row['Year'] = Number(row['Year']);
@@ -90,11 +100,24 @@ const preprocessRow = async (row) => {
     .map((val) => val.trim())
     .filter((country) => country !== 'NA');
 
-  row['Subcontinent/Continent code'] = String(
-    row['Subcontinent/Continent code']
-  )
+  row['Group'] = String(row['Group'])
     .split(',')
     .map((val) => val.trim())
     .filter((country) => country !== 'NA');
+
+  row['Region'] = String(row['Region'])
+    .split(',')
+    .map((val) => val.trim())
+    .filter((country) => country !== 'NA');
+
+  row['Continent'] = [];
+  for (let i = 0; i < row['Country'].length; i++) {
+    const continent = lookup_continent(row['Country'][i])
+
+    if (!row['Continent'].includes(continent)) {
+      row['Continent'].push(continent);
+    }
+  }
+
   return row;
 };
