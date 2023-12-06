@@ -113,7 +113,7 @@ const Map = (props) => {
                       key={geo.rsmKey}
                       style={{
                         hover: {
-                          fill: '#FFF',
+                          fill: '#000',
                         },
                       }}
                       geography={geo}

@@ -17,7 +17,7 @@ const initialData = require('./data/data.json');
 
 const darkTheme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: 'light',
   },
 });
 
