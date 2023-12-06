@@ -1,20 +1,59 @@
 import React, { useState, useEffect } from 'react';
-import { Paper } from '@mui/material';
+import { Paper, Typography, Box, Modal } from '@mui/material';
 import { DataGrid } from '@mui/x-data-grid';
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
+
+const format_if_array = (val) => {
+  if (Array.isArray(val)) {
+    let formatted = "";
+    val.forEach((elem) => {formatted += `${elem}, `})
+    formatted = formatted.substring(0, formatted.length - 1)
+    formatted = formatted.slice(0, -1)
+    return formatted
+  } else {
+    return val
+  }
+}
 
 const Table = (props) => {
   const [currData, setCurrData] = useState([]);
+  const [open, setOpen] = React.useState(false);
+  const [finalClickInfo, setFinalClickInfo] = useState({colDef: {headerName: ""}, value: "", formattedValue: ""});
+
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  const handleOnCellClick = (params) => {
+    if (params.formattedValue.length !== 0) {
+      setFinalClickInfo(params);
+      handleOpen()
+    }
+  };
+
+  const handleOnCellEnter = (params) => {
+    //TODO
+  }
 
   // COLUMNS: Project Name, Description, Languages, Country, Region, Starting Year, Group
   const columns = [
     { field: 'id1', headerName: 'Project Name', flex: 0.2 },
-    { field: 'id2', headerName: 'Description', flex: 0.2 },
+    { field: 'id2', headerName: 'Description', flex: 0.6 },
     { field: 'id3', headerName: 'Languages', flex: 0.2 },
     { field: 'id4', headerName: 'Country', flex: 0.2 },
     { field: 'id5', headerName: 'Region', flex: 0.2 },
     { field: 'id6', headerName: 'Starting Year', flex: 0.2 },
     { field: 'id7', headerName: 'Group', flex: 0.2 },
-    { field: 'id8', headerName: 'Country code', flex: 0.2 },
   ];
 
   const transformData = (data) => {
@@ -30,7 +69,6 @@ const Table = (props) => {
         Region: 'id5',
         Year: 'id6',
         Group: 'id7',
-        'Country code': 'id8',
       };
       const newRow = { id: `id${rowNum}` };
       for (const key in translations) {
@@ -55,6 +93,9 @@ const Table = (props) => {
   return (
     <Paper>
       <DataGrid
+        componentsProps={{
+          cell: { onMouseOver: handleOnCellEnter },
+        }}
         rows={currData}
         columns={columns}
         initialState={{
@@ -64,7 +105,23 @@ const Table = (props) => {
         }}
         pageSizeOptions={[5, 10]}
         disableColumnFilter
+        onCellClick={handleOnCellClick}
       />
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="column-name"
+        aria-describedby="cell-content"
+      >
+        <Box sx={style}>
+          <Typography id="column-name" variant="h6" component="h2">
+            {finalClickInfo.colDef.headerName}
+          </Typography>
+          <Typography id="cell-content" sx={{ mt: 2 }}>
+            {format_if_array(finalClickInfo.formattedValue)}
+          </Typography>
+        </Box>
+      </Modal>
     </Paper>
   );
 };
