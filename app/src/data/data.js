@@ -1,10 +1,40 @@
 const fs = require('fs');
 const { parse } = require('csv-parse');
+const axios = require('axios');
 const country_continent = require('./country-continent.json');
+const sheets_id = "1-xgXuWPTuN2C9_VmT_7c6Vtn8Bc5Ns3wvoCpU7sHZEw";
+const sheets_name = 'modified data';
+
+const downloadCsv = async () => {
+  const url = `https://docs.google.com/spreadsheets/d/${sheets_id}/gviz/tq?tqx=out:csv&sheet=${sheets_name}&headers=0`;
+  try {
+    const response = await axios.get(url, {
+      responseType: 'stream',
+    });
+
+    // Specify the path where you want to save the CSV file
+    const outputPath = 'wiki_disinfo_data.csv';
+
+    // Pipe the response stream to a file
+    response.data.pipe(fs.createWriteStream(outputPath));
+
+    return new Promise((resolve, reject) => {
+      response.data.on('end', () => resolve(outputPath));
+      response.data.on('error', (error) => reject(error));
+    });
+  } catch (error) {
+    console.error(`Error: ${error.message}`);
+  }
+};
+
 
 // @returns rows, columns
 async function retrieve_data() {
-  return new Promise((resolve, reject) => {
+  // download google sheet
+  await downloadCsv();
+  console.log("data downloaded from Google Sheets as csv")
+
+  return new Promise((resolve, reject) => {    
     // accumulate all the data for the webpage in this structure
     const data = [];
     // read CSV input stream
