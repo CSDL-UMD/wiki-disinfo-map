@@ -27,7 +27,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Parse csv data
+      - name: Download & parse csv data
         working-directory: app/src/data/
         run: node data.js
 
