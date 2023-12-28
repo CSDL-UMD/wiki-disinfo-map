@@ -40,7 +40,7 @@ const listValueCounts = (data, column) => {
 };
 
 const Map = (props) => {
-  const [buttonText, setButtonText] = useState('Global');
+  const [buttonText, setButtonText] = useState('Only Global');
   const [originalCounts, setOriginalCounts] = useState(
     listValueCounts(props.data, 'Continent')
   );
@@ -131,7 +131,7 @@ const Map = (props) => {
                       geography={geo}
                       fill={d ? colorScale(d.count) : '#525151'}
                       onMouseEnter={() => {
-                        if (buttonText === "Global") {
+                        if (buttonText === "Only Global") {
                           setTooltipContent(
                             `${geo.properties.continent}: ${d ? d.count : 0}`
                           );
@@ -144,7 +144,7 @@ const Map = (props) => {
                         setTooltipContent('');
                       }}
                       onClick={() => {
-                        if (buttonText === "Global") {
+                        if (buttonText === "Only Global") {
                           onMapRegionClick('Continent', geo.properties.continent);
                         }
                       }}
@@ -189,14 +189,14 @@ const Map = (props) => {
             className="custom-button"
             onClick={() => {
               
-              if (buttonText === 'Back') {
+              if (buttonText === 'Only Regional') {
                 // add logic
                 props.removeFilter(filterId);
-                setButtonText("Global");
+                setButtonText("Only Global");
               } else {
                 // add logic
                 onMapRegionClick('Continent', 'Global');
-                setButtonText("Back");
+                setButtonText("Only Regional");
               }
             }}>
             {buttonText}
