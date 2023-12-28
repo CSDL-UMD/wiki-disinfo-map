@@ -2,15 +2,7 @@
   outline: none;
 }
 
-/*
-.controls {
-  display: flex;
-  margin: 1.25rem 0;
-  text-align: center;
-  justify-content: center;
-} */
-
-.controls > button {
+/* .controls > button {
   justify-content: center;
   align-items: center;
   padding: 0;
@@ -37,6 +29,33 @@
   border-radius: 100%;
   border: 0;
 }
-/* .controls > button:first-child {
-  margin-right: 0.25rem;
-} */
+ */
+
+ .controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.control-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.control-buttons button:hover {
+  cursor:pointer;
+}
+
+.controls button {
+  margin-bottom: 10px; /* Add margin between buttons and the bottom of the div */
+}
+
+.custom-stack {
+  margin-bottom: 10px; /* Add margin between the Stack and the bottom of the div */
+}
+
+.custom-button {
+  /* Add any specific styling for the buttons within the Stack */
+  margin-bottom: 10px; /* Add margin between buttons */
+}
