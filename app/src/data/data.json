@@ -82,7 +82,9 @@
       ],
       "Country code": [],
       "id": "id2",
-      "Continent": []
+      "Continent": [
+         "Global"
+      ]
    },
    {
       "Project": "Knowledge integrity, Wikimedia Research",
@@ -101,7 +103,9 @@
       ],
       "Country code": [],
       "id": "id3",
-      "Continent": []
+      "Continent": [
+         "Global"
+      ]
    },
    {
       "Project": "Machine Learning based service to predict reverts on Wikipedia, Wikimedia Research",
@@ -118,7 +122,9 @@
       "Languages": [],
       "Country code": [],
       "id": "id4",
-      "Continent": []
+      "Continent": [
+         "Global"
+      ]
    },
    {
       "Project": "ORES",
@@ -137,7 +143,9 @@
       ],
       "Country code": [],
       "id": "id5",
-      "Continent": []
+      "Continent": [
+         "Global"
+      ]
    },
    {
       "Project": "Reading Wikipedia in the classroom",
@@ -168,7 +176,9 @@
       ],
       "Country code": [],
       "id": "id6",
-      "Continent": []
+      "Continent": [
+         "Global"
+      ]
    },
    {
       "Project": "Reliable sources noticeboard",
@@ -185,7 +195,9 @@
       ],
       "Country code": [],
       "id": "id7",
-      "Continent": []
+      "Continent": [
+         "Global"
+      ]
    },
    {
       "Project": "Wikipedia:WikiProject Climate change",
@@ -209,7 +221,9 @@
       ],
       "Country code": [],
       "id": "id8",
-      "Continent": []
+      "Continent": [
+         "Global"
+      ]
    },
    {
       "Project": "Wikipedia:WikiProject COVID-19",
@@ -1549,6 +1563,8 @@
       ],
       "Country code": [],
       "id": "id64",
-      "Continent": []
+      "Continent": [
+         "Global"
+      ]
    }
 ]

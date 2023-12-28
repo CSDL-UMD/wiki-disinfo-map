@@ -11,6 +11,8 @@ import {
 import { Paper } from '@mui/material';
 import { Tooltip } from 'react-tooltip';
 import { createContainsFilter } from '../utils';
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
 // css
 import './Map.css';
 
@@ -26,6 +28,9 @@ const listValueCounts = (data, column) => {
       counts[key] = counts[key] ? counts[key] + 1 : 1;
     }
   }
+
+  // console.log(counts)
+
   // transform to array of objects
   return Object.keys(counts).map((key) => {
     const item = { count: counts[key] };
@@ -35,6 +40,7 @@ const listValueCounts = (data, column) => {
 };
 
 const Map = (props) => {
+  const [buttonText, setButtonText] = useState('Global');
   const [originalCounts, setOriginalCounts] = useState(
     listValueCounts(props.data, 'Continent')
   );
@@ -44,6 +50,7 @@ const Map = (props) => {
   const [tooltipContent, setTooltipContent] = useState('');
   const [filterId, setFilterId] = useState(-1);
   const [position, setPosition] = useState({ coordinates: [0, 0], zoom: 1 });
+  
 
   const maxCount = mapCounts.reduce((a, b) => Math.max(a, b.count), 0);
   const colorScale = scaleLinear()
@@ -82,6 +89,8 @@ const Map = (props) => {
 
   return (
     <Paper>
+      
+
       <ComposableMap
         projectionConfig={{
           rotate: [-10, 0, 0],
@@ -90,6 +99,7 @@ const Map = (props) => {
         className="map-chart"
         id="map"
       >
+        
         <ZoomableGroup
           filterZoomEvent={(event) => {
             return event.type === 'wheel' ? false : true;
@@ -98,6 +108,7 @@ const Map = (props) => {
           center={position.coordinates}
           onMoveEnd={handleMoveEnd}
         >
+          
           <Sphere stroke="#E4E5E6" strokeWidth={0.5} />
           <Graticule stroke="#E4E5E6" strokeWidth={0.5} />
           {mapCounts.length > 0 && (
@@ -113,21 +124,29 @@ const Map = (props) => {
                       key={geo.rsmKey}
                       style={{
                         hover: {
-                          fill: '#000',
+                          fill: '#B2BEB5',
+                          cursor: 'pointer'
                         },
                       }}
                       geography={geo}
                       fill={d ? colorScale(d.count) : '#525151'}
                       onMouseEnter={() => {
-                        setTooltipContent(
-                          `${geo.properties.continent}: ${d ? d.count : 0}`
-                        );
+                        if (buttonText === "Global") {
+                          setTooltipContent(
+                            `${geo.properties.continent}: ${d ? d.count : 0}`
+                          );
+                        } else {
+                          console.log(originalCounts)
+                          setTooltipContent(`Global: ${originalCounts[0]['count']}`)
+                        }
                       }}
                       onMouseLeave={() => {
                         setTooltipContent('');
                       }}
                       onClick={() => {
-                        onMapRegionClick('Continent', geo.properties.continent);
+                        if (buttonText === "Global") {
+                          onMapRegionClick('Continent', geo.properties.continent);
+                        }
                       }}
                     />
                   );
@@ -138,7 +157,7 @@ const Map = (props) => {
         </ZoomableGroup>
       </ComposableMap>
 
-      <div className="controls">
+      <div className="controls control-buttons">
         <button id="1" onClick={handleZoomIn}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -164,7 +183,28 @@ const Map = (props) => {
             <line x1="5" y1="12" x2="19" y2="12" />
           </svg>
         </button>
+        <Stack direction="row" spacing={2} className="custom-stack">
+          <Button 
+            variant="contained" 
+            className="custom-button"
+            onClick={() => {
+              
+              if (buttonText === 'Back') {
+                // add logic
+                props.removeFilter(filterId);
+                setButtonText("Global");
+              } else {
+                // add logic
+                onMapRegionClick('Continent', 'Global');
+                setButtonText("Back");
+              }
+            }}>
+            {buttonText}
+          </Button>
+        </Stack>
       </div>
+
+      
 
       <Tooltip anchorId="map" content={tooltipContent} float />
     </Paper>

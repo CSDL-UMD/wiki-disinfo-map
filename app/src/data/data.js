@@ -119,5 +119,10 @@ const preprocessRow = async (row) => {
     }
   }
 
+  // if the region is considered global
+  if (row['Region'].length == 1 && row['Region'][0] === "Global" && row['Continent'].length == 0) {
+    row['Continent'] = ["Global"]
+  }
+
   return row;
 };

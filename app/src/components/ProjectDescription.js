@@ -1,10 +1,13 @@
 import React from 'react';
 import { Paper } from '@mui/material';
+import Typography from '@mui/material/Typography';
 
 const ProjectDescription = () => {
   return (
     <Paper style={{ padding: 10 }}>
-      <p>About</p>
+      <Typography variant="h4" component="h2">
+        Background
+      </Typography>
       <p>
         Wikipedia is a trusted source of knowledge for millions of people worldwide. 
         Edited by thousands of volunteers across more than 300 language editions, 
