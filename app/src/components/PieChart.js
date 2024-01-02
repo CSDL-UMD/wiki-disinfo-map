@@ -166,7 +166,7 @@ export default class PieChart extends Component {
   render() {
     return (
       <Paper style={{ padding: 20 }}>
-        <Typography variant="h5" gutterBottom align="center">
+        <Typography variant="h5" gutterBottom align="center" style={{fontFamily: "Segoe UI, Tahoma, Geneva, Verdana, sans-serif"}}>
           {this.props.column}
         </Typography>
         <ResponsiveContainer width="100%" height={250}>
