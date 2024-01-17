@@ -41,16 +41,13 @@ const listValueCounts = (data, column) => {
 
 const Map = (props) => {
   const [buttonText, setButtonText] = useState('Only Global');
-  const [originalCounts, setOriginalCounts] = useState(
-    listValueCounts(props.data, 'Continent')
-  );
+  const originalCounts = listValueCounts(props.data, 'Continent');
   const [mapCounts, setMapCounts] = useState(
     listValueCounts(props.data, 'Continent')
   );
   const [tooltipContent, setTooltipContent] = useState('');
   const [filterId, setFilterId] = useState(-1);
   const [position, setPosition] = useState({ coordinates: [0, 0], zoom: 1 });
-  
 
   const maxCount = mapCounts.reduce((a, b) => Math.max(a, b.count), 0);
   const colorScale = scaleLinear()
@@ -89,8 +86,6 @@ const Map = (props) => {
 
   return (
     <Paper>
-      
-
       <ComposableMap
         projectionConfig={{
           rotate: [-10, 0, 0],
@@ -99,7 +94,6 @@ const Map = (props) => {
         className="map-chart"
         id="map"
       >
-        
         <ZoomableGroup
           filterZoomEvent={(event) => {
             return event.type === 'wheel' ? false : true;
@@ -108,7 +102,6 @@ const Map = (props) => {
           center={position.coordinates}
           onMoveEnd={handleMoveEnd}
         >
-          
           <Sphere stroke="#E4E5E6" strokeWidth={0.5} />
           <Graticule stroke="#E4E5E6" strokeWidth={0.5} />
           {mapCounts.length > 0 && (
@@ -125,27 +118,32 @@ const Map = (props) => {
                       style={{
                         hover: {
                           fill: '#B2BEB5',
-                          cursor: 'pointer'
+                          cursor: 'pointer',
                         },
                       }}
                       geography={geo}
                       fill={d ? colorScale(d.count) : '#525151'}
                       onMouseEnter={() => {
-                        if (buttonText === "Only Global") {
+                        if (buttonText === 'Only Global') {
                           setTooltipContent(
                             `${geo.properties.continent}: ${d ? d.count : 0}`
                           );
                         } else {
-                          console.log(originalCounts)
-                          setTooltipContent(`Global: ${originalCounts[0]['count']}`)
+                          console.log(originalCounts);
+                          setTooltipContent(
+                            `Global: ${originalCounts[0]['count']}`
+                          );
                         }
                       }}
                       onMouseLeave={() => {
                         setTooltipContent('');
                       }}
                       onClick={() => {
-                        if (buttonText === "Only Global") {
-                          onMapRegionClick('Continent', geo.properties.continent);
+                        if (buttonText === 'Only Global') {
+                          onMapRegionClick(
+                            'Continent',
+                            geo.properties.continent
+                          );
                         }
                       }}
                     />
@@ -184,27 +182,25 @@ const Map = (props) => {
           </svg>
         </button>
         <Stack direction="row" spacing={2} className="custom-stack">
-          <Button 
-            variant="contained" 
+          <Button
+            variant="contained"
             className="custom-button"
             onClick={() => {
-              
               if (buttonText === 'Only Regional') {
                 // add logic
                 props.removeFilter(filterId);
-                setButtonText("Only Global");
+                setButtonText('Only Global');
               } else {
                 // add logic
                 onMapRegionClick('Continent', 'Global');
-                setButtonText("Only Regional");
+                setButtonText('Only Regional');
               }
-            }}>
+            }}
+          >
             {buttonText}
           </Button>
         </Stack>
       </div>
-
-      
 
       <Tooltip anchorId="map" content={tooltipContent} float />
     </Paper>
