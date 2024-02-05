@@ -31,3 +31,16 @@ export default function ButtonAppBar({ resetData }) {
   </Toolbar>
 </AppBar>
 */
+
+/*
+<AppBar position="sticky">
+  <Toolbar>
+    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+      Wikimedia Disinformation Map
+    </Typography>
+    <Button color="inherit" onClick={resetData}>
+      Reset Filters
+    </Button>
+  </Toolbar>
+</AppBar>
+*/

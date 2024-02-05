@@ -6,6 +6,7 @@ import { Container, CssBaseline, Grid } from '@mui/material';
 // component imports
 import {
   AppBar,
+  DevelopmentDescription,
   Filter,
   FrequencyChart,
   Map,
@@ -76,25 +77,27 @@ function App() {
         <Container maxWidth={false}>
           <AppBar resetData={resetData} />
           <Grid container spacing={2} justify="flex-end" alignItems="center">
-            <Grid item xs={12} md={8} xl={6}>
-              {/* Map */}
-              <Map
-                data={currData}
-                addFilter={addFilter}
-                removeFilter={removeFilter}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} xl={6}>
-              <FrequencyChart
-                column="Year"
-                title="Frequency of Start Year"
-                data={currData}
-                addFilter={addFilter}
-                removeFilter={removeFilter}
-              />
+            <Grid xs={12}>
+              <Grid
+                item
+                xs={12}
+                md={8}
+                xl={6}
+                style={{
+                  marginLeft: 'auto',
+                  marginRight: 'auto',
+                }}
+              >
+                {/* Map */}
+                <Map
+                  data={currData}
+                  addFilter={addFilter}
+                  removeFilter={removeFilter}
+                />
+              </Grid>
             </Grid>
 
-            <Grid item xs={12} sm={6} md={12}>
+            <Grid item xs={12}>
               <Grid container spacing={2}>
                 <Grid item xs={12} md={6}>
                   {/* Project Description */}
@@ -103,6 +106,10 @@ function App() {
 
                 {/* Search */}
                 <Grid item xs={12} md={6}>
+                  <Grid item xs={12} marginBottom={2}>
+                    {/* Development Process Description */}
+                    <DevelopmentDescription />
+                  </Grid>
                   <Grid container spacing={2}>
                     <Grid item xs={12} md={6}>
                       {/* Country Filter */}
@@ -134,7 +141,16 @@ function App() {
               <Table data={currData} />
             </Grid>
 
-            <Grid item xs={12} sm={6} md={4}>
+            <Grid item xs={12} sm={6} lg={3}>
+              <FrequencyChart
+                column="Year"
+                title="Frequency of Start Year"
+                data={currData}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} lg={3}>
               <PieChart
                 column="Country"
                 data={currData}
@@ -142,7 +158,7 @@ function App() {
                 removeFilter={removeFilter}
               />
             </Grid>
-            <Grid item xs={12} sm={6} md={4}>
+            <Grid item xs={12} sm={6} lg={3}>
               <PieChart
                 column="Region"
                 data={currData}
@@ -150,7 +166,7 @@ function App() {
                 removeFilter={removeFilter}
               />
             </Grid>
-            <Grid item xs={12} sm={6} md={4}>
+            <Grid item xs={12} sm={6} lg={3}>
               <PieChart
                 column="Group"
                 data={currData}

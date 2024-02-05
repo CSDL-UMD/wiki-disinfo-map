@@ -2,7 +2,7 @@ const fs = require('fs');
 const { parse } = require('csv-parse');
 const axios = require('axios');
 const country_continent = require('./country-continent.json');
-const sheets_id = "1-xgXuWPTuN2C9_VmT_7c6Vtn8Bc5Ns3wvoCpU7sHZEw";
+const sheets_id = '1-xgXuWPTuN2C9_VmT_7c6Vtn8Bc5Ns3wvoCpU7sHZEw';
 const sheets_name = 'modified data';
 
 const downloadCsv = async () => {
@@ -27,14 +27,13 @@ const downloadCsv = async () => {
   }
 };
 
-
 // @returns rows, columns
 async function retrieve_data() {
   // download google sheet
   await downloadCsv();
-  console.log("data downloaded from Google Sheets as csv")
+  console.log('data downloaded from Google Sheets as csv');
 
-  return new Promise((resolve, reject) => {    
+  return new Promise((resolve, reject) => {
     // accumulate all the data for the webpage in this structure
     const data = [];
     // read CSV input stream
@@ -52,7 +51,7 @@ async function retrieve_data() {
         delete row['Link'];
         delete row['Type'];
         delete row['Wikimedia project'];
-        delete row["Subcontinent/Continent code"];
+        delete row['Subcontinent/Continent code'];
 
         data.push(row);
       })
@@ -101,7 +100,7 @@ const lookup_continent = (country) => {
       return country_continent[i].continent;
     }
   }
-}
+};
 
 const preprocessRow = async (row) => {
   // parse Start Year to number
@@ -142,7 +141,7 @@ const preprocessRow = async (row) => {
 
   row['Continent'] = [];
   for (let i = 0; i < row['Country'].length; i++) {
-    const continent = lookup_continent(row['Country'][i])
+    const continent = lookup_continent(row['Country'][i]);
 
     if (!row['Continent'].includes(continent)) {
       row['Continent'].push(continent);
@@ -150,8 +149,12 @@ const preprocessRow = async (row) => {
   }
 
   // if the region is considered global
-  if (row['Region'].length == 1 && row['Region'][0] === "Global" && row['Continent'].length == 0) {
-    row['Continent'] = ["Global"]
+  if (
+    row['Region'].length === 1 &&
+    row['Region'][0] === 'Global' &&
+    row['Continent'].length === 0
+  ) {
+    row['Continent'] = ['Global'];
   }
 
   return row;
