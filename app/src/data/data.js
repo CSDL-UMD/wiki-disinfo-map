@@ -1,10 +1,12 @@
 const fs = require('fs');
 const { parse } = require('csv-parse');
+const path = require('path');
 const axios = require('axios');
 const country_continent = require('./country-continent.json');
 const sheets_id = '1-xgXuWPTuN2C9_VmT_7c6Vtn8Bc5Ns3wvoCpU7sHZEw';
 const sheets_name = 'modified data';
 const sheets_file_name = 'wiki_disinfo_data.csv';
+const output_json = 'data.json';
 
 const downloadCsv = async () => {
   const url = `https://docs.google.com/spreadsheets/d/${sheets_id}/gviz/tq?tqx=out:csv&sheet=${sheets_name}&headers=1`;
@@ -86,7 +88,7 @@ async function main() {
   /* NOTE: We are only returning the rows_json file since 
   the columns are universal and won't change too much
   ALSO, the columns are the keys in each JSON object...*/
-  fs.writeFile('data.json', data_json, (err) => {
+  fs.writeFile(path.join(output_json), data_json, (err) => {
     if (err) throw err;
     console.log('The file has been saved!');
   });
