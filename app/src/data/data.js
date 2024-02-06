@@ -4,16 +4,17 @@ const axios = require('axios');
 const country_continent = require('./country-continent.json');
 const sheets_id = '1-xgXuWPTuN2C9_VmT_7c6Vtn8Bc5Ns3wvoCpU7sHZEw';
 const sheets_name = 'modified data';
+const sheets_file_name = 'wiki_disinfo_data.csv';
 
 const downloadCsv = async () => {
-  const url = `https://docs.google.com/spreadsheets/d/${sheets_id}/gviz/tq?tqx=out:csv&sheet=${sheets_name}&headers=0`;
+  const url = `https://docs.google.com/spreadsheets/d/${sheets_id}/gviz/tq?tqx=out:csv&sheet=${sheets_name}&headers=1`;
   try {
     const response = await axios.get(url, {
       responseType: 'stream',
     });
 
     // Specify the path where you want to save the CSV file
-    const outputPath = 'wiki_disinfo_data.csv';
+    const outputPath = sheets_file_name;
 
     // Pipe the response stream to a file
     response.data.pipe(fs.createWriteStream(outputPath));
@@ -37,7 +38,7 @@ async function retrieve_data() {
     // accumulate all the data for the webpage in this structure
     const data = [];
     // read CSV input stream
-    fs.createReadStream('./wiki_disinfo_data.csv')
+    fs.createReadStream(sheets_file_name)
       .pipe(
         parse({
           delimiter: ',',
@@ -52,6 +53,7 @@ async function retrieve_data() {
         delete row['Type'];
         delete row['Wikimedia project'];
         delete row['Subcontinent/Continent code'];
+        delete row['Year (Original)'];
 
         data.push(row);
       })
