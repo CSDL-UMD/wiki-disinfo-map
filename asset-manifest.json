@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.00e658ca.css",
-    "main.js": "/static/js/main.bb7ca446.js",
+    "main.js": "/static/js/main.4c9048a5.js",
     "static/js/787.0f8d78ff.chunk.js": "/static/js/787.0f8d78ff.chunk.js",
-    "static/media/wikimedia_foundation_logo_white.svg": "/static/media/wikimedia_foundation_logo_white.338b4a4e227684958c68e13a40cba08f.svg",
+    "static/media/umd_logo_raster.png": "/static/media/umd_logo_raster.415d2f42365ad25df914.png",
     "index.html": "/index.html",
     "main.00e658ca.css.map": "/static/css/main.00e658ca.css.map",
-    "main.bb7ca446.js.map": "/static/js/main.bb7ca446.js.map",
+    "main.4c9048a5.js.map": "/static/js/main.4c9048a5.js.map",
     "787.0f8d78ff.chunk.js.map": "/static/js/787.0f8d78ff.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.00e658ca.css",
-    "static/js/main.bb7ca446.js"
+    "static/js/main.4c9048a5.js"
   ]
 }
