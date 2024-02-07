@@ -9,27 +9,13 @@ const ProjectDescription = () => {
         Background
       </Typography>
       <p style={{fontFamily: "Segoe UI, Tahoma, Geneva, Verdana, sans-serif"}}>
-        Wikipedia is a trusted source of knowledge for millions of people worldwide. 
-        Edited by thousands of volunteers across more than 300 language editions, 
-        the encyclopedia is part of a global movement whose goal is to build a reliable 
-        and open knowledge infrastructure for the Internet. <br></br><br></br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Senectus et netus et malesuada fames. Quis viverra nibh cras pulvinar mattis nunc sed. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam erat. Penatibus et magnis dis parturient. Volutpat sed cras ornare arcu dui vivamus arcu. Ipsum nunc aliquet bibendum enim. Est ullamcorper eget nulla facilisi etiam dignissim diam quis. Interdum velit laoreet id donec ultrices tincidunt. Blandit massa enim nec dui nunc mattis enim ut tellus. Tortor consequat id porta nibh venenatis. Dolor sit amet consectetur adipiscing elit ut. Eu nisl nunc mi ipsum. Semper quis lectus nulla at volutpat diam. Lorem sed risus ultricies tristique nulla aliquet enim.
+        <br></br><br></br>
         
-        Due to its prominence and 
-        importance within cyberspace, however, Wikipedia and its sister projects are 
-        constantly under threat from external actors whose role is to compromise its 
-        independence and undermine its integrity as an open source of knowledge. Examples 
-        include authoritarian regimes persecuting local Wikipedia editors for their role 
-        in documenting conflicts like the war in Ukraine, or shady marketing firms 
-        creating fake grassroots campaigns to promote companies and influence state 
-        and local decision-making processes. <br></br><br></br>
+        Consequat id porta nibh venenatis cras sed felis eget velit. In dictum non consectetur a erat nam at lectus. Imperdiet massa tincidunt nunc pulvinar. Lacus suspendisse faucibus interdum posuere. Lectus nulla at volutpat diam ut venenatis tellus. Scelerisque varius morbi enim nunc faucibus. Eget felis eget nunc lobortis mattis. Erat nam at lectus urna. Neque ornare aenean euismod elementum nisi quis. Elit scelerisque mauris pellentesque pulvinar. Sem et tortor consequat id porta nibh. Molestie at elementum eu facilisis sed odio morbi quis commodo. Pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae.
+        <br></br><br></br>
         
-        The Wikipedia community, however, is 
-        fighting back. Over the years, a number of community projects have been started 
-        to counter these threats. The goal of this project is to compile the first 
-        exhaustive map of these community efforts aimed at preserving the integrity of 
-        Wikipedia and its sister projects, and to provide resources for those within the 
-        community who are engaged in the active and ongoing process of countering 
-        disinformation and advancing information literacy across the world.
+        Ornare suspendisse sed nisi lacus. Et leo duis ut diam. Quam nulla porttitor massa id neque aliquam. Tempus quam pellentesque nec nam aliquam sem et tortor consequat. Ultrices dui sapien eget mi proin sed libero enim sed. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. Diam quam nulla porttitor massa id neque aliquam. Ullamcorper a lacus vestibulum sed arcu. Nulla at volutpat diam ut venenatis tellus in metus. Etiam non quam lacus suspendisse faucibus interdum posuere lorem ipsum.
       </p>
     </Paper>
   );

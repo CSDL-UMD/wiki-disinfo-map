@@ -18,12 +18,7 @@ const DevelopmentDescription = () => {
       <p
         style={{ fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif' }}
       >
-        The Wikimedia Disinformation Map is a community effort created by researchers at the University of Maryland in the
-        Computational Sociodynamics Lab. This website was created as a visualization tool to help spread awareness and
-        bring about community involvement in the projects. With the help of contacts at Wikimedia, researchers developed
-        an initial dataset of anti-disinformation efforts.
-        <br></br><br></br>The dataset is growing based on community submissions. If you'd like to include a project in this
-        website, contact: FILL IN LATER
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac auctor augue mauris augue neque. Feugiat vivamus at augue eget arcu dictum varius duis at. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit. Aliquet nec ullamcorper sit amet risus nullam eget felis eget. Praesent elementum facilisis leo vel. Vitae semper quis lectus nulla at volutpat diam. Lacus sed turpis tincidunt id aliquet. Tincidunt id aliquet risus feugiat in ante. Risus feugiat in ante metus dictum at. Non diam phasellus vestibulum lorem sed risus ultricies. Ornare arcu odio ut sem nulla. Consequat semper viverra nam libero justo laoreet. Suspendisse in est ante in. Pellentesque id nibh tortor id aliquet lectus. Tempor orci dapibus ultrices in iaculis. Dui faucibus in ornare quam. Eget sit amet tellus cras adipiscing enim eu turpis.
       </p>
     </Paper>
   );
