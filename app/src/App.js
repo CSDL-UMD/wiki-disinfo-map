@@ -1,5 +1,5 @@
 import './App.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 // mui
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Container, CssBaseline, Grid } from '@mui/material';
@@ -69,47 +69,38 @@ function App() {
     setCurrData(data);
   }, [filters]);
 
+  const aboutRef = useRef(null);
+
   return (
     <div className="App">
       <ThemeProvider theme={darkTheme}>
         <CssBaseline />
 
         <Container maxWidth={false}>
-          <AppBar resetData={resetData} />
+          {/* TODO: remove reset data after button moved to absolute */}
+          <AppBar resetData={resetData} aboutRef={aboutRef} />
           <Grid container spacing={2} justify="flex-end" alignItems="center">
-            <Grid xs={12}>
-              <Grid
-                item
-                xs={12}
-                md={8}
-                xl={6}
-                style={{
-                  marginLeft: 'auto',
-                  marginRight: 'auto',
-                }}
-              >
-                {/* Map */}
-                <Map
-                  data={currData}
-                  addFilter={addFilter}
-                  removeFilter={removeFilter}
-                />
-              </Grid>
+            <Grid
+              item
+              xs={12}
+              md={8}
+              xl={6}
+              style={{
+                marginLeft: 'auto',
+                marginRight: 'auto',
+              }}
+            >
+              {/* Map */}
+              <Map
+                data={currData}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
+              />
             </Grid>
 
             <Grid item xs={12}>
               <Grid container spacing={2}>
                 <Grid item xs={12} md={6}>
-                  {/* Project Description */}
-                  <ProjectDescription />
-                </Grid>
-
-                {/* Search */}
-                <Grid item xs={12} md={6}>
-                  <Grid item xs={12} marginBottom={2}>
-                    {/* Development Process Description */}
-                    <DevelopmentDescription />
-                  </Grid>
                   <Grid container spacing={2}>
                     <Grid item xs={12} md={6}>
                       {/* Country Filter */}
@@ -173,6 +164,23 @@ function App() {
                 addFilter={addFilter}
                 removeFilter={removeFilter}
               />
+            </Grid>
+
+            <Grid item xs={12} ref={aboutRef} id="about">
+              <Grid container spacing={2}>
+                <Grid item xs={12} md={6}>
+                  {/* Project Description */}
+                  <ProjectDescription />
+                </Grid>
+
+                {/* Search */}
+                <Grid item xs={12} md={6}>
+                  <Grid item xs={12}>
+                    {/* Development Process Description */}
+                    <DevelopmentDescription />
+                  </Grid>
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
         </Container>
