@@ -10,7 +10,7 @@ export default function ButtonAppBar({
   resetData,
   aboutRef,
 }) {
-  const submit_form = 'https://google.com';
+  const submit_form = 'https://forms.gle/cC3Vfu15uVckxCV7A';
   const aboutOnClick = () =>
     aboutRef.current.scrollIntoView({ behavior: 'smooth' });
 
