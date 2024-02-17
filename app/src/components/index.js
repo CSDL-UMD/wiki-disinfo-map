@@ -1,4 +1,5 @@
 import AppBar from './AppBar';
+import ContributingDescription from './ContributingDescription';
 import DevelopmentDescription from './DevelopmentDescription';
 import Filter from './Filter';
 import FrequencyChart from './FrequencyChart';
@@ -10,6 +11,7 @@ import Table from './Table';
 export {
   AppBar,
   DevelopmentDescription,
+  ContributingDescription,
   Filter,
   FrequencyChart,
   Map,

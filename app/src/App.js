@@ -6,6 +6,7 @@ import { Container, CssBaseline, Grid } from '@mui/material';
 // component imports
 import {
   AppBar,
+  ContributingDescription,
   DevelopmentDescription,
   Filter,
   FrequencyChart,
@@ -77,8 +78,7 @@ function App() {
         <CssBaseline />
 
         <Container maxWidth={false}>
-          {/* TODO: remove reset data after button moved to absolute */}
-          <AppBar resetData={resetData} aboutRef={aboutRef} />
+          <AppBar aboutRef={aboutRef} />
           <Grid container spacing={2} justify="flex-end" alignItems="center">
             <Grid
               item
@@ -178,6 +178,8 @@ function App() {
                   <Grid item xs={12}>
                     {/* Development Process Description */}
                     <DevelopmentDescription />
+                    {/* Contributing Description */}
+                    <ContributingDescription />
                   </Grid>
                 </Grid>
               </Grid>
