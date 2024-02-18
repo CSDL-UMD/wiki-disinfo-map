@@ -5,11 +5,7 @@ import InfoIcon from '@mui/icons-material/Info';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import logo from './../umd_logo_raster.png';
 
-export default function ButtonAppBar({
-  // TODO: remove resetData
-  resetData,
-  aboutRef,
-}) {
+export default function ButtonAppBar({ aboutRef }) {
   const submit_form = 'https://forms.gle/cC3Vfu15uVckxCV7A';
   const aboutOnClick = () =>
     aboutRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -27,7 +23,12 @@ export default function ButtonAppBar({
           component="div"
           sx={{ flexGrow: 1 }}
         ></Typography>
-        <Button color="inherit" onClick={aboutOnClick} endIcon={<InfoIcon />}>
+        <Button
+          color="inherit"
+          onClick={aboutOnClick}
+          endIcon={<InfoIcon />}
+          style={{ margin: '0 5px' }}
+        >
           About
         </Button>
         <Button
@@ -35,12 +36,9 @@ export default function ButtonAppBar({
           href={submit_form}
           target="_blank"
           endIcon={<OpenInNewIcon />}
+          style={{ margin: '0 5px' }}
         >
           Submit Entry
-        </Button>
-        {/* DELETE */}
-        <Button color="inherit" onClick={resetData} variant="outlined">
-          Reset Filters
         </Button>
       </Toolbar>
     </AppBar>
