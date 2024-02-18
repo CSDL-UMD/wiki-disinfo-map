@@ -1,8 +1,9 @@
 import './App.css';
 import { useState, useEffect, useRef } from 'react';
+import 'animate.css';
 // mui
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { Container, CssBaseline, Grid } from '@mui/material';
+import { Container, CssBaseline, Grid, Typography } from '@mui/material';
 // component imports
 import {
   AppBar,
@@ -13,12 +14,21 @@ import {
   PieChart,
   ProjectDescription,
   Table,
+  BottomFooter,
+  IconTooltip
 } from './components';
+
 const initialData = require('./data/data.json');
+
+const lightTheme = createTheme({
+  palette: {
+    mode: 'light',
+  },
+});
 
 const darkTheme = createTheme({
   palette: {
-    mode: 'light',
+    mode: 'dark',
   },
 });
 
@@ -26,11 +36,17 @@ function App() {
   const [filterIdCounter, setFilterIdCounter] = useState(0);
   const [currData, setCurrData] = useState(initialData.slice());
   const [filters, setFilters] = useState([]);
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  // const [value, setValue] = React.useState(0);
 
   // reset all filters (which will reset all data)
   const resetData = () => {
     setFilters([]);
   };
+
+  const toggleTheme = () => {
+    setIsDarkTheme((prevThem) => !prevThem)
+  }
 
   // Add a filter to the data and returns the id of the filter
   // A filter must be a function which takes only a single parameter (data) and
@@ -73,12 +89,26 @@ function App() {
 
   return (
     <div className="App">
-      <ThemeProvider theme={darkTheme}>
+      <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
         <CssBaseline />
 
         <Container maxWidth={false}>
           {/* TODO: remove reset data after button moved to absolute */}
           <AppBar resetData={resetData} aboutRef={aboutRef} />
+          <Typography 
+            marginTop={5}
+            className='animate__animated animate__fadeInDown animate__delay-1.5s' 
+            variant="h1" 
+            align="center">
+            Disinformation Map
+          </Typography>
+          <Typography 
+          marginTop={3}
+            className='animate__animated animate__fadeInDown animate__delay-3s'
+            variant="h6" 
+            align="center">
+            A map to visualize it all. Beware of the Russians. 
+          </Typography>
           <Grid container spacing={2} justify="flex-end" alignItems="center">
             <Grid
               item
@@ -96,6 +126,9 @@ function App() {
                 addFilter={addFilter}
                 removeFilter={removeFilter}
               />
+              
+              <IconTooltip></IconTooltip>
+
             </Grid>
 
             <Grid item xs={12}>
@@ -183,6 +216,9 @@ function App() {
               </Grid>
             </Grid>
           </Grid>
+
+          <BottomFooter toggleTheme={toggleTheme}></BottomFooter>
+          
         </Container>
       </ThemeProvider>
     </div>
