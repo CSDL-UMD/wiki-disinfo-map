@@ -11,7 +11,8 @@ export default function ButtonAppBar({ resetData }) {
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
     
         </Typography>
-        <Button color="inherit" onClick={resetData} variant="outlined">
+        <Button color="error" onClick={resetData} variant="contained" 
+          style={{ position: 'fixed', bottom: '1%', right: 30, transform: 'translateY(-30%)', zIndex: 999 }}>
           Reset Filters
         </Button>
       </Toolbar>

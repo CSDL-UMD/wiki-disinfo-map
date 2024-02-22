@@ -185,6 +185,7 @@ const Map = (props) => {
           <Button
             variant="contained"
             className="custom-button"
+            style={{ position: 'fixed', bottom: '1%', right: 180, transform: 'translateY(-30%)', zIndex: 999 }}
             onClick={() => {
               if (buttonText === 'Only Regional') {
                 // add logic
