@@ -3,7 +3,8 @@ import { useState, useEffect, useRef } from 'react';
 import 'animate.css';
 // mui
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { Container, CssBaseline, Grid, Typography } from '@mui/material';
+import { Container, CssBaseline, Grid, Typography, Button } from '@mui/material';
+import RestartAltIcon from '@mui/icons-material/RestartAlt';
 // component imports
 import {
   AppBar,
@@ -94,6 +95,14 @@ function App() {
         <CssBaseline />
 
         <Container maxWidth={false}>
+          <div style={{position: 'fixed', bottom: '0.5%', right: 25, width: 353, height: 50, backgroundColor: "rgba(0, 0, 0, 0.3)", borderRadius: "10px", zIndex: 999}}></div>
+          <Button 
+            color="error" 
+            onClick={resetData}
+            variant="contained" 
+            style={{ position: 'fixed', bottom: '0%', right: 32, transform: 'translateY(-30%)', zIndex: 999 }}> 
+            <RestartAltIcon/>Reset Filters
+          </Button>
           <AppBar aboutRef={aboutRef} />
           <Typography 
             marginTop={5}
