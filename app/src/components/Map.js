@@ -11,8 +11,9 @@ import {
 import { Paper } from '@mui/material';
 import { Tooltip } from 'react-tooltip';
 import { createContainsFilter } from '../utils';
-import Button from '@mui/material/Button';
+import { Switch, FormControlLabel } from '@mui/material';
 import Stack from '@mui/material/Stack';
+import PublicIcon from '@mui/icons-material/Public';
 // css
 import './Map.css';
 
@@ -49,6 +50,9 @@ const Map = (props) => {
   const [filterId, setFilterId] = useState(-1);
   const [position, setPosition] = useState({ coordinates: [0, 0], zoom: 1 });
 
+  const [selected, setSelected] = useState(false);
+
+  const globalText = "GLOBAL"
   const maxCount = mapCounts.reduce((a, b) => Math.max(a, b.count), 0);
   const colorScale = scaleLinear()
     .domain([0, maxCount])
@@ -182,23 +186,35 @@ const Map = (props) => {
           </svg>
         </button>
         <Stack direction="row" spacing={2} className="custom-stack">
-          <Button
-            variant="contained"
-            className="custom-button"
-            onClick={() => {
-              if (buttonText === 'Only Regional') {
+          
+          <div style={{position: 'fixed', bottom: 10, right: 206, paddingLeft: 12, backgroundColor: "rgba(119, 157, 210, 1)", borderRadius: "5px", zIndex: 999}}>
+           <FormControlLabel 
+           control={<Switch
+            color='primary'
+            checked={selected}
+            onChange={() => {
+              setSelected(!selected);
+              if (selected === true) {
                 // add logic
                 props.removeFilter(filterId);
-                setButtonText('Only Global');
               } else {
                 // add logic
                 onMapRegionClick('Continent', 'Global');
-                setButtonText('Only Regional');
               }
             }}
-          >
-            {buttonText}
-          </Button>
+            inputProps={{ 'aria-label': 'controlled' }}
+            >
+          </Switch>} 
+          label={
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <PublicIcon/>
+              <span>GLOBAL</span>
+            </div>
+          }
+          sx={{'& .MuiFormControlLabel-label': {color: "white",},}}
+          />
+          </div>
+        
         </Stack>
       </div>
 
