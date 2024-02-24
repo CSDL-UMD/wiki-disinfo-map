@@ -41,25 +41,24 @@ const listValueCounts = (data, column) => {
 };
 
 const Map = (props) => {
-  const [buttonText, setButtonText] = useState('Only Global');
-  const originalCounts = listValueCounts(props.data, 'Continent');
+  const columnName = 'Continent';
+  const originalCounts = listValueCounts(props.data, columnName);
   const [mapCounts, setMapCounts] = useState(
-    listValueCounts(props.data, 'Continent')
+    listValueCounts(props.data, columnName)
   );
   const [tooltipContent, setTooltipContent] = useState('');
   const [filterId, setFilterId] = useState(-1);
   const [position, setPosition] = useState({ coordinates: [0, 0], zoom: 1 });
 
-  const [selected, setSelected] = useState(false);
+  const [globalSelected, setGlobalSelected] = useState(false);
 
-  const globalText = "GLOBAL"
   const maxCount = mapCounts.reduce((a, b) => Math.max(a, b.count), 0);
   const colorScale = scaleLinear()
     .domain([0, maxCount])
     .range(['#ffedea', '#15008c']);
 
   useEffect(() => {
-    setMapCounts(listValueCounts(props.data, 'Continent'));
+    setMapCounts(listValueCounts(props.data, columnName));
   }, [props.data]);
 
   const onMapRegionClick = (columnName, regionName) => {
@@ -113,7 +112,7 @@ const Map = (props) => {
               {({ geographies }) =>
                 geographies.map((geo) => {
                   const d = mapCounts.find(
-                    (s) => s.Continent === geo.properties.continent
+                    (s) => s[columnName] === geo.properties.continent
                   );
 
                   return (
@@ -128,12 +127,11 @@ const Map = (props) => {
                       geography={geo}
                       fill={d ? colorScale(d.count) : '#525151'}
                       onMouseEnter={() => {
-                        if (buttonText === 'Only Global') {
+                        if (!globalSelected) {
                           setTooltipContent(
                             `${geo.properties.continent}: ${d ? d.count : 0}`
                           );
                         } else {
-                          console.log(originalCounts);
                           setTooltipContent(
                             `Global: ${originalCounts[0]['count']}`
                           );
@@ -143,9 +141,9 @@ const Map = (props) => {
                         setTooltipContent('');
                       }}
                       onClick={() => {
-                        if (buttonText === 'Only Global') {
+                        if (!globalSelected) {
                           onMapRegionClick(
-                            'Continent',
+                            columnName,
                             geo.properties.continent
                           );
                         }
@@ -186,35 +184,44 @@ const Map = (props) => {
           </svg>
         </button>
         <Stack direction="row" spacing={2} className="custom-stack">
-          
-          <div style={{position: 'fixed', bottom: 10, right: 206, paddingLeft: 12, backgroundColor: "rgba(119, 157, 210, 1)", borderRadius: "5px", zIndex: 999}}>
-           <FormControlLabel 
-           control={<Switch
-            color='primary'
-            checked={selected}
-            onChange={() => {
-              setSelected(!selected);
-              if (selected === true) {
-                // add logic
-                props.removeFilter(filterId);
-              } else {
-                // add logic
-                onMapRegionClick('Continent', 'Global');
-              }
+          <div
+            style={{
+              position: 'fixed',
+              bottom: 10,
+              right: 206,
+              paddingLeft: 12,
+              backgroundColor: 'rgba(119, 157, 210, 1)',
+              borderRadius: '5px',
+              zIndex: 999,
             }}
-            inputProps={{ 'aria-label': 'controlled' }}
-            >
-          </Switch>} 
-          label={
-            <div style={{ display: 'flex', alignItems: 'center' }}>
-              <PublicIcon/>
-              <span>GLOBAL</span>
-            </div>
-          }
-          sx={{'& .MuiFormControlLabel-label': {color: "white",},}}
-          />
+          >
+            <FormControlLabel
+              control={
+                <Switch
+                  color="primary"
+                  checked={globalSelected}
+                  onChange={() => {
+                    setGlobalSelected(!globalSelected);
+                    if (globalSelected === true) {
+                      // add logic
+                      props.removeFilter(filterId);
+                    } else {
+                      // add logic
+                      onMapRegionClick('Continent', 'Global');
+                    }
+                  }}
+                  inputProps={{ 'aria-label': 'controlled' }}
+                ></Switch>
+              }
+              label={
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <PublicIcon />
+                  <span>GLOBAL</span>
+                </div>
+              }
+              sx={{ '& .MuiFormControlLabel-label': { color: 'white' } }}
+            />
           </div>
-        
         </Stack>
       </div>
 

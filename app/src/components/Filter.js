@@ -18,7 +18,7 @@ const get_options_countries = (data) => {
     const row = data[rowNum];
 
     // check if the item is already included in options (since some are repeated)
-    for (let country of row['Country']) {
+    for (let country of row['Country/Countries']) {
       if (!countries.has(country.trim())) {
         countries.add(country);
       }
@@ -46,9 +46,9 @@ const get_options_languages = (data) => {
   for (let rowNum = 0; rowNum < data.length; rowNum++) {
     const row = data[rowNum];
 
-    if (row['Languages'] !== 'NA') {
+    if (row['Language(s)'] !== 'NA') {
       // check if the item is already included in options (since some are repeated)
-      options = [...new Set([...options, ...row.Languages])];
+      options = [...new Set([...options, ...row['Language(s)']])];
     }
   }
 
@@ -68,8 +68,6 @@ export default class Filter extends Component {
       column: props.column,
       data: props.data,
       originalDataLen: props.data.length,
-      // options_countries: get_options_countries(props.data),
-      // options_languages: get_options_languages(props.data),
       selectedOption: null,
       filterId: -1,
     };
@@ -115,7 +113,9 @@ export default class Filter extends Component {
           options={
             this.props.column === 'Country'
               ? get_options_countries(this.props.data)
-              : get_options_languages(this.props.data)
+              : this.props.column === 'Language(s)'
+              ? get_options_languages(this.props.data)
+              : []
           }
           value={selectedOption}
           onChange={this.onChange.bind(this)}

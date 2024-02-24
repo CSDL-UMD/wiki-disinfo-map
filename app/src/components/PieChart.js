@@ -13,7 +13,17 @@ import { createValueFilter, createContainsFilter } from '../utils';
 // css
 import './PieChart.css';
 
-const COLORS = ['#bae6fd', '#7dd3fc', '#0ea5e9', '#0ea5e9', '#0284c7', '#0369a1', '#075985', '#0c4a6e', '#082f49'];
+const COLORS = [
+  '#bae6fd',
+  '#7dd3fc',
+  '#0ea5e9',
+  '#0ea5e9',
+  '#0284c7',
+  '#0369a1',
+  '#075985',
+  '#0c4a6e',
+  '#082f49',
+];
 
 const getData = (dataRaw, columnName) => {
   // gather all values of the given column
@@ -164,13 +174,22 @@ export default class PieChart extends Component {
   };
 
   render() {
+    const { dataCounts } = this.state;
     return (
       <Paper style={{ padding: 20 }}>
-        <Typography variant="h5" gutterBottom align="center" style={{fontFamily: "Segoe UI, Tahoma, Geneva, Verdana, sans-serif"}}>
+        <Typography
+          variant="h5"
+          gutterBottom
+          align="center"
+          style={{
+            fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif',
+          }}
+        >
           {this.props.column}
         </Typography>
         <ResponsiveContainer width="100%" height={250}>
-          {this.state.dataCounts.length <= 0 ? (
+          {dataCounts.length <= 0 ||
+          (dataCounts.length === 1 && dataCounts[0]['name'] === 'undefined') ? (
             <div
               style={{
                 display: 'flex',
@@ -207,8 +226,18 @@ export default class PieChart extends Component {
                 className="pie-chart"
               >
                 {this.state.dataCounts.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={COLORS[Math.floor((entry.value / (this.state.maxCount + 1)) * COLORS.length)]} />
-            ))}
+                  <Cell
+                    key={`cell-${index}`}
+                    fill={
+                      COLORS[
+                        Math.floor(
+                          (entry.value / (this.state.maxCount + 1)) *
+                            COLORS.length
+                        )
+                      ]
+                    }
+                  />
+                ))}
               </Pie>
               <Tooltip />
             </RechartsPieChart>
