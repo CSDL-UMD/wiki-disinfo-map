@@ -6,7 +6,6 @@ import {
   Geography,
   Sphere,
   Graticule,
-  ZoomableGroup,
 } from 'react-simple-maps';
 import { Paper } from '@mui/material';
 import { Tooltip } from 'react-tooltip';
@@ -97,92 +96,55 @@ const Map = (props) => {
         className="map-chart"
         id="map"
       >
-        <ZoomableGroup
-          filterZoomEvent={(event) => {
-            return event.type === 'wheel' ? false : true;
-          }}
-          zoom={position.zoom}
-          center={position.coordinates}
-          onMoveEnd={handleMoveEnd}
-        >
-          <Sphere stroke="#E4E5E6" strokeWidth={0.5} />
-          <Graticule stroke="#E4E5E6" strokeWidth={0.5} />
-          {mapCounts.length > 0 && (
-            <Geographies geography={mapFeatures}>
-              {({ geographies }) =>
-                geographies.map((geo) => {
-                  const d = mapCounts.find(
-                    (s) => s[columnName] === geo.properties.continent
-                  );
+        <Sphere stroke="#E4E5E6" strokeWidth={0.5} />
+        <Graticule stroke="#E4E5E6" strokeWidth={0.5} />
+        {mapCounts.length > 0 && (
+          <Geographies geography={mapFeatures}>
+            {({ geographies }) =>
+              geographies.map((geo) => {
+                const d = mapCounts.find(
+                  (s) => s[columnName] === geo.properties.continent
+                );
 
-                  return (
-                    <Geography
-                      key={geo.rsmKey}
-                      style={{
-                        hover: {
-                          fill: '#B2BEB5',
-                          cursor: 'pointer',
-                        },
-                      }}
-                      geography={geo}
-                      fill={d ? colorScale(d.count) : '#525151'}
-                      onMouseEnter={() => {
-                        if (!globalSelected) {
-                          setTooltipContent(
-                            `${geo.properties.continent}: ${d ? d.count : 0}`
-                          );
-                        } else {
-                          setTooltipContent(
-                            `Global: ${originalCounts[0]['count']}`
-                          );
-                        }
-                      }}
-                      onMouseLeave={() => {
-                        setTooltipContent('');
-                      }}
-                      onClick={() => {
-                        if (!globalSelected) {
-                          onMapRegionClick(
-                            columnName,
-                            geo.properties.continent
-                          );
-                        }
-                      }}
-                    />
-                  );
-                })
-              }
-            </Geographies>
-          )}
-        </ZoomableGroup>
+                return (
+                  <Geography
+                    key={geo.rsmKey}
+                    style={{
+                      hover: {
+                        fill: '#B2BEB5',
+                        cursor: 'pointer',
+                      },
+                    }}
+                    geography={geo}
+                    fill={d ? colorScale(d.count) : '#525151'}
+                    onMouseEnter={() => {
+                      if (!globalSelected) {
+                        setTooltipContent(
+                          `${geo.properties.continent}: ${d ? d.count : 0}`
+                        );
+                      } else {
+                        setTooltipContent(
+                          `Global: ${originalCounts[0]['count']}`
+                        );
+                      }
+                    }}
+                    onMouseLeave={() => {
+                      setTooltipContent('');
+                    }}
+                    onClick={() => {
+                      if (!globalSelected) {
+                        onMapRegionClick(columnName, geo.properties.continent);
+                      }
+                    }}
+                  />
+                );
+              })
+            }
+          </Geographies>
+        )}
       </ComposableMap>
 
       <div className="controls control-buttons">
-        <button id="1" onClick={handleZoomIn}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth="3"
-          >
-            <line x1="12" y1="5" x2="12" y2="19" />
-            <line x1="5" y1="12" x2="19" y2="12" />
-          </svg>
-        </button>
-        <button id="2" onClick={handleZoomOut}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth="3"
-          >
-            <line x1="5" y1="12" x2="19" y2="12" />
-          </svg>
-        </button>
         <Stack direction="row" spacing={2} className="custom-stack">
           <div
             style={{
