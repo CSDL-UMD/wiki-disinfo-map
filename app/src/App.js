@@ -174,7 +174,7 @@ function App() {
                       {/* Country Filter */}
                       <Filter
                         resetData={resetData}
-                        column="Country/Countries"
+                        column="Countries"
                         data={currData}
                         addFilter={addFilter}
                         removeFilter={removeFilter}
@@ -184,7 +184,7 @@ function App() {
                       {/* Language Filter */}
                       <Filter
                         resetData={resetData}
-                        column="Language(s)"
+                        column="Languages"
                         data={currData}
                         addFilter={addFilter}
                         removeFilter={removeFilter}
@@ -211,7 +211,7 @@ function App() {
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>
               <PieChart
-                column="Country/Countries"
+                column="Countries"
                 data={currData}
                 addFilter={addFilter}
                 removeFilter={removeFilter}

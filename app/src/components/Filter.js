@@ -18,7 +18,7 @@ const get_options_countries = (data) => {
     const row = data[rowNum];
 
     // check if the item is already included in options (since some are repeated)
-    for (let country of row['Country/Countries']) {
+    for (let country of row['Countries']) {
       if (!countries.has(country.trim())) {
         countries.add(country);
       }
@@ -46,9 +46,9 @@ const get_options_languages = (data) => {
   for (let rowNum = 0; rowNum < data.length; rowNum++) {
     const row = data[rowNum];
 
-    if (row['Language(s)'] !== 'NA') {
+    if (row['Languages'] !== 'NA') {
       // check if the item is already included in options (since some are repeated)
-      options = [...new Set([...options, ...row['Language(s)']])];
+      options = [...new Set([...options, ...row['Languages']])];
     }
   }
 
@@ -105,15 +105,15 @@ export default class Filter extends Component {
 
   render() {
     const { column, selectedOption } = this.state;
-    if (column === 'Country') {
+    if (column === 'Countries') {
       return (
         <Autocomplete
           id="country-select"
           fullWidth={true}
           options={
-            this.props.column === 'Country'
+            this.props.column === 'Countries'
               ? get_options_countries(this.props.data)
-              : this.props.column === 'Language(s)'
+              : this.props.column === 'Languages'
               ? get_options_languages(this.props.data)
               : []
           }
@@ -140,7 +140,7 @@ export default class Filter extends Component {
           renderInput={(params) => (
             <TextField
               {...params}
-              label={`Choose a ${column}`}
+              label={`Choose ${column}`}
               inputProps={{
                 ...params.inputProps,
                 autoComplete: 'new-password', // disable autocomplete and autofill
@@ -162,7 +162,7 @@ export default class Filter extends Component {
           renderInput={(params) => (
             <TextField
               {...params}
-              label={`Choose a ${column}`}
+              label={`Choose ${column}`}
               inputProps={{
                 ...params.inputProps,
                 autoComplete: 'new-password', // disable autocomplete and autofill

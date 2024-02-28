@@ -176,7 +176,7 @@ export default class PieChart extends Component {
   render() {
     const { dataCounts } = this.state;
     return (
-      <Paper style={{ padding: 20 }}>
+      <Paper style={{ padding: '30px' }}>
         <Typography
           variant="h5"
           gutterBottom

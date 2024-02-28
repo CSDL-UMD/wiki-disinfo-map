@@ -107,14 +107,14 @@ const preprocessRow = (row) => {
   // parse Start Year to number
   row['Start Year'] = Number(row['Start Year']);
   // parse country to list of countries
-  row['Country/Countries'] = String(row['Country/Countries'])
+  row['Countries'] = String(row['Countries'])
     .split(',')
     .map((str) => str.trim())
     .filter(
       (val) => val !== 'NA' && val !== 'Multiple (NA)' && val !== 'Multiple'
     );
   // parse languages to list of languages
-  row['Language(s)'] = String(row['Language(s)'])
+  row['Languages'] = String(row['Languages'])
     .split(',')
     .map((val) => val.trim())
     .filter(
@@ -122,7 +122,7 @@ const preprocessRow = (row) => {
         lang !== 'NA' && lang !== 'undefined' && lang !== '' && lang !== 'All'
     );
 
-  row['Country Code(s)'] = String(row['Country Code(s)'])
+  row['Country Codes'] = String(row['Country Codes'])
     .split(',')
     .map((val) => val.trim())
     .filter((val) => val !== 'NA');
@@ -138,8 +138,8 @@ const preprocessRow = (row) => {
     .filter((val) => val !== 'NA');
 
   row['Continent'] = [];
-  for (let i = 0; i < row['Country/Countries'].length; i++) {
-    const continent = lookup_continent(row['Country/Countries'][i]);
+  for (let i = 0; i < row['Countries'].length; i++) {
+    const continent = lookup_continent(row['Countries'][i]);
 
     if (!row['Continent'].includes(continent)) {
       row['Continent'].push(continent);
