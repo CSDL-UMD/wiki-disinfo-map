@@ -18,7 +18,6 @@ const BottomFooter = ({
               backgroundColor: "#add8e6",
               color: "white",
             }}
-            maxWidth
           >
             <BottomNavigationAction icon={<Link href='https://github.com/CSDL-UMD/wiki-disinfo-map'><GitHubIcon /></Link>}/>
             <BottomNavigationAction icon={<Link onClick={toggleTheme}><Brightness3Icon /></Link>}></BottomNavigationAction>

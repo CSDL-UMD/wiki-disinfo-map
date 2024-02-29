@@ -8,7 +8,7 @@ const textStyle = {
 
 const ProjectDescription = () => {
   return (
-    <Paper style={{ padding: 10, margin: '10px 0' }}>
+    <Paper style={{ padding: 10, margin: '10px 0', paddingBottom: 26}}>
       <Typography
         variant="h4"
         style={{

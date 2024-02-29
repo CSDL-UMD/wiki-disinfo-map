@@ -50,13 +50,13 @@ const Map = (props) => {
   const [filterId, setFilterId] = useState(-1);
   const [position, setPosition] = useState({ coordinates: [0, 0], zoom: 1 });
 
-  const [selected, setSelected] = useState(false);
-
   const globalText = "GLOBAL"
   const maxCount = mapCounts.reduce((a, b) => Math.max(a, b.count), 0);
   const colorScale = scaleLinear()
     .domain([0, maxCount])
     .range(['#ffedea', '#15008c']);
+  const {isGlobalToggleChecked, setIsGlobalToggleChecked} = props;
+
 
   useEffect(() => {
     setMapCounts(listValueCounts(props.data, 'Continent'));
@@ -187,14 +187,14 @@ const Map = (props) => {
         </button>
         <Stack direction="row" spacing={2} className="custom-stack">
           
-          <div style={{position: 'fixed', bottom: 10, right: 206, paddingLeft: 12, backgroundColor: "rgba(119, 157, 210, 1)", borderRadius: "5px", zIndex: 999}}>
+          <div style={{overflow: "hidden", position: 'fixed', bottom: 10, right: 206, paddingLeft: 12, backgroundColor: "rgba(119, 157, 210, 1)", borderRadius: "5px", zIndex: 999, }}>
            <FormControlLabel 
            control={<Switch
             color='primary'
-            checked={selected}
+            checked={isGlobalToggleChecked}
             onChange={() => {
-              setSelected(!selected);
-              if (selected === true) {
+              setIsGlobalToggleChecked((prevVal) => !prevVal)
+              if (isGlobalToggleChecked) {
                 // add logic
                 props.removeFilter(filterId);
               } else {
