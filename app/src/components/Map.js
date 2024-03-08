@@ -55,6 +55,7 @@ const Map = (props) => {
   const colorScale = scaleLinear()
     .domain([0, maxCount])
     .range(['#ffedea', '#15008c']);
+  const {isGlobalToggleChecked, setIsGlobalToggleChecked} = props;
 
   useEffect(() => {
     setMapCounts(listValueCounts(props.data, columnName));
@@ -148,6 +149,7 @@ const Map = (props) => {
         <Stack direction="row" spacing={2} className="custom-stack">
           <div
             style={{
+              overflow: "hidden",
               position: 'fixed',
               bottom: 10,
               right: 206,
@@ -161,10 +163,10 @@ const Map = (props) => {
               control={
                 <Switch
                   color="primary"
-                  checked={globalSelected}
+                  checked={isGlobalToggleChecked}
                   onChange={() => {
-                    setGlobalSelected(!globalSelected);
-                    if (globalSelected === true) {
+                    setIsGlobalToggleChecked((prevVal) => !prevVal)
+                    if (isGlobalToggleChecked) {
                       // add logic
                       props.removeFilter(filterId);
                     } else {
