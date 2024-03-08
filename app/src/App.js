@@ -3,7 +3,13 @@ import { useState, useEffect, useRef } from 'react';
 import 'animate.css';
 // mui
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { Container, CssBaseline, Grid, Typography, Button } from '@mui/material';
+import {
+  Container,
+  CssBaseline,
+  Grid,
+  Typography,
+  Button,
+} from '@mui/material';
 import RestartAltIcon from '@mui/icons-material/RestartAlt';
 
 import {
@@ -17,7 +23,7 @@ import {
   ProjectDescription,
   Table,
   BottomFooter,
-  IconTooltip
+  IconTooltip,
 } from './components';
 
 const initialData = require('./data/data.json');
@@ -47,8 +53,8 @@ function App() {
   };
 
   const toggleTheme = () => {
-    setIsDarkTheme((prevThem) => !prevThem)
-  }
+    setIsDarkTheme((prevThem) => !prevThem);
+  };
 
   // Add a filter to the data and returns the id of the filter
   // A filter must be a function which takes only a single parameter (data) and
@@ -95,28 +101,49 @@ function App() {
         <CssBaseline />
 
         <Container maxWidth={false}>
-          <div style={{position: 'fixed', bottom: '0.5%', right: 25, width: 353, height: 50, backgroundColor: "rgba(0, 0, 0, 0.3)", borderRadius: "10px", zIndex: 999}}></div>
-          <Button 
-            color="error" 
+          <div
+            style={{
+              position: 'fixed',
+              bottom: '0.5%',
+              right: 25,
+              width: 353,
+              height: 50,
+              backgroundColor: 'rgba(0, 0, 0, 0.3)',
+              borderRadius: '10px',
+              zIndex: 999,
+            }}
+          ></div>
+          <Button
+            color="error"
             onClick={resetData}
-            variant="contained" 
-            style={{ position: 'fixed', bottom: '0%', right: 32, transform: 'translateY(-30%)', zIndex: 999 }}> 
-            <RestartAltIcon/>Reset Filters
+            variant="contained"
+            style={{
+              position: 'fixed',
+              bottom: '0%',
+              right: 32,
+              transform: 'translateY(-30%)',
+              zIndex: 999,
+            }}
+          >
+            <RestartAltIcon />
+            Reset Filters
           </Button>
           <AppBar aboutRef={aboutRef} />
-          <Typography 
+          <Typography
             marginTop={5}
-            className='animate__animated animate__fadeInDown animate__delay-1.5s' 
-            variant="h1" 
-            align="center">
+            className="animate__animated animate__fadeInDown animate__delay-1.5s"
+            variant="h1"
+            align="center"
+          >
             Disinformation Map
           </Typography>
-          <Typography 
-          marginTop={3}
-            className='animate__animated animate__fadeInDown animate__delay-3s'
-            variant="h6" 
-            align="center">
-            A map to visualize it all. Beware of the Russians. 
+          <Typography
+            marginTop={3}
+            className="animate__animated animate__fadeInDown animate__delay-3s"
+            variant="h6"
+            align="center"
+          >
+            A map to visualize it all. Beware of the Russians.
           </Typography>
           <Grid container spacing={2} justify="flex-end" alignItems="center">
             <Grid
@@ -135,9 +162,8 @@ function App() {
                 addFilter={addFilter}
                 removeFilter={removeFilter}
               />
-              
-              <IconTooltip></IconTooltip>
 
+              <IconTooltip></IconTooltip>
             </Grid>
 
             <Grid item xs={12}>
@@ -148,7 +174,7 @@ function App() {
                       {/* Country Filter */}
                       <Filter
                         resetData={resetData}
-                        column="Country"
+                        column="Countries"
                         data={currData}
                         addFilter={addFilter}
                         removeFilter={removeFilter}
@@ -176,7 +202,7 @@ function App() {
 
             <Grid item xs={12} sm={6} lg={3}>
               <FrequencyChart
-                column="Year"
+                column="Start Year"
                 title="Frequency of Start Year"
                 data={currData}
                 addFilter={addFilter}
@@ -185,7 +211,7 @@ function App() {
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>
               <PieChart
-                column="Country"
+                column="Countries"
                 data={currData}
                 addFilter={addFilter}
                 removeFilter={removeFilter}
@@ -201,7 +227,7 @@ function App() {
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>
               <PieChart
-                column="Group"
+                column="Group Association"
                 data={currData}
                 addFilter={addFilter}
                 removeFilter={removeFilter}

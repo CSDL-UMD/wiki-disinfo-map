@@ -16,20 +16,26 @@ const style = {
 
 const format_if_array = (val) => {
   if (Array.isArray(val)) {
-    let formatted = "";
-    val.forEach((elem) => {formatted += `${elem}, `})
-    formatted = formatted.substring(0, formatted.length - 1)
-    formatted = formatted.slice(0, -1)
-    return formatted
+    let formatted = '';
+    val.forEach((elem) => {
+      formatted += `${elem}, `;
+    });
+    formatted = formatted.substring(0, formatted.length - 1);
+    formatted = formatted.slice(0, -1);
+    return formatted;
   } else {
-    return val
+    return val;
   }
-}
+};
 
 const Table = (props) => {
   const [currData, setCurrData] = useState([]);
   const [open, setOpen] = React.useState(false);
-  const [finalClickInfo, setFinalClickInfo] = useState({colDef: {headerName: ""}, value: "", formattedValue: ""});
+  const [finalClickInfo, setFinalClickInfo] = useState({
+    colDef: { headerName: '' },
+    value: '',
+    formattedValue: '',
+  });
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -37,23 +43,23 @@ const Table = (props) => {
   const handleOnCellClick = (params) => {
     if (params.formattedValue.length !== 0) {
       setFinalClickInfo(params);
-      handleOpen()
+      handleOpen();
     }
   };
 
   const handleOnCellEnter = (params) => {
     //TODO
-  }
+  };
 
   // COLUMNS: Project Name, Description, Languages, Country, Region, Starting Year, Group
   const columns = [
     { field: 'id1', headerName: 'Project Name', flex: 0.2 },
     { field: 'id2', headerName: 'Description', flex: 0.6 },
-    { field: 'id3', headerName: 'Languages', flex: 0.2 },
-    { field: 'id4', headerName: 'Country', flex: 0.2 },
+    { field: 'id3', headerName: 'Language(s)', flex: 0.2 },
+    { field: 'id4', headerName: 'Country/Countries', flex: 0.2 },
     { field: 'id5', headerName: 'Region', flex: 0.2 },
-    { field: 'id6', headerName: 'Starting Year', flex: 0.2 },
-    { field: 'id7', headerName: 'Group', flex: 0.2 },
+    { field: 'id6', headerName: 'Start Year', flex: 0.2 },
+    { field: 'id7', headerName: 'Group Association', flex: 0.2 },
   ];
 
   const transformData = (data) => {
@@ -62,13 +68,13 @@ const Table = (props) => {
     // NOTE: for the purposes of the table component, the rows have to be associated with an ID
     for (let rowNum = 0; rowNum < data.length; rowNum++) {
       const translations = {
-        Project: 'id1',
+        'Project Name': 'id1',
         Description: 'id2',
-        Languages: 'id3',
-        Country: 'id4',
+        'Language(s)': 'id3',
+        'Country/Countries': 'id4',
         Region: 'id5',
-        Year: 'id6',
-        Group: 'id7',
+        'Start Year': 'id6',
+        'Group Association': 'id7',
       };
       const newRow = { id: `id${rowNum}` };
       for (const key in translations) {
