@@ -45,11 +45,12 @@ function App() {
   const [currData, setCurrData] = useState(initialData.slice());
   const [filters, setFilters] = useState([]);
   const [isDarkTheme, setIsDarkTheme] = useState(false);
-  // const [value, setValue] = React.useState(0);
+  const [isGlobalToggleChecked, setIsGlobalToggleChecked] = useState(false);
 
   // reset all filters (which will reset all data)
   const resetData = () => {
     setFilters([]);
+    setIsGlobalToggleChecked(false);
   };
 
   const toggleTheme = () => {
@@ -114,17 +115,12 @@ function App() {
             }}
           ></div>
           <Button
+            onMouseEnter={(e) => e.target.style.boxShadow = '0px 0px 0px transparent'}
+            onMouseLeave={(e) => e.target.style.boxShadow = 'none'}
             color="error"
             onClick={resetData}
             variant="contained"
-            style={{
-              position: 'fixed',
-              bottom: '0%',
-              right: 32,
-              transform: 'translateY(-30%)',
-              zIndex: 999,
-            }}
-          >
+            style={{ overflow: "hidden", position: 'fixed', bottom: '0%', right: 32, transform: 'translateY(-30%)', zIndex: 999 }}>
             <RestartAltIcon />
             Reset Filters
           </Button>
@@ -135,7 +131,7 @@ function App() {
             variant="h1"
             align="center"
           >
-            Disinformation Map
+            Wikimapia
           </Typography>
           <Typography
             marginTop={3}
@@ -143,7 +139,7 @@ function App() {
             variant="h6"
             align="center"
           >
-            A map to visualize it all. Beware of the Russians.
+            Click on a continent to get started
           </Typography>
           <Grid container spacing={2} justify="flex-end" alignItems="center">
             <Grid
@@ -161,6 +157,8 @@ function App() {
                 data={currData}
                 addFilter={addFilter}
                 removeFilter={removeFilter}
+                isGlobalToggleChecked={isGlobalToggleChecked}
+                setIsGlobalToggleChecked={setIsGlobalToggleChecked}
               />
 
               <IconTooltip></IconTooltip>
