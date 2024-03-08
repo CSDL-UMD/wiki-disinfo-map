@@ -1,30 +1,31 @@
 import React from 'react';
-import { Box, BottomNavigation, BottomNavigationAction, Link } from "@mui/material";
+import { Link } from "@mui/material";
 import Brightness3Icon from '@mui/icons-material/Brightness3';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import {Paper, Stack} from '@mui/material';
+import {IconButton} from '@mui/material';
+import WbSunnyIcon from '@mui/icons-material/WbSunny';
 
 const BottomFooter = ({
-  toggleTheme
+  toggleTheme,
+  darkTheme
 }) => {
+    console.log(darkTheme)
     return (
-      <Box marginTop={5}>
-          <BottomNavigation
-            showLabels
-            value={0}
-            // onChange={(event, newValue) => {
-            //   setValue(newValue)
-            // }}
-            sx={{
-              backgroundColor: "#add8e6",
-              color: "white",
-            }}
-            maxWidth
-          >
-            <BottomNavigationAction icon={<Link href='https://github.com/CSDL-UMD/wiki-disinfo-map'><GitHubIcon /></Link>}/>
-            <BottomNavigationAction icon={<Link onClick={toggleTheme}><Brightness3Icon /></Link>}></BottomNavigationAction>
-
-          </BottomNavigation>
-      </Box>
+      <Paper elevation={3} style={{ padding: '1rem' }}>
+      <Stack direction="row" spacing={2} justifyContent={'center'}>
+        <Link href='https://github.com/CSDL-UMD/wiki-disinfo-map'>
+          <IconButton color="primary">
+            <GitHubIcon />
+          </IconButton>
+        </Link>
+        <Link onClick={toggleTheme}>
+          <IconButton color="primary">
+            {darkTheme ?  <WbSunnyIcon /> : <Brightness3Icon />}
+          </IconButton>
+        </Link>
+      </Stack>
+    </Paper>
     );
 };
 
