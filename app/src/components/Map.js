@@ -87,7 +87,7 @@ const Map = (props) => {
   }
 
   return (
-    <Paper elevation={0}>
+    <Paper elevation={0} style={{marginBottom: "-100px"}}>
       <ComposableMap
         projectionConfig={{
           rotate: [-10, 0, 0],
