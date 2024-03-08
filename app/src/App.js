@@ -11,7 +11,7 @@ import {
   Button,
 } from '@mui/material';
 import RestartAltIcon from '@mui/icons-material/RestartAlt';
-// component imports
+
 import {
   AppBar,
   ContributingDescription,
@@ -251,8 +251,7 @@ function App() {
               </Grid>
             </Grid>
           </Grid>
-
-          <BottomFooter toggleTheme={toggleTheme}></BottomFooter>
+          <BottomFooter toggleTheme={toggleTheme} darkTheme={isDarkTheme}></BottomFooter>
         </Container>
       </ThemeProvider>
     </div>
