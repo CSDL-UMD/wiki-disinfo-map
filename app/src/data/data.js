@@ -38,7 +38,7 @@ async function retrieve_data() {
 
   return new Promise((resolve, reject) => {
     // accumulate all the data for the webpage in this structure
-    const data = [];
+    let data = [];
     // read CSV input stream
     fs.createReadStream(sheets_file_name)
       .pipe(
@@ -50,12 +50,6 @@ async function retrieve_data() {
       )
       .on('data', (row) => {
         // pre-process data directly when scanning each row
-        delete row['KeyDisinfo'];
-        delete row['Link'];
-        delete row['Type'];
-        delete row['Wikimedia project'];
-        delete row['Subcontinent/Continent code'];
-        delete row['Year (Original)'];
 
         data.push(row);
       })
@@ -64,6 +58,9 @@ async function retrieve_data() {
       })
       .on('end', () => {
         console.log('parsed csv data:');
+
+        // filter rows
+        data = data.filter((row) => row['Checked?'] === 'TRUE');
 
         // preprocess row
         for (let i = 0; i < data.length; i++) {
@@ -106,21 +103,18 @@ const lookup_continent = (country) => {
   }
 };
 
-const preprocessRow = async (row) => {
+const preprocessRow = (row) => {
   // parse Start Year to number
-  row['Year'] = Number(row['Year']);
+  row['Start Year'] = Number(row['Start Year']);
   // parse country to list of countries
-  row['Country'] = String(row['Country'])
+  row['Countries'] = String(row['Countries'])
     .split(',')
     .map((str) => str.trim())
     .filter(
-      (country) =>
-        country !== 'NA' &&
-        country !== 'Multiple (NA)' &&
-        country !== 'Multiple'
+      (val) => val !== 'NA' && val !== 'Multiple (NA)' && val !== 'Multiple'
     );
   // parse languages to list of languages
-  row.Languages = String(row.Languages)
+  row['Languages'] = String(row['Languages'])
     .split(',')
     .map((val) => val.trim())
     .filter(
@@ -128,24 +122,24 @@ const preprocessRow = async (row) => {
         lang !== 'NA' && lang !== 'undefined' && lang !== '' && lang !== 'All'
     );
 
-  row['Country code'] = String(row['Country code'])
+  row['Country Codes'] = String(row['Country Codes'])
     .split(',')
     .map((val) => val.trim())
-    .filter((country) => country !== 'NA');
+    .filter((val) => val !== 'NA');
 
-  row['Group'] = String(row['Group'])
+  row['Group Association'] = String(row['Group Association'])
     .split(',')
     .map((val) => val.trim())
-    .filter((country) => country !== 'NA');
+    .filter((val) => val !== 'NA');
 
   row['Region'] = String(row['Region'])
     .split(',')
     .map((val) => val.trim())
-    .filter((country) => country !== 'NA');
+    .filter((val) => val !== 'NA');
 
   row['Continent'] = [];
-  for (let i = 0; i < row['Country'].length; i++) {
-    const continent = lookup_continent(row['Country'][i]);
+  for (let i = 0; i < row['Countries'].length; i++) {
+    const continent = lookup_continent(row['Countries'][i]);
 
     if (!row['Continent'].includes(continent)) {
       row['Continent'].push(continent);
