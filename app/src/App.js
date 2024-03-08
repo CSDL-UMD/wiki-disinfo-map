@@ -131,7 +131,7 @@ function App() {
             variant="h1"
             align="center"
           >
-            Disinformation Map
+            Wikimapia
           </Typography>
           <Typography
             marginTop={3}
@@ -139,7 +139,7 @@ function App() {
             variant="h6"
             align="center"
           >
-            A map to visualize it all. Beware of the Russians.
+            Click on a continent to get started
           </Typography>
           <Grid container spacing={2} justify="flex-end" alignItems="center">
             <Grid
