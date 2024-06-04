@@ -11,6 +11,7 @@ import {
   Button,
 } from '@mui/material';
 import RestartAltIcon from '@mui/icons-material/RestartAlt';
+import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 
 import {
   AppBar,
@@ -115,19 +116,29 @@ function App() {
             }}
           ></div>
           <Button
-            onMouseEnter={(e) => e.target.style.boxShadow = '0px 0px 0px transparent'}
-            onMouseLeave={(e) => e.target.style.boxShadow = 'none'}
+            onMouseEnter={(e) =>
+              (e.target.style.boxShadow = '0px 0px 0px transparent')
+            }
+            onMouseLeave={(e) => (e.target.style.boxShadow = 'none')}
             color="error"
             onClick={resetData}
             variant="contained"
-            style={{ overflow: "hidden", position: 'fixed', bottom: '0%', right: 32, transform: 'translateY(-30%)', zIndex: 999 }}>
+            style={{
+              overflow: 'hidden',
+              position: 'fixed',
+              bottom: '0%',
+              right: 32,
+              transform: 'translateY(-30%)',
+              zIndex: 999,
+            }}
+          >
             <RestartAltIcon />
             Reset Filters
           </Button>
           <AppBar aboutRef={aboutRef} />
           <Typography
             marginTop={5}
-            className="animate__animated animate__fadeInDown animate__delay-1.5s"
+            className="animate__animated animate__fadeInDown animate__delay-1s"
             variant="h1"
             align="center"
           >
@@ -135,12 +146,13 @@ function App() {
           </Typography>
           <Typography
             marginTop={3}
-            className="animate__animated animate__fadeInDown animate__delay-3s"
+            className="animate__animated animate__fadeInDown animate__delay-2s"
             variant="h6"
             align="center"
           >
-            Click on a continent to get started
+            Click on a continent to get started, then scroll down
           </Typography>
+          <IconTooltip className="animate__animated animate__fadeInDown animate__delay-2s" />
           <Grid container spacing={2} justify="flex-end" alignItems="center">
             <Grid
               item
@@ -160,8 +172,18 @@ function App() {
                 isGlobalToggleChecked={isGlobalToggleChecked}
                 setIsGlobalToggleChecked={setIsGlobalToggleChecked}
               />
-
-              <IconTooltip></IconTooltip>
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              style={{
+                textAlign: 'center',
+              }}
+            >
+              <KeyboardDoubleArrowDownIcon
+                fontSize="large"
+                className="animate__animated animate__bounce animate__repeat-3 animate__slow animate__delay-1s"
+              />
             </Grid>
 
             <Grid item xs={12}>
@@ -251,7 +273,10 @@ function App() {
               </Grid>
             </Grid>
           </Grid>
-          <BottomFooter toggleTheme={toggleTheme} darkTheme={isDarkTheme}></BottomFooter>
+          <BottomFooter
+            toggleTheme={toggleTheme}
+            darkTheme={isDarkTheme}
+          ></BottomFooter>
         </Container>
       </ThemeProvider>
     </div>

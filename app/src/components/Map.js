@@ -55,7 +55,7 @@ const Map = (props) => {
   const colorScale = scaleLinear()
     .domain([0, maxCount])
     .range(['#ffedea', '#15008c']);
-  const {isGlobalToggleChecked, setIsGlobalToggleChecked} = props;
+  const { isGlobalToggleChecked, setIsGlobalToggleChecked } = props;
 
   useEffect(() => {
     setMapCounts(listValueCounts(props.data, columnName));
@@ -88,7 +88,14 @@ const Map = (props) => {
   }
 
   return (
-    <Paper elevation={0} style={{marginBottom: "-100px"}}>
+    <Paper
+      elevation={0}
+      style={{
+        marginTop: '-100px',
+        marginBottom: '-150px',
+        background: 'none',
+      }}
+    >
       <ComposableMap
         projectionConfig={{
           rotate: [-10, 0, 0],
@@ -149,7 +156,7 @@ const Map = (props) => {
         <Stack direction="row" spacing={2} className="custom-stack">
           <div
             style={{
-              overflow: "hidden",
+              overflow: 'hidden',
               position: 'fixed',
               bottom: 10,
               right: 206,
@@ -165,7 +172,7 @@ const Map = (props) => {
                   color="primary"
                   checked={isGlobalToggleChecked}
                   onChange={() => {
-                    setIsGlobalToggleChecked((prevVal) => !prevVal)
+                    setIsGlobalToggleChecked((prevVal) => !prevVal);
                     if (isGlobalToggleChecked) {
                       // add logic
                       props.removeFilter(filterId);
