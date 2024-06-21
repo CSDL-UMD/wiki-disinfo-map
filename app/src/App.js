@@ -1,5 +1,5 @@
 import './App.css';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useLayoutEffect } from 'react';
 import 'animate.css';
 // mui
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -27,7 +27,7 @@ import {
   IconTooltip,
 } from './components';
 
-const initialData = require('./data/data.json');
+let initialData = [];
 
 const lightTheme = createTheme({
   palette: {
@@ -82,6 +82,25 @@ function App() {
       );
     }
   };
+
+  // componentDidMount
+  useLayoutEffect(() => {
+    fetch('data/data.json', {
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        initialData = data;
+        setCurrData(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   // When filters added or removed, rerun all filters on initialData
   useEffect(() => {
