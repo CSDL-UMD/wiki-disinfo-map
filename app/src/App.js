@@ -137,22 +137,29 @@ function App() {
           </Button>
           <AppBar aboutRef={aboutRef} />
           <Typography
-            marginTop={5}
+            marginTop={4}
             className="animate__animated animate__fadeInDown animate__delay-1s"
-            variant="h1"
+            variant="h2"
             align="center"
           >
             Wikimapia
           </Typography>
           <Typography
-            marginTop={3}
+            marginTop={1}
             className="animate__animated animate__fadeInDown animate__delay-2s"
-            variant="h6"
+            variant="body1"
+            align="center"
+          >
+            This map depicts regions where certain community efforts and
+            projects were developed.
+          </Typography>
+          <Typography
+            className="animate__animated animate__fadeInDown animate__delay-2s"
+            variant="body1"
             align="center"
           >
             Click on a continent to get started, then scroll down
           </Typography>
-          <IconTooltip className="animate__animated animate__fadeInDown animate__delay-2s" />
           <Grid container spacing={2} justify="flex-end" alignItems="center">
             <Grid
               item

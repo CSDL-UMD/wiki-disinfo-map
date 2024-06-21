@@ -92,7 +92,7 @@ const Map = (props) => {
       elevation={0}
       style={{
         marginTop: '-100px',
-        marginBottom: '-150px',
+        marginBottom: '-120px',
         background: 'none',
       }}
     >
