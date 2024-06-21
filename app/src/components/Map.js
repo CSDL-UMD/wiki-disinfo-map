@@ -29,8 +29,6 @@ const listValueCounts = (data, column) => {
     }
   }
 
-  // console.log(counts)
-
   // transform to array of objects
   return Object.keys(counts).map((key) => {
     const item = { count: counts[key] };
