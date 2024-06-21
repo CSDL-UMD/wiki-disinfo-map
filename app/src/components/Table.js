@@ -70,8 +70,8 @@ const Table = (props) => {
       const translations = {
         'Project Name': 'id1',
         Description: 'id2',
-        'Language(s)': 'id3',
-        'Country/Countries': 'id4',
+        Languages: 'id3',
+        Countries: 'id4',
         Region: 'id5',
         'Start Year': 'id6',
         'Group Association': 'id7',
