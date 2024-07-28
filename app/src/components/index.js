@@ -6,6 +6,7 @@ import FrequencyChart from './FrequencyChart';
 import Map from './Map';
 import PieChart from './PieChart';
 import ProjectDescription from './ProjectDescription';
+import OldTable from './OldTable';
 import Table from './Table';
 import { BottomFooter } from './BottomFooter';
 import { IconTooltip } from './IconTooltip';
@@ -19,7 +20,8 @@ export {
   Map,
   PieChart,
   ProjectDescription,
+  OldTable,
   Table,
   BottomFooter,
-  IconTooltip
+  IconTooltip,
 };

@@ -22,9 +22,9 @@ import {
   Map,
   PieChart,
   ProjectDescription,
+  OldTable,
   Table,
   BottomFooter,
-  IconTooltip,
 } from './components';
 
 let initialData = [];
@@ -243,6 +243,7 @@ function App() {
 
             <Grid item xs={12}>
               {/* Data table */}
+              <OldTable data={currData} />
               <Table data={currData} />
             </Grid>
 
