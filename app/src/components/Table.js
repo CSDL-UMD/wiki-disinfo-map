@@ -3,10 +3,12 @@ import { Box, Typography } from '@mui/material';
 import {
   MaterialReactTable,
   useMaterialReactTable,
+  getMRT_RowSelectionHandler
 } from 'material-react-table';
 
 const Table2 = (props) => {
   const [currData, setCurrData] = useState([]);
+  const [expanded, setExpanded] = useState({});
   const headerColumns = useMemo(
     () => [
       { accessorKey: 'Project Name', header: 'Project Name' },
@@ -50,6 +52,20 @@ const Table2 = (props) => {
   const table = useMaterialReactTable({
     data: currData,
     columns: headerColumns,
+    muiTableBodyRowProps: ({ row, staticRowIndex, table }) => ({
+      onClick: (event) =>{
+        getMRT_RowSelectionHandler({ row, staticRowIndex, table })(event); //import this helper function from material-react-table
+        table.setExpanded((prevExpanded) => ({
+          ...prevExpanded,
+          [row.id]: !prevExpanded[row.id],
+        })); // combines what was previously expanded to expanding/not expanding current row
+      },
+      sx: { cursor: 'pointer' },
+    }),
+    state: {
+      expanded
+    },
+    onExpandedChange: setExpanded,
     renderDetailPanel: ({ row }) => {
       return (
         <Box
