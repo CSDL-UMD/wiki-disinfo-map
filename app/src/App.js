@@ -243,7 +243,6 @@ function App() {
 
             <Grid item xs={12}>
               {/* Data table */}
-              <OldTable data={currData} />
               <Table data={currData} />
             </Grid>
 

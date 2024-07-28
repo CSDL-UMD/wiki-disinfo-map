@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import { Box, Typography } from '@mui/material';
 import {
   MaterialReactTable,
   useMaterialReactTable,
@@ -6,10 +7,9 @@ import {
 
 const Table2 = (props) => {
   const [currData, setCurrData] = useState([]);
-  const columns = useMemo(
+  const headerColumns = useMemo(
     () => [
       { accessorKey: 'Project Name', header: 'Project Name' },
-      { accessorKey: 'Description', header: 'Description' },
       { accessorKey: 'Languages', header: 'Language(s)' },
       { accessorKey: 'Countries', header: 'Country/Countries' },
       { accessorKey: 'Region', header: 'Region' },
@@ -18,6 +18,7 @@ const Table2 = (props) => {
     ],
     []
   );
+  const detailPanelCol = { accessorKey: 'Description', header: 'Description' };
 
   const formatDataEntry = (entry) => {
     let formatted = entry;
@@ -30,9 +31,12 @@ const Table2 = (props) => {
   };
 
   const preprocessData = (data) => {
+    const columns = headerColumns.map((r) => r.accessorKey);
+    columns.push(detailPanelCol.accessorKey);
+
     for (const row of data) {
       for (const col of columns) {
-        row[col.accessorKey] = formatDataEntry(row[col.accessorKey]);
+        row[col] = formatDataEntry(row[col]);
       }
     }
     return data;
@@ -45,7 +49,22 @@ const Table2 = (props) => {
 
   const table = useMaterialReactTable({
     data: currData,
-    columns,
+    columns: headerColumns,
+    renderDetailPanel: ({ row }) => {
+      return (
+        <Box
+          sx={{
+            display: 'grid',
+            width: 'calc(100vw - 150px)',
+          }}
+        >
+          <Typography>
+            Description: {row.original[detailPanelCol.accessorKey]}
+          </Typography>
+          {/* <Typography>{detailPanelCol.accessorKey}</Typography> */}
+        </Box>
+      );
+    },
   });
 
   return <MaterialReactTable table={table} />;
