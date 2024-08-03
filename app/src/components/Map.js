@@ -46,9 +46,6 @@ const Map = (props) => {
   const [tooltipContent, setTooltipContent] = useState('');
   const [filterId, setFilterId] = useState(-1);
   const [position, setPosition] = useState({ coordinates: [0, 0], zoom: 1 });
-
-  const [globalSelected, setGlobalSelected] = useState(false);
-
   const maxCount = mapCounts.reduce((a, b) => Math.max(a, b.count), 0);
   const colorScale = scaleLinear()
     .domain([0, maxCount])
@@ -124,7 +121,7 @@ const Map = (props) => {
                     geography={geo}
                     fill={d ? colorScale(d.count) : '#525151'}
                     onMouseEnter={() => {
-                      if (!globalSelected) {
+                      if (!isGlobalToggleChecked) {
                         setTooltipContent(
                           `${geo.properties.continent}: ${d ? d.count : 0}`
                         );
@@ -138,7 +135,7 @@ const Map = (props) => {
                       setTooltipContent('');
                     }}
                     onClick={() => {
-                      if (!globalSelected) {
+                      if (!isGlobalToggleChecked) {
                         onMapRegionClick(columnName, geo.properties.continent);
                       }
                     }}

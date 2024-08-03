@@ -24,8 +24,9 @@ import {
   ProjectDescription,
   Table,
   BottomFooter,
-  IconTooltip,
 } from './components';
+
+import MapSettings from './components/MapSettings';
 
 let initialData = [];
 
@@ -179,6 +180,7 @@ function App() {
           >
             Click on a continent to get started, then scroll down
           </Typography>
+          <MapSettings />
           <Grid container spacing={2} justify="flex-end" alignItems="center">
             <Grid
               item
@@ -198,6 +200,13 @@ function App() {
                 isGlobalToggleChecked={isGlobalToggleChecked}
                 setIsGlobalToggleChecked={setIsGlobalToggleChecked}
               />
+            <Grid
+              item
+              xs={12}
+              md={8}
+              xl={6}
+            ></Grid>
+              <MapSettings />
             </Grid>
             <Grid
               item
