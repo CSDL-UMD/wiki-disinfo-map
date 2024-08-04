@@ -27,6 +27,8 @@ import {
   BottomFooter,
 } from './components';
 
+import MapSettings from './components/MapSettings';
+
 let initialData = [];
 
 const lightTheme = createTheme({
@@ -198,6 +200,13 @@ function App() {
                 isGlobalToggleChecked={isGlobalToggleChecked}
                 setIsGlobalToggleChecked={setIsGlobalToggleChecked}
               />
+            <Grid
+              item
+              xs={12}
+              md={8}
+              xl={6}
+            ></Grid>
+              {/* <MapSettings /> */}
             </Grid>
             <Grid
               item

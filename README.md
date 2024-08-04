@@ -10,7 +10,7 @@ A website compiling disinformation-combatting efforts within the Wikimedia commu
    ```
 1. Run our data fetching and processing file (in `./app/src/data` directory).
    ```bash
-   ./app/src/data % node.js
+   ./app/public/data % node.js
    ```
 1. Start development server (in `./app` directory).
    ```bash
@@ -23,7 +23,7 @@ Note: Our GitHub Action "Deploy to GitHub Pages" does this process and places st
 
 1. Run our data fetching and processing file (in `./app/src/data` directory).
    ```bash
-   ./app/src/data % node.js
+   ./app/public/data % node.js
    ```
 1. Generate static site (in `.app` directory).
    ```bash

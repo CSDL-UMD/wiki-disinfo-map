@@ -9,6 +9,7 @@ import ProjectDescription from './ProjectDescription';
 import Table from './Table';
 import { BottomFooter } from './BottomFooter';
 import { IconTooltip } from './IconTooltip';
+import MapSettings from './MapSettings';
 
 export {
   AppBar,
@@ -22,4 +23,5 @@ export {
   Table,
   BottomFooter,
   IconTooltip,
+  MapSettings
 };
