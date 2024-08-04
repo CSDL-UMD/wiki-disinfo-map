@@ -22,6 +22,7 @@ import {
   Map,
   PieChart,
   ProjectDescription,
+  OldTable,
   Table,
   BottomFooter,
 } from './components';
