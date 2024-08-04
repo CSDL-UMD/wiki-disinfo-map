@@ -180,7 +180,6 @@ function App() {
           >
             Click on a continent to get started, then scroll down
           </Typography>
-          <MapSettings />
           <Grid container spacing={2} justify="flex-end" alignItems="center">
             <Grid
               item
@@ -206,7 +205,7 @@ function App() {
               md={8}
               xl={6}
             ></Grid>
-              <MapSettings />
+              {/* <MapSettings /> */}
             </Grid>
             <Grid
               item
