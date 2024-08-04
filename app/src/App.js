@@ -24,8 +24,9 @@ import {
   ProjectDescription,
   Table,
   BottomFooter,
-  IconTooltip,
 } from './components';
+
+import MapSettings from './components/MapSettings';
 
 let initialData = [];
 
@@ -198,6 +199,13 @@ function App() {
                 isGlobalToggleChecked={isGlobalToggleChecked}
                 setIsGlobalToggleChecked={setIsGlobalToggleChecked}
               />
+            <Grid
+              item
+              xs={12}
+              md={8}
+              xl={6}
+            ></Grid>
+              {/* <MapSettings /> */}
             </Grid>
             <Grid
               item
